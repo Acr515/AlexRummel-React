@@ -33,7 +33,7 @@ module.exports = {
                     {
                         loader: "sass-loader",
                         options: {
-                            additionalData: "@import'./src/global/GlobalVariables.scss';"
+                            additionalData: "@import'./src/config/GlobalVariables.scss';"
                         }
                     }
                 ],
@@ -64,8 +64,9 @@ module.exports = {
         alias: {
             assets: path.resolve(__dirname, "src", "assets"),
             components: path.resolve(__dirname, "src", "components"),
+            config: path.resolve(__dirname, "src", "config"),
             context: path.resolve(__dirname, "src", "context"),
-            global: path.resolve(__dirname, "src", "global"),
+            projects: path.resolve(__dirname, "src", "projects"),
         }
     }
 };
