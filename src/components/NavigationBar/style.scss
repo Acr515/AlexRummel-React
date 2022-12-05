@@ -1,0 +1,62 @@
+._NavigationBar {
+    height: 70px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 3px 14px -8px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
+
+    .burger-button {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+
+        span {
+            border-bottom: 5px solid #4aa27c;
+        }
+    }
+
+    .link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        flex-shrink: 0;
+
+        li {
+            display: inline-block;
+            margin-left: 40px;
+
+            a {
+                font-size: 20px;
+                color: black;
+                text-decoration: none;
+                font-weight: 300;
+                border-bottom: 3px solid;
+                border-color: rgba(0, 0, 0, 0);
+                transition: border-color .2s;
+            }
+
+            a:hover {
+                border-color: $GREEN;
+            }
+        }
+
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+}

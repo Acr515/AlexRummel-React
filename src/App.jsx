@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import NavigationBar from 'components/NavigationBar';
 
 /**
  * Wrapper for entire site, showing header, footer, and other constant information.
@@ -7,7 +8,7 @@ import { Outlet } from 'react-router-dom';
 export default function App() {
     return (
         <div>
-            <p>Hello React!</p>
+            <NavigationBar />
             <Outlet />
             <p>Footer idk</p>
         </div>
