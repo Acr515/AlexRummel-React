@@ -1,6 +1,5 @@
 import React from 'react';
 import WidthContainer from 'components/WidthContainer';
-import './style.scss';
 
 /**
  * Represents a section of content on any page. Fill with any elements you want!

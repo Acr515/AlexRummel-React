@@ -6,7 +6,7 @@ import './style.scss'
 export default function NavigationBar() {
     return (
         <nav className="_NavigationBar">
-            <WidthContainer className="container">
+            <WidthContainer className="container" verticalPadding={false}>
                 <Link className="title" to="/"><span>Alex Rummel</span></Link>
                 <ul className="link-list">
                     <li><Link to="/">home</Link></li>
