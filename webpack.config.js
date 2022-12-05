@@ -67,6 +67,7 @@ module.exports = {
             config: path.resolve(__dirname, "src", "config"),
             context: path.resolve(__dirname, "src", "context"),
             projects: path.resolve(__dirname, "src", "projects"),
+            screens: path.resolve(__dirname, "src", "screens"),
         }
     }
 };
