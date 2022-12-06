@@ -1,6 +1,6 @@
 import ProjectCollection from 'classes/ProjectCollection';
-import BlueberryFestivalScreen from 'screens/BlueberryFestivalScreen';
-import SpencerWebsiteScreen from 'screens/SpencerWebsiteScreen';
+import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
+import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
 
 /**
  * An instance of the `ProjectCollection` class that contains references to every public portfolio project.
