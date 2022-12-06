@@ -10,6 +10,13 @@ const PortfolioEntries = new ProjectCollection([
             featuredImage: require('projects/BlueberryFestival/featured-cover.png'),
             thumbnailImage: require('projects/BlueberryFestival/small-cover.png')
         }
+    },
+    {
+        data: require('projects/SpencerWebsite/data.json'),
+        images: {
+            featuredImage: require('projects/SpencerWebsite/featured-cover.png'),
+            thumbnailImage: require('projects/SpencerWebsite/small-cover.png')
+        }
     }
 ]);
 

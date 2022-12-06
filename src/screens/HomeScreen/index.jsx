@@ -3,9 +3,9 @@ import Section from 'components/Section';
 import SectionDivider from 'components/SectionDivider';
 import MetaTags from 'components/MetaTags';
 import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
+import PortfolioEntries from 'config/PortfolioEntries';
 import MyPicture from 'assets/images/alex-image.jpg'
 import './style.scss';
-import PortfolioEntries from 'config/PortfolioEntries';
 
 /**
  * The index page of the website.

@@ -1,0 +1,21 @@
+{
+	"urlName": "spencer-website",
+	"date": "2020-08-01",
+	"title": "Spencer Manufacturing Website",
+	"tagline": "During two summer internships at Spencer Manufacturing, I completely redesigned the company's website from scratch, adding countless new features and improvements.",
+	"featured": true,
+	"tags": [
+		"paid",
+		"software"
+	],
+	"specs": {
+		"dates": "Jun. 2020–Aug. 2021",
+		"tools_used": "HTML, CSS, JavaScript, PHP, SQL Database<br>Git version control",
+		"link_names": [
+			"Live website"
+		],
+		"link_locations": [
+			"https://spencerfiretrucks.com"
+		]
+	}
+}
