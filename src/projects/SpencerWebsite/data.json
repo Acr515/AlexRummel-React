@@ -10,11 +10,14 @@
 	],
 	"specs": {
 		"dates": "Jun. 2020–Aug. 2021",
-		"tools_used": "HTML, CSS, JavaScript, PHP, SQL Database<br>Git version control",
-		"link_names": [
+		"toolsUsed": [
+			"HTML, CSS, JavaScript, PHP, SQL Database",
+			"GitHub, Git version control"
+		],
+		"linkNames": [
 			"Live website"
 		],
-		"link_locations": [
+		"linkLocations": [
 			"https://spencerfiretrucks.com"
 		]
 	}

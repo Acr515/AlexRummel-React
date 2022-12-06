@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import ErrorScreen from 'screens/ErrorScreen';
 import HomeScreen from 'screens/HomeScreen';
+import BlueberryFestivalScreen from 'screens/BlueberryFestivalScreen';
 import 'config/GlobalStyle.scss';
 
 const router = createBrowserRouter([
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
             {
                 path: "",
                 element: <HomeScreen />
+            },
+            {
+                path: "portfolio/blueberry-festival",
+                element: <BlueberryFestivalScreen />
             }
         ]
     },
