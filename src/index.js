@@ -6,7 +6,7 @@ import App from './App';
 import HomeScreen from 'screens/HomeScreen';
 import PortfolioScreen from 'screens/PortfolioScreen';
 import ErrorScreen from 'screens/ErrorScreen';
-import BlueberryFestivalScreen from 'screens/BlueberryFestivalScreen';
+import PortfolioEntries from 'config/PortfolioEntries';
 import 'config/GlobalStyle.scss';
 
 const router = createBrowserRouter([
@@ -23,10 +23,12 @@ const router = createBrowserRouter([
                 path: "portfolio",
                 element: <PortfolioScreen />
             },
-            {
-                path: "portfolio/blueberry-festival",
-                element: <BlueberryFestivalScreen />
-            }
+            ...PortfolioEntries.projects.map(entry => {
+                return {
+                    path: entry.getRelativeUrl(),
+                    element: <entry.screenComponent />
+                };
+            })
         ]
     },
 ]);

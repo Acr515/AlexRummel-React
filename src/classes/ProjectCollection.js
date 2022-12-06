@@ -9,11 +9,11 @@ export default class ProjectCollection {
 
     /**
      * Instantiates the ProjectCollection. Creates an array of `PortfolioEntry` objects, storing it as `projects`.
-     * @param {object[]} projects An array of objects with `data` and `images` properties
+     * @param {object[]} projects An array of objects with `data`, `images`, and 'component' properties
      */
     constructor(projects) {
         this.projects = projects.map(entry => {
-            return new PortfolioEntry(entry.data, entry.images);
+            return new PortfolioEntry(entry.data, entry.images, entry.component);
         });
     }
 
