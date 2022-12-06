@@ -1,0 +1,25 @@
+._HomeScreen {
+    .image-section {
+        display: flex;
+
+        .image-text {
+            padding-right: 48px;
+
+            .warning {
+                color: #4aa27c;
+                font-weight: 700;
+            }
+        }
+
+        .image-round {
+            width: 240px;
+            height: 240px;
+            border-radius: 240px;
+            margin-left: auto;
+            flex-shrink: 0;
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+}
