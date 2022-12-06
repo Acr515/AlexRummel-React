@@ -1,0 +1,27 @@
+{
+	"urlName": "digital-animation",
+	"date": "2018-01-01",
+	"title": "Digital Animation Award",
+	"tagline": "I created a 30-second 3D animation in three weeks as a sophomore in high school.",
+	"featured": false,
+	"tags": [
+		"school",
+		"motion"
+	],
+	"specs": {
+		"dates": "Jan. 2018",
+		"toolsUsed": [
+			"Blender",
+			"FamiTracker, Bfxr for audio",
+			"Adobe Premiere, After Effects"
+		],
+		"linkNames": [
+			"Video",
+			"Notes from judges"
+		],
+		"linkLocations": [
+			"https://www.youtube.com/watch?v=iO-3KY-IUtQ",
+			"https://library.automationdirect.com/first-robotics-2018-digital-animation-award/"
+		]
+	}
+}

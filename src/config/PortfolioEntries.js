@@ -1,5 +1,6 @@
 import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
+import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
 
 /**
@@ -21,6 +22,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/SpencerWebsite/small-cover.png')
         },
         component: SpencerWebsiteScreen
+    },
+    {
+        data: require('projects/DigitalAnimation/data.json'),
+        images: {
+            featuredImage: require('projects/DigitalAnimation/featured-cover.png'),
+            thumbnailImage: require('projects/DigitalAnimation/small-cover.png')
+        },
+        component: DigitalAnimationScreen
     }
 ]);
 
