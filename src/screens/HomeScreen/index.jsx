@@ -1,8 +1,11 @@
 import React from 'react';
 import Section from 'components/Section';
+import SectionDivider from 'components/SectionDivider';
 import MetaTags from 'components/MetaTags';
+import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
 import MyPicture from 'assets/images/alex-image.jpg'
 import './style.scss';
+import PortfolioEntries from 'config/PortfolioEntries';
 
 /**
  * The index page of the website.
@@ -23,6 +26,26 @@ export default function HomeScreen() {
                     className="image-round"
                     style={{ backgroundImage: `url(${MyPicture})` }}
                 ></div>
+            </Section>
+            <SectionDivider />
+            <Section>
+                <h2>Featured Work</h2>
+                {
+                    PortfolioEntries.getFeaturedProjects().map(entry => (<FeaturedPortfolioItem 
+                        entry={entry}
+                        key={entry.urlName}
+                    />))
+                }
+            </Section>
+            <SectionDivider />
+            <Section>
+                <h2>About Me</h2>
+				<p>
+					I grew up in South Haven, Michigan and graduated from South Haven High School. I was involved in band, FIRST Robotics, and tennis for all four of my years in high school. During my free-time, I enjoy playing tennis, developing my various programming projects, and spending time with friends and family.
+				</p>
+				<p>
+					I&apos;m always looking for new opportunities! If you think I could be of assistance for your next project, feel free to get in contact with me through my <a href="https://www.linkedin.com/in/alex-rummel/">LinkedIn</a> or my <a href="mailto:rummelac@mail.uc.edu">email</a>.
+				</p>
             </Section>
         </div>
     )

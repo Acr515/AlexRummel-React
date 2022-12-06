@@ -1,0 +1,25 @@
+{
+	"urlName": "blueberry-festival",
+	"date": "2021-08-12",
+	"title": "National Blueberry Festival App",
+	"tagline": "I designed and programmed the user interface of a custom mobile phone app for a local festival.",
+	"featured": true,
+	"tags": [
+		"paid",
+		"software"
+	],
+	"specs": {
+		"dates": "May 2021–Aug. 2021",
+		"tools_used": "JavaScript, React.js/React Native, Amazon AWS<br>Adobe Illustrator, XD, Figma<br>GitHub, Git version control",
+		"link_names": [
+			"iOS app download",
+			"Android app download",
+			"Festival website"
+		],
+		"link_locations": [
+			"https://apps.apple.com/us/app/south-haven-blueberry-festival/id1572703423",
+			"https://play.google.com/store/apps/details?id=com.blueberryfestival.blueberryfestival",
+			"https://www.blueberryfestival.com"
+		]
+	}
+}

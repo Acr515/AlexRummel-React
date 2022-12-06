@@ -63,11 +63,13 @@ module.exports = {
         extensions: ["*", ".js", ".jsx"],
         alias: {
             assets: path.resolve(__dirname, "src", "assets"),
+            classes: path.resolve(__dirname, "src", "classes"),
             components: path.resolve(__dirname, "src", "components"),
             config: path.resolve(__dirname, "src", "config"),
             context: path.resolve(__dirname, "src", "context"),
             projects: path.resolve(__dirname, "src", "projects"),
             screens: path.resolve(__dirname, "src", "screens"),
+            util: path.resolve(__dirname, "src", "util"),
         }
     }
 };
