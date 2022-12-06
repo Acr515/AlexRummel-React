@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import ErrorScreen from 'screens/ErrorScreen';
 import HomeScreen from 'screens/HomeScreen';
@@ -20,6 +21,12 @@ const router = createBrowserRouter([
     },
 ]);
 
+const helmet = {};
+
 const container = document.getElementById("root");
 const root = createRoot(container);
-root.render(<RouterProvider router={router} />);
+root.render(
+    <HelmetProvider context={helmet}>
+        <RouterProvider router={router} />
+    </HelmetProvider>
+);
