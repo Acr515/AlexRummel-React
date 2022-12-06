@@ -24,9 +24,9 @@ export default function ImageDisplay({ images, caption = null, maxWidth = null, 
                 ))
             }
             </div>
-            { caption != null && <caption className="image-caption">
+            { caption != null && <div className="image-caption">
                 {caption}
-            </caption> }
+            </div> }
         </div>
     )
 }

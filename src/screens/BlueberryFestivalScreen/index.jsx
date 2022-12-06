@@ -8,8 +8,10 @@ import PortfolioEntries from 'config/PortfolioEntries';
 import WideImage from 'projects/BlueberryFestival/assets/physical-phone.jpeg';
 import NarrowImage from 'projects/BlueberryFestival/assets/harbor.jpg';
 import imports from 'projects/BlueberryFestival/imports';
-import './style.scss';
 
+/**
+ * The portfolio page for the Blueberry Festival App.
+ */
 export default function BlueberryFestivalScreen() {
     return (
         <div className="_BlueberryFestivalScreen _Screen">

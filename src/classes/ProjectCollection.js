@@ -26,7 +26,7 @@ export default class ProjectCollection {
         this.projects.forEach(entry => {
             if (entry.featured) featuredProjects.push(entry);
         });
-        return featuredProjects;
+        return this.sortProjects(featuredProjects);
     }
 
     /**
@@ -43,5 +43,14 @@ export default class ProjectCollection {
             }
         });
         return match;
+    }
+    
+    /**
+     * Sorts any array of portfolio entries by date.
+     * @param {PortfolioEntry[]} projects Defaults to all projects. The array of projects to sort
+     * @returns A sorted array of portfolio entries
+     */
+    sortProjects(projects = this.projects) {
+        return projects.sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 }

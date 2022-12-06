@@ -15,6 +15,7 @@ export default function PortfolioHeader({ entry, wideImage = null, narrowImage, 
         <div className="_PortfolioHeader">
             <MetaTags
                 title={entry.title}
+                description={entry.tagline}
             />
             <Section>
                 <img className="banner-image" width="800" height="275" src={entry.featuredImage} />
