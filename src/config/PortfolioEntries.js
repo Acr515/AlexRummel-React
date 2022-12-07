@@ -2,6 +2,7 @@ import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
+import NoCartoonsScreen from 'screens/portfolio/NoCartoonsScreen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
 
 /**
@@ -39,6 +40,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/DigitalAnimation/small-cover.png')
         },
         component: DigitalAnimationScreen
+    },
+    {
+        data: require('projects/NoCartoons/data.json'),
+        images: {
+            featuredImage: require('projects/NoCartoons/featured-cover.png'),
+            thumbnailImage: require('projects/NoCartoons/small-cover.png')
+        },
+        component: NoCartoonsScreen
     }
 ]);
 

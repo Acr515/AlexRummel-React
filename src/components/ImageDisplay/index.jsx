@@ -16,7 +16,7 @@ export default function ImageDisplay({ images, caption = null, maxWidth = null, 
             {
                 images.map((img, ind) => (
                     <img 
-                        className={`image ${showBorders && "bordered"}${forceFullWidth && " full-width"}`}
+                        className={`image ${showBorders && " bordered"} ${forceFullWidth && " full-width"}`}
                         style={ maxWidth != null ? { maxWidth } : {}}
                         src={img}
                         key={ind}

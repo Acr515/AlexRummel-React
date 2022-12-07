@@ -3,10 +3,10 @@ import Section from 'components/Section';
 import SectionDivider from 'components/SectionDivider';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
+import Blockquote from 'components/Blockquote';
 import PortfolioEntries from 'config/PortfolioEntries';
 
 import imports from 'projects/LudumDare46/imports';
-import Blockquote from 'components/Blockquote';
 
 /**
  * The portfolio page for Ludum Dare 46.

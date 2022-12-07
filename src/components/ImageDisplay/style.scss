@@ -17,6 +17,10 @@
             &.full-width {
                 max-width: unset;
             }
+
+            &.bordered {
+                border: 2px solid #bbb;
+            }
         }
     }
 
