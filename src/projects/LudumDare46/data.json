@@ -1,0 +1,26 @@
+{
+	"urlName": "ludum-dare-46",
+	"date": "2020-04-01",
+	"title": "Ludum Dare 46",
+	"tagline": "I worked on a two-person team to develop a video game in 72 hours, competing against entrants from around the world.",
+	"featured": false,
+	"tags": [
+		"recreational",
+		"software"
+	],
+	"specs": {
+		"dates": "Apr. 2020",
+		"toolsUsed": [
+            "Adobe Illustrator, Godot, Krita, Bfxr",
+            "Git version control"
+        ],
+		"linkNames": [
+			"Ludum Dare entry",
+			"Playable game"
+		],
+		"linkLocations": [
+			"https://ldjam.com/events/ludum-dare/46/the-empty-cone",
+			"https://acr515.itch.io/ld46"
+		]
+	}
+}

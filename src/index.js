@@ -28,9 +28,14 @@ const router = createBrowserRouter([
                     path: entry.getRelativeUrl(),
                     element: <entry.screenComponent />
                 };
-            })
+            }),
+            {
+                path: "*",
+                element: <ErrorScreen forceErrorCode={404} />,
+                errorElement: <ErrorScreen />
+            }
         ]
-    },
+    }
 ]);
 
 const helmet = {};
