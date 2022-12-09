@@ -22,4 +22,14 @@
             background-repeat: no-repeat;
         }
     }
+
+    /* Switch to mobile navigation bar */
+    @media (max-width: $MOBILE_MQ) {
+        .image-section {
+            flex-direction: column;
+        }
+        .image-round {
+            margin: auto;
+        }
+    }
 }
