@@ -4,6 +4,7 @@ import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
 import NoCartoonsScreen from 'screens/portfolio/NoCartoonsScreen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
+import USOpenScreen from 'screens/portfolio/USOpenScreen';
 
 /**
  * An instance of the `ProjectCollection` class that contains references to every public portfolio project.
@@ -41,14 +42,22 @@ const PortfolioEntries = new ProjectCollection([
         },
         component: DigitalAnimationScreen
     },
-    {
+    /*{
         data: require('projects/NoCartoons/data.json'),
         images: {
             featuredImage: require('projects/NoCartoons/featured-cover.png'),
             thumbnailImage: require('projects/NoCartoons/small-cover.png')
         },
         component: NoCartoonsScreen
-    }
+    },
+    {
+        data: require('projects/USOpen/data.json'),
+        images: {
+            featuredImage: require('projects/USOpen/featured-cover.png'),
+            thumbnailImage: require('projects/USOpen/small-cover.png')
+        },
+        component: USOpenScreen
+    }*/
 ]);
 
 export default PortfolioEntries;
