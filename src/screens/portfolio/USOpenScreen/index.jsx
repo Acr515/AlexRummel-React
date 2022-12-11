@@ -31,8 +31,19 @@ export default function USOpenScreen() {
             <Section>
                 <h2>Process</h2>
 				<p>
-					I began by researching the US Open event, focusing on its history, location, audience, and 
+					I began by researching the US Open event, focusing on its history, location, and audience. We used that information and reflected on the current branding and its shortcomings, including whether or not it matched its design goals or not, as well as a technical analysis.
 				</p>
+                <p>
+                    With this information in hand, I generated numerous hand and digital sketches. I emphasized a logo that embodies some feature of its location in New York City, as well as a the overall energy and intensity of the event.
+                </p>
+                {/* Put the sketch images here */}
+                <p>
+                </p>
+                {/* Talk about color */}
+                {/* Talk about applications */}
+            </Section>
+            <Section>
+                <h2>Results</h2>
             </Section>
         </div>
     )

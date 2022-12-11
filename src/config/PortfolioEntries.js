@@ -42,7 +42,7 @@ const PortfolioEntries = new ProjectCollection([
         },
         component: DigitalAnimationScreen
     },
-    /*{
+    {
         data: require('projects/NoCartoons/data.json'),
         images: {
             featuredImage: require('projects/NoCartoons/featured-cover.png'),
@@ -57,7 +57,7 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/USOpen/small-cover.png')
         },
         component: USOpenScreen
-    }*/
+    }
 ]);
 
 export default PortfolioEntries;
