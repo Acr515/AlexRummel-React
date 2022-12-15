@@ -6,6 +6,7 @@ import App from './App';
 import HomeScreen from 'screens/HomeScreen';
 import PortfolioScreen from 'screens/PortfolioScreen';
 import ErrorScreen from 'screens/ErrorScreen';
+import XRScreen from 'screens/XRScreen';
 import PortfolioEntries from 'config/PortfolioEntries';
 import 'config/GlobalStyle.scss';
 
@@ -35,8 +36,12 @@ const router = createBrowserRouter([
                 errorElement: <ErrorScreen />
             }
         ]
+    },
+    {
+        path: "/xr",
+        element: <XRScreen />
     }
-]);
+], { basename: "/staging" });
 
 const helmet = {};
 
