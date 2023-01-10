@@ -9,9 +9,9 @@ import './style.scss';
  * @param {boolean} showBorders Defaults to false. When true, shows a gray border around each image
  * @param {boolean} forceFullWidth Defaults to false. When true, ensures the image inside stretches across the entire page
 */
-export default function ImageDisplay({ images, caption = null, maxWidth = null, showBorders = false, forceFullWidth = false }) {
+export default function ImageDisplay({ className = "", style, images, caption = null, maxWidth = null, showBorders = false, forceFullWidth = false }) {
     return (
-        <div className="_ImageDisplay">
+        <div className={`_ImageDisplay ${className}`} style={style}>
             <div className={`image-container`}>
             {
                 images.map((img, ind) => (

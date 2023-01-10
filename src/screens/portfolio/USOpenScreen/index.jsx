@@ -10,7 +10,7 @@ import NarrowImage from 'projects/USOpen/assets/nadal-tall.png';
 import imports from 'projects/USOpen/imports';
 
 /**
- * The portfolio page for Ludum Dare 46.
+ * The portfolio page for the US Open rebrand.
  */
 export default function USOpenScreen() {
     return (
@@ -24,22 +24,33 @@ export default function USOpenScreen() {
             <Section>
                 <h2>Introduction</h2>
 				<p>
-					I was tasked with selecting any event and completely redesigning its entire brand. I chose the US Open tennis tournament as I saw significant opportunities to improve upon their latest rebranding strategies.
+					I was tasked with selecting any event and completely redesigning its entire brand. I chose the US Open tennis tournament as I saw significant opportunities to improve upon their recent rebranding attempt.
 				</p>
             </Section>
             <SectionDivider />
             <Section>
                 <h2>Process</h2>
 				<p>
-					I began by researching the US Open event, focusing on its history, location, and audience. We used that information and reflected on the current branding and its shortcomings, including whether or not it matched its design goals or not, as well as a technical analysis.
+					I began by researching the US Open, focusing on its history, location, and audience. With that information, I analyzed the current logo, including whether or not it met its design goals.
 				</p>
                 <p>
-                    With this information in hand, I generated numerous hand and digital sketches. I emphasized a logo that embodies some feature of its location in New York City, as well as a the overall energy and intensity of the event.
+                    I then generated numerous hand and digital sketches, emphasizing a logo that embodies any features of its location in New York City, as well as a the overall energy and intensity of the event. Once the new logo was fully developed, I applied the design to a number of physical objects and places, including souvenirs and sections of the venue.
                 </p>
-                {/* Put the sketch images here */}
-                <p>
-                </p>
-                {/* Talk about color */}
+                <ImageDisplay 
+                    images={[imports['hand-sketches']]}
+                    forceFullWidth
+                />
+                <ImageDisplay 
+                    images={[imports['digital-sketches']]}
+                    caption="Hand and digital sketches of potential logo concepts."
+                    forceFullWidth
+                />
+                <ImageDisplay
+                    images={[imports['final-concepts']]}
+                    caption="The final three logo designs. I ultimately selected the far right design."
+                    forceFullWidth
+                />
+                {/* Color iterations */}
                 {/* Talk about applications */}
             </Section>
             <Section>
