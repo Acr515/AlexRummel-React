@@ -6,19 +6,23 @@ import './style.scss'
 export default function NavigationBar() {
 
     const [opened, setOpened] = useState(false);
+    
+    const linkClicked = () => {
+        setOpened(false);
+    }
 
     return (
         <nav className={`_NavigationBar ${ opened ? "open" : "" }`}>
             <WidthContainer className="container" verticalPadding={false}>
                 <Link className="title" to="/"><span>Alex Rummel</span></Link>
                 <ul className="link-list">
-                    <li><Link to="/">home</Link></li>
-                    <li><Link to="/portfolio/">portfolio</Link></li>
+                    <li><Link onClick={linkClicked} to="/">home</Link></li>
+                    <li><Link onClick={linkClicked} to="/portfolio/">portfolio</Link></li>
                     <li>
                         { process.env.NODE_ENV == 'production' ? 
-                            <a href="/bin/AlexRummel_Resume.pdf">resume</a>
+                            <a onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf">resume</a>
                         :
-                            <Link to="/bin/AlexRummel_Resume.pdf">resume</Link>
+                            <Link onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf">resume</Link>
                         }
                     </li>
                 </ul>
