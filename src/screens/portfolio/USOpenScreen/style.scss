@@ -1,0 +1,20 @@
+._USOpenScreen {
+    .split-display {
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        
+        .split-column {
+            flex-grow: 1;
+            height: 100%;
+        }
+
+        img {
+            width: 40%;
+        }
+
+        video {
+            width: 60%;
+        }
+    }
+}

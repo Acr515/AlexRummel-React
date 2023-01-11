@@ -14,7 +14,13 @@ export default function NavigationBar() {
                 <ul className="link-list">
                     <li><Link to="/">home</Link></li>
                     <li><Link to="/portfolio/">portfolio</Link></li>
-                    <li><Link to="/bin/AlexRummel_Resume.pdf">resume</Link></li>
+                    <li>
+                        { process.env.NODE_ENV == 'production' ? 
+                            <a href="/bin/AlexRummel_Resume.pdf">resume</a>
+                        :
+                            <Link to="/bin/AlexRummel_Resume.pdf">resume</Link>
+                        }
+                    </li>
                 </ul>
                 <div className="burger-button" onClick={ () => setOpened(!opened) }>
                     <div className="line line-1"></div>

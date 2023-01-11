@@ -8,6 +8,7 @@ import PortfolioEntries from 'config/PortfolioEntries';
 import WideImage from 'projects/USOpen/assets/ashe-exterior.jpg';
 import NarrowImage from 'projects/USOpen/assets/nadal-tall.png';
 import imports from 'projects/USOpen/imports';
+import './style.scss';
 
 /**
  * The portfolio page for the US Open rebrand.
@@ -50,11 +51,46 @@ export default function USOpenScreen() {
                     caption="The final three logo designs. I ultimately selected the far right design."
                     forceFullWidth
                 />
-                {/* Color iterations */}
-                {/* Talk about applications */}
+                <ImageDisplay
+                    images={[imports['color-concepts']]}
+                    caption="Possible color combinations and the final color selections."
+                    forceFullWidth
+                />
             </Section>
+            <SectionDivider />
             <Section>
                 <h2>Results</h2>
+                <p>With my completed logo in hand, I implemented it into various real-life applications, focusing on merchandise and the overall venue experience, and culminating in a <a href="/bin/AlexRummel_USOpen_BrandProposal.pdf">comprehensive brand book</a>.</p>
+                <ImageDisplay
+                    images={[imports['ashe-logo-large'], imports['ashe-logo-small']]}
+                    forceFullWidth
+                />
+                <ImageDisplay
+                    images={[imports['arthur-ashe-process']]}
+                    forceFullWidth
+                />
+                <ImageDisplay
+                    images={[imports['scoreboards']]}
+                    forceFullWidth
+                />
+                <div className="split-display">
+                    <img src={imports['logo-animation']} className="split-column" />
+                    <video controls className="split-column">
+                        <source type="video/mp4" src={imports['logo-animation-video']} />
+                    </video>
+                </div>
+                <ImageDisplay
+                    images={[imports['merchandise-1']]}
+                    forceFullWidth
+                />
+                <ImageDisplay
+                    images={[imports['merchandise-2']]}
+                    forceFullWidth
+                />
+                <ImageDisplay
+                    images={[imports['tennis-balls']]}
+                    forceFullWidth
+                />
             </Section>
         </div>
     )
