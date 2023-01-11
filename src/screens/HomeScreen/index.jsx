@@ -19,7 +19,7 @@ export default function HomeScreen() {
 					<h1>I&apos;m Alex!</h1>
 					<p>
 						I am currently a student at the University of Cincinnati majoring in Communication Design and minoring in Computer Science. 
-                        <span className="warning"> Please pardon the dust! This site is actively being developed and is still missing information in some places.</span>
+                        { /*<span className="warning"> Please pardon the dust! This site is actively being developed and is still missing information in some places.</span>*/ }
 					</p>
 				</div>
 				<div 

@@ -16,6 +16,7 @@ const imports = {
     'merchandise-2': require('./assets/merchandise-2.jpg'),
     'scoreboards': require('./assets/scoreboards.jpg'),
     'tennis-balls': require('./assets/tennis-balls.jpg'),
+    'old-logo': require('./assets/old-logo.svg'),
 };
 
 export default imports;

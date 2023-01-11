@@ -27,6 +27,12 @@ export default function USOpenScreen() {
 				<p>
 					I was tasked with selecting any event and completely redesigning its entire brand. I chose the US Open tennis tournament as I saw significant opportunities to improve upon their recent rebranding attempt.
 				</p>
+                <ImageDisplay 
+                    images={[imports['old-logo']]}
+                    maxWidth={200}
+                    caption="The current US Open logo."
+                    captionMargin={32}
+                />
             </Section>
             <SectionDivider />
             <Section>
@@ -43,17 +49,14 @@ export default function USOpenScreen() {
                 />
                 <ImageDisplay 
                     images={[imports['digital-sketches']]}
-                    caption="Hand and digital sketches of potential logo concepts."
                     forceFullWidth
                 />
                 <ImageDisplay
                     images={[imports['final-concepts']]}
-                    caption="The final three logo designs. I ultimately selected the far right design."
                     forceFullWidth
                 />
                 <ImageDisplay
                     images={[imports['color-concepts']]}
-                    caption="Possible color combinations and the final color selections."
                     forceFullWidth
                 />
             </Section>
@@ -79,14 +82,6 @@ export default function USOpenScreen() {
                         <source type="video/mp4" src={imports['logo-animation-video']} />
                     </video>
                 </div>
-                <ImageDisplay
-                    images={[imports['merchandise-1']]}
-                    forceFullWidth
-                />
-                <ImageDisplay
-                    images={[imports['merchandise-2']]}
-                    forceFullWidth
-                />
                 <ImageDisplay
                     images={[imports['tennis-balls']]}
                     forceFullWidth
