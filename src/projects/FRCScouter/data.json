@@ -1,0 +1,26 @@
+{
+	"urlName": "frc-scouter",
+	"date": "2022-02-01",
+	"title": "Robotics Scouting Software",
+	"tagline": "I created an open-source, cross-platform web-app for FIRST Robotics Competition scouting.",
+	"featured": true,
+	"tags": [
+		"recreational",
+		"software"
+	],
+	"specs": {
+		"dates": "Jan. 2022–Apr. 2022",
+		"toolsUsed": [
+            "React.js, Adobe Illustrator",
+            "Git version control"
+        ],
+		"linkNames": [
+			"Source code",
+			"Downloadable release"
+		],
+		"linkLocations": [
+			"https://github.com/Acr515/FortyEight",
+			"https://github.com/Acr515/FortyEight/releases"
+		]
+	}
+}

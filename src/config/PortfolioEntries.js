@@ -1,6 +1,7 @@
 import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
+import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
 import NoCartoonsScreen from 'screens/portfolio/NoCartoonsScreen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
@@ -57,6 +58,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/USOpen/small-cover.png')
         },
         component: USOpenScreen
+    },
+    {
+        data: require('projects/FRCScouter/data.json'),
+        images: {
+            featuredImage: require('projects/FRCScouter/featured-cover.png'),
+            thumbnailImage: require('projects/FRCScouter/small-cover.png')
+        },
+        component: FRCScouterScreen
     }
 ]);
 
