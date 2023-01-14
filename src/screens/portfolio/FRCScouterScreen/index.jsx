@@ -22,14 +22,14 @@ export default function FRCScouterScreen() {
                     I built a public web-app to be used to record data on robots at FIRST Robotics Competition events. The app is branded as FortyEight, named after the first digits of my former team&apos;s team number, but it is available for anyone to view and download. The app is also open-source and viewable by anyone through GitHub.
 				</p>
                 <p>
-                    Each FRC match joins 3 schools on an alliance against 3 other schools. Roughly 12 qualification matches are played by each school with randomly generated teammates and opponents for each match. Qualification matches are followed by elimination rounds, where the top 8 teams pick 2 robots each from the remaining field to compete with for the remainder of the tournament.
+                    Each FRC match joins 3 schools on an alliance against 3 other schools. Roughly 12 qualification matches are played by each school at a 40+ school event with randomly generated teammates and opponents for each match. Qualification matches are followed by elimination rounds, where the top 8 teams pick 2 robots each from the remaining field to compete with for the remainder of the tournament.
                 </p>
                 <p>
-                    Because each event hosts between 30 and 60 teams who can play with or against your team at any given time, keeping records on their performance is vital. Some of the major constraints and considerations of a scouting application are:
+                    Some of the major constraints and considerations of designing the scouting application were:
                 </p>
                 <ul>
-                    <li>Due to the volume of people at an event using wi-fi or cellular connections, the solution could not require internet in order to share and compile data.</li>
-                    <li>High school students each have a Chromebook, which is the only device constant. The solution needed to be functional on basic devices like these.</li>
+                    <li>Due to the volume of people at an event using wi-fi or cellular connections, the solution could not require internet to share and compile data.</li>
+                    <li>The solution needed to be functional on basic devices such as the Chromebooks that each high schooler is provided.</li>
                     <li>Nearly all students, even those with little to no prior experience in the program, are asked to help with scouting, so the interface needed to be easy to understand.</li>
                     <li>The students operating the robot on the field would need an easy and quick way to parse out and apply findings from the solution in a fast-paced, stressful environment.</li>
                 </ul>

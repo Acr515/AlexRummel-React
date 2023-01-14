@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import ImageViewerContext from 'context/ImageViewerContext';
+import MagnifyingGlass from 'assets/images/icons/magnifying-glass.png';
 import './style.scss';
 
 /**
@@ -21,18 +22,30 @@ export default function ImageDisplay({ className = "", style, images, caption = 
             <div className={`image-container`}>
             {
                 images.map((img, ind) => (
-                    <img 
-                        className={`image ${showBorders && " bordered"} ${forceFullWidth && " full-width"}`}
-                        style={{ ...maxWidth != null ? { maxWidth } : {} }}
-                        src={img}
+                    <div 
+                        className={`single-image-container ${clickToExpand ? "expandable" : ""}`}
                         key={ind}
                         onClick={clickToExpand ? () => imageViewer.openImage(img) : null}
-                    />
+                    >
+                        <img 
+                            className={`image ${showBorders && " bordered"} ${forceFullWidth && " full-width"}`}
+                            style={{ ...maxWidth != null ? { maxWidth } : {} }}
+                            src={img}
+                        />
+                        { clickToExpand && 
+                            <div className="hover-overlay">
+                                <img 
+                                    src={MagnifyingGlass}
+                                    className="magnifying-glass"
+                                />
+                            </div>
+                        }
+                    </div>
                 ))
             }
             </div>
             { caption != null && <div className="image-caption" style={{ marginTop: captionMargin || "unset" }}>
-                {caption}
+                {clickToExpand && <span className="bold-action">Click {images.length == 1 ? "the" : "an"} image to expand it. </span>}{caption}
             </div> }
         </div>
     )

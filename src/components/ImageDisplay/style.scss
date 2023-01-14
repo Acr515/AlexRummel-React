@@ -8,19 +8,58 @@
         display: flex;
         gap: 8px;
 
-        .image {
-            flex: 1 1 auto;
+        .single-image-container {
+            position: relative;
             margin: 0 auto;
-            width: 100%;
-            min-width: 0;
-            max-width: 570px;
 
-            &.full-width {
-                max-width: unset;
+            .image {
+                width: 100%;
+                min-width: 0;
+                max-width: 570px;
+                display: block;
+    
+                &.full-width {
+                    max-width: unset;
+                }
+    
+                &.bordered {
+                    box-sizing: border-box;
+                    border: 2px solid #bbb;
+                }
             }
 
-            &.bordered {
-                border: 2px solid #bbb;
+            .hover-overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, .5);
+                opacity: 0;
+                transition: opacity .2s;
+
+                .magnifying-glass {
+                    position: absolute;
+                    top: calc(50% + 12px);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    filter: invert(100%);
+                    width: 40px;
+                    height: 40px;
+                    transition: top .2s;
+                }
+            }
+
+            &.expandable:hover {
+                cursor: pointer; 
+
+                .hover-overlay {
+                    opacity: 1;
+
+                    .magnifying-glass {
+                        top: 50%;
+                    }
+                }
             }
         }
     }
@@ -34,5 +73,9 @@
         width: 100%;
         max-width: 500px;
         margin: 12px auto 0;
+
+        .bold-action {
+            font-weight: 600;
+        }
     }
 }
