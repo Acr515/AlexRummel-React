@@ -23,6 +23,44 @@
         }
     }
 
+    .portfolio-hook {
+        display: flex;
+        align-items: stretch;
+        color: #4aa27c;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 50px 0 25px;
+        background-color: #e5fff2;
+        padding: 14px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        transition: opacity .15s;
+
+        .text-container {
+            flex-grow: 1;
+        }
+
+        .image-container {
+            flex-grow: 0;
+            min-width: 24px;
+            position: relative;
+
+            img {
+                width: 24px;
+                height: 31px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                filter: none;
+                transition: filter .15s;
+            }
+        }
+    }
+    .portfolio-hook:hover {
+        opacity: .7;
+    }
+
     /* Switch to mobile navigation bar */
     @media (max-width: $MOBILE_MQ) {
         .image-section {

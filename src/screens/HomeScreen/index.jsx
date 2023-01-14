@@ -6,6 +6,8 @@ import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
 import PortfolioEntries from 'config/PortfolioEntries';
 import MyPicture from 'assets/images/alex-image.jpg'
 import './style.scss';
+import { Link } from 'react-router-dom';
+import Chevron from 'assets/images/icons/chevron.png';
 
 /**
  * The index page of the website.
@@ -36,6 +38,10 @@ export default function HomeScreen() {
                         key={entry.urlName}
                     />))
                 }
+                <Link to="/portfolio" className="portfolio-hook">
+                    <div className="text-container">Check out more of my work here!</div>
+					<div className="image-container"><img src={Chevron} /></div>
+                </Link>
             </Section>
             <SectionDivider />
             <Section>
