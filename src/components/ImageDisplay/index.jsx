@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ImageViewerContext from 'context/ImageViewerContext';
 import './style.scss';
 
 /**
@@ -9,8 +10,12 @@ import './style.scss';
  * @param {number} captionMargin Overrides the default margin between the image area and the caption
  * @param {boolean} showBorders Defaults to false. When true, shows a gray border around each image
  * @param {boolean} forceFullWidth Defaults to false. When true, ensures the image inside stretches across the entire page
+ * @param {boolean} clickToExpand Defaults to false. When true, images can be clicked and zoomed into
 */
-export default function ImageDisplay({ className = "", style, images, caption = null, maxWidth = null, captionMargin, showBorders = false, forceFullWidth = false }) {
+export default function ImageDisplay({ className = "", style, images, caption = null, maxWidth = null, captionMargin, showBorders = false, forceFullWidth = false, clickToExpand = false }) {
+    
+    const imageViewer = useContext(ImageViewerContext);
+    
     return (
         <div className={`_ImageDisplay ${className}`} style={style}>
             <div className={`image-container`}>
@@ -18,9 +23,10 @@ export default function ImageDisplay({ className = "", style, images, caption = 
                 images.map((img, ind) => (
                     <img 
                         className={`image ${showBorders && " bordered"} ${forceFullWidth && " full-width"}`}
-                        style={ maxWidth != null ? { maxWidth } : {}}
+                        style={{ ...maxWidth != null ? { maxWidth } : {} }}
                         src={img}
                         key={ind}
+                        onClick={clickToExpand ? () => imageViewer.openImage(img) : null}
                     />
                 ))
             }
