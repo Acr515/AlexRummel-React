@@ -1,5 +1,6 @@
 import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
+import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
@@ -66,6 +67,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/FRCScouter/small-cover.png')
         },
         component: FRCScouterScreen
+    },
+    {
+        data: require('projects/CraigslistRedesign/data.json'),
+        images: {
+            featuredImage: require('projects/CraigslistRedesign/featured-cover.jpg'),
+            thumbnailImage: require('projects/CraigslistRedesign/small-cover.jpg')
+        },
+        component: CraigslistRedesignScreen
     }
 ]);
 
