@@ -4,7 +4,6 @@ import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
-import NoCartoonsScreen from 'screens/portfolio/NoCartoonsScreen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
 import USOpenScreen from 'screens/portfolio/USOpenScreen';
 
@@ -43,14 +42,6 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/DigitalAnimation/small-cover.png')
         },
         component: DigitalAnimationScreen
-    },
-    {
-        data: require('projects/NoCartoons/data.json'),
-        images: {
-            featuredImage: require('projects/NoCartoons/featured-cover.png'),
-            thumbnailImage: require('projects/NoCartoons/small-cover.png')
-        },
-        component: NoCartoonsScreen
     },
     {
         data: require('projects/USOpen/data.json'),
