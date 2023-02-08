@@ -3,8 +3,8 @@ import Section from 'components/Section';
 import SectionDivider from 'components/SectionDivider';
 import PortfolioItem from 'components/PortfolioItem';
 import PortfolioEntries from 'config/PortfolioEntries';
-import './style.scss';
 import MetaTags from 'components/MetaTags';
+import './style.scss';
 
 /**
  * The screen that shows all portfolio entries.

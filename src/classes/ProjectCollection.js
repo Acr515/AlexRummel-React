@@ -30,6 +30,18 @@ export default class ProjectCollection {
     }
 
     /**
+     * Retrieves only projects that are NOT featured.
+     * @returns An array of `PortfolioEntry` instances
+     */
+    getNonFeaturedProjects() {
+        let featuredProjects = [];
+        this.projects.forEach(entry => {
+            if (!entry.featured) featuredProjects.push(entry);
+        });
+        return this.sortProjects(featuredProjects);
+    }
+
+    /**
      * Retrieves a project using its `urlName` property.
      * @param {string} urlName The urlName property found in the project's data.json file
      * @returns A `PortfolioEntry` instance if found, null if there are no matches

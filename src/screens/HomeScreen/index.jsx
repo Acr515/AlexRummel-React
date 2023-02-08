@@ -1,13 +1,12 @@
 import React from 'react';
 import Section from 'components/Section';
+import PortfolioItem from 'components/PortfolioItem';
+import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
 import SectionDivider from 'components/SectionDivider';
 import MetaTags from 'components/MetaTags';
-import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
 import PortfolioEntries from 'config/PortfolioEntries';
 import MyPicture from 'assets/images/alex-image.jpg'
 import './style.scss';
-import { Link } from 'react-router-dom';
-import Chevron from 'assets/images/icons/chevron.png';
 
 /**
  * The index page of the website.
@@ -15,7 +14,7 @@ import Chevron from 'assets/images/icons/chevron.png';
 export default function HomeScreen() {
     return (
         <div className="_HomeScreen _Screen">
-            <MetaTags />
+            <MetaTags title="Portfolio" />
             <Section className="image-section">
                 <div className="image-text">
 					<h1>I&apos;m Alex!</h1>
@@ -38,20 +37,18 @@ export default function HomeScreen() {
                         key={entry.urlName}
                     />))
                 }
-                <Link to="/portfolio" className="portfolio-hook">
-                    <div className="text-container">Check out more of my work here!</div>
-					<div className="image-container"><img src={Chevron} /></div>
-                </Link>
             </Section>
-            <SectionDivider />
             <Section>
-                <h2>About Me</h2>
-				<p>
-					I grew up in South Haven, Michigan and graduated from South Haven High School. I was involved in band, FIRST Robotics, and tennis for all four of my years in high school. During my free-time, I enjoy playing tennis, developing my various programming projects, and spending time with friends and family.
-				</p>
-				<p>
-					I&apos;m always looking for new opportunities! If you think I could be of assistance for your next project, feel free to get in contact with me through my <a href="https://www.linkedin.com/in/alex-rummel/">LinkedIn</a> or my <a href="mailto:rummelac@mail.uc.edu">email</a>.
-				</p>
+                <div className="portfolio-container">
+                    {
+                        PortfolioEntries.sortProjects(PortfolioEntries.getNonFeaturedProjects()).map(entry => (
+                            <PortfolioItem
+                                key={entry.urlName}
+                                entry={entry}
+                            />
+                        ))
+                    }
+                </div>
             </Section>
         </div>
     )
