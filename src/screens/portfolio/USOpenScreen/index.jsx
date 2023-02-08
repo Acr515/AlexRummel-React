@@ -1,6 +1,5 @@
 import React from 'react';
 import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
@@ -23,26 +22,18 @@ export default function USOpenScreen() {
                 narrowImage={NarrowImage}
             />
             <Section>
-                <h2>Introduction</h2>
+                <h2>Development</h2>
 				<p>
 					I was tasked with selecting any event and completely redesigning its entire brand. I chose the US Open tennis tournament as I saw significant opportunities to improve upon their recent rebranding attempt.
 				</p>
-                <ImageDisplay 
-                    images={[imports['old-logo']]}
-                    maxWidth={200}
-                    caption="The current US Open logo."
-                    captionMargin={32}
-                />
-            </Section>
-            <SectionDivider />
-            <Section>
-                <h2>Process</h2>
 				<p>
-					I began by researching the US Open, focusing on its history, location, and audience. With that information, I analyzed the current logo, including whether or not it met its design goals.
+					After thorough research of the event, I decided to create a design that would:
 				</p>
-                <p>
-                    I then generated numerous hand and digital sketches, emphasizing a logo that embodies any features of its location in New York City, as well as a the overall energy and intensity of the event. Once the new logo was fully developed, I applied the design to a number of physical objects and places, including souvenirs and sections of the venue.
-                </p>
+                <ul>
+                    <li>Encapsulate the same energy and intensity of the event</li>
+                    <li>Include an implicit connection to some feature of the venue or its host city</li>
+                    <li>Remain accessible to fans, old and new</li>
+                </ul>
                 <ImageDisplay 
                     images={[imports['hand-sketches']]}
                     forceFullWidth
@@ -55,35 +46,37 @@ export default function USOpenScreen() {
                     images={[imports['final-concepts']]}
                     forceFullWidth
                 />
+                <p>
+                    In selecting potential brand colors, I sought a palette that would emulate American colors without being too predictable while keeping with the logo&apos;s fresh, dynamic aesthetic.
+                </p>
                 <ImageDisplay
-                    images={[imports['color-concepts']]}
+                    images={[imports['color-study']]}
                     forceFullWidth
                 />
             </Section>
-            <SectionDivider />
             <Section>
-                <h2>Results</h2>
-                <p>With my completed logo in hand, I implemented it into various real-life applications, focusing on merchandise and the overall venue experience, and culminating in a <a href="/bin/AlexRummel_USOpen_BrandProposal.pdf">comprehensive brand book</a>.</p>
+                <h2>Applications</h2>
+                <h3>Stadium</h3>
+                <p>With my completed logo in hand, I implemented it into various real-life applications, beginning with the stadium graphics.</p>
                 <ImageDisplay
-                    images={[imports['ashe-logo-large'], imports['ashe-logo-small']]}
+                    images={[imports['stadium-graphics']]}
                     forceFullWidth
                 />
+                <h3>Scoreboards</h3>
                 <ImageDisplay
-                    images={[imports['arthur-ashe-process']]}
+                    images={[imports['scoreboard']]}
                     forceFullWidth
                 />
-                <ImageDisplay
-                    images={[imports['scoreboards']]}
-                    forceFullWidth
-                />
+                <h3>Motion</h3>
                 <div className="split-display">
                     <img src={imports['logo-animation']} className="split-column" />
                     <video controls className="split-column">
                         <source type="video/mp4" src={imports['logo-animation-video']} />
                     </video>
                 </div>
+                <h3>Merchandise</h3>
                 <ImageDisplay
-                    images={[imports['tennis-balls']]}
+                    images={[imports['merchandise']]}
                     forceFullWidth
                 />
             </Section>
