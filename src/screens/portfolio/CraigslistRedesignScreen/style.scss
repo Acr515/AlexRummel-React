@@ -1,0 +1,25 @@
+._CraigslistRedesignScreen {
+    .wide-column-area {
+        display: flex;
+        width: 100%;
+
+        .image-column {
+            width: 60%;
+        }
+        .text-column {
+            box-sizing: border-box;
+            padding-right: 24px;
+            width: 40%;
+        }
+        .column {
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+    }
+
+    .result-background {
+        padding-top: 64px;
+        padding-bottom: 32px;
+        background-color: #f2e6e7;
+    }
+}

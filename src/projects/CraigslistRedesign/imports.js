@@ -2,8 +2,8 @@
  * A dictionary of file names in the assets folder, minus the file extension. Used to avoid polluting the screen .jsx file for a portfolio entry.
  */
 const imports = {
-    "usability-data-1": require('./assets/usability-data-1.jpg'),
-    "usability-data-2": require('./assets/usability-data-2.jpg'),
+    "user-flow-a": require('./assets/user-flow-a.png'),
+    "user-flow-b": require('./assets/user-flow-b.png'),
     "sketch-1": require('./assets/sketch-1.jpg'),
     "sketch-2": require('./assets/sketch-2.jpg'),
     "sketch-3": require('./assets/sketch-3.jpg'),
@@ -12,8 +12,15 @@ const imports = {
     "sketch-6": require('./assets/sketch-6.jpg'),
     "wireframe": require('./assets/wireframe.jpg'),
     "style-guide": require('./assets/style-guide.png'),
-    "final-results": require('./assets/final-results-white.png'),
-    "button-animations": require('./assets/button-animations.gif')
+    "button-animations": require('./assets/button-animations.gif'),
+    "create-details": require('./assets/prototype/create-details.png'),
+    "create-draft": require('./assets/prototype/create-draft.png'),
+    "create-images": require('./assets/prototype/create-images.png'),
+    "create-landing": require('./assets/prototype/create-landing.png'),
+    "home-page-large": require('./assets/prototype/home-page-large.png'),
+    "listing-details": require('./assets/prototype/listing-details.png'),
+    "listing-gallery": require('./assets/prototype/listing-gallery.png'),
+    "listing-map": require('./assets/prototype/listing-map.png')
 };
 
 export default imports;

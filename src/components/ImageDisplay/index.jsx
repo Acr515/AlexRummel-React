@@ -8,18 +8,20 @@ import './style.scss';
  * @param {Array} images An array of `require` statements containing references to images. For right now, avoid using more than 2
  * @param {string} caption A text caption to show beneath the image(s)
  * @param {number} maxWidth Forces a certain maximum width to apply to images
+ * @param {object} innerStyle Style properties to apply to the `img` elements
  * @param {number} captionMargin Overrides the default margin between the image area and the caption
+ * @param {number} gap Defaults to 8. The `flex` gap between multiple images
  * @param {boolean} showBorders Defaults to false. When true, shows a gray border around each image
  * @param {boolean} forceFullWidth Defaults to false. When true, ensures the image inside stretches across the entire page
  * @param {boolean} clickToExpand Defaults to false. When true, images can be clicked and zoomed into
 */
-export default function ImageDisplay({ className = "", style, images, caption = null, maxWidth = null, captionMargin, showBorders = false, forceFullWidth = false, clickToExpand = false }) {
+export default function ImageDisplay({ className = "", style, images, caption = null, gap = 8, innerStyle = {}, maxWidth = null, captionMargin, showBorders = false, forceFullWidth = false, clickToExpand = false }) {
     
     const imageViewer = useContext(ImageViewerContext);
     
     return (
         <div className={`_ImageDisplay ${className}`} style={style}>
-            <div className={`image-container`}>
+            <div className={`image-container`} style={{ gap }}>
             {
                 images.map((img, ind) => (
                     <div 
@@ -28,8 +30,8 @@ export default function ImageDisplay({ className = "", style, images, caption = 
                         onClick={clickToExpand ? () => imageViewer.openImage(img) : null}
                     >
                         <img 
-                            className={`image ${showBorders && " bordered"} ${forceFullWidth && " full-width"}`}
-                            style={{ ...maxWidth != null ? { maxWidth } : {} }}
+                            className={`image ${showBorders ? " bordered" : ""} ${forceFullWidth ? " full-width" : ""}`}
+                            style={{ ...maxWidth != null ? { maxWidth } : {}, ...innerStyle }}
                             src={img}
                         />
                         { clickToExpand && 
