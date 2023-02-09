@@ -3,6 +3,7 @@ import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
 import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
+import KineticVisionScreen from 'screens/portfolio/KineticVisionScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
 import SpencerWebsiteScreen from 'screens/portfolio/SpencerWebsiteScreen';
 import USOpenScreen from 'screens/portfolio/USOpenScreen';
@@ -66,6 +67,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/CraigslistRedesign/small-cover.jpg')
         },
         component: CraigslistRedesignScreen
+    },
+    {
+        data: require('projects/KineticVision/data.json'),
+        images: {
+            featuredImage: require('projects/KineticVision/featured-cover.jpg'),
+            thumbnailImage: require('projects/KineticVision/small-cover.png')
+        },
+        component: KineticVisionScreen
     }
 ]);
 

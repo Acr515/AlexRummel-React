@@ -7,7 +7,7 @@ import MetaTags from 'components/MetaTags';
 import './style.scss';
 
 /**
- * The screen that shows all portfolio entries.
+ * Currently not implemented. A screen that shows all portfolio entries.
  */
 export default function PortfolioScreen() {
     return (

@@ -1,17 +1,24 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import WidthContainer from 'components/WidthContainer';
+import SectionDivider from 'components/SectionDivider';
 import GitHubIcon from 'assets/images/icons/github.png';
 import LinkedInIcon from 'assets/images/icons/linkedin.png';
 import './style.scss';
-import SectionDivider from 'components/SectionDivider';
 
 /**
  * Renders a `SectionDivider` component, followed by the footer, which contains links as well as my email.
  */
 export default function Footer() {
+    
+    const location = useLocation();
+    const dividerHideRoutes = [
+        "/portfolio/craigslist-redesign"
+    ];
+
     return (
         <>
-            <SectionDivider />
+            { !dividerHideRoutes.includes(location.pathname) && <SectionDivider className="footer-divider" /> }
             <footer className="_Footer">
                 <WidthContainer className="container">
                     <div className="icon-row">

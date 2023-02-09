@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import HomeScreen from 'screens/HomeScreen';
-import PortfolioScreen from 'screens/PortfolioScreen';
+import AboutScreen from 'screens/AboutScreen';
 import ErrorScreen from 'screens/ErrorScreen';
 import PortfolioEntries from 'config/PortfolioEntries';
 import 'config/GlobalStyle.scss';
@@ -20,8 +20,12 @@ const router = createBrowserRouter([
                 element: <HomeScreen />
             },
             {
+                path: "about",
+                element: <AboutScreen />
+            },
+            {
                 path: "portfolio",
-                element: <PortfolioScreen />
+                element: <HomeScreen />
             },
             ...PortfolioEntries.projects.map(entry => {
                 return {

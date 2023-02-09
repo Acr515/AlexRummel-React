@@ -1,0 +1,21 @@
+{
+	"urlName": "kinetic-vision",
+	"date": "2022-07-01",
+	"title": "Kinetic Vision Co-op",
+	"tagline": "I worked on the Mobile + AR team as an intern for two terms at Kinetic Vision.",
+	"featured": true,
+	"tags": [
+		"paid",
+		"software"
+	],
+	"specs": {
+		"dates": "Jan. 2022–Dec. 2022",
+		"toolsUsed": [
+            "Swift, RealityKit, Unity, C#",
+            "React.js, JavaScript",
+            "Jira, Bitbucket"
+        ],
+		"linkNames": [],
+		"linkLocations": []
+	}
+}

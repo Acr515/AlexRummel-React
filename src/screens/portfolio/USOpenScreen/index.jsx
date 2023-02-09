@@ -46,26 +46,27 @@ export default function USOpenScreen() {
                     images={[imports['final-concepts']]}
                     forceFullWidth
                 />
-                <p>
-                    In selecting potential brand colors, I sought a palette that would emulate American colors without being too predictable while keeping with the logo&apos;s fresh, dynamic aesthetic.
-                </p>
                 <ImageDisplay
                     images={[imports['color-study']]}
                     forceFullWidth
+                    caption="In selecting potential brand colors, I sought a palette that would emulate American colors without being too predictable while keeping with the logo's fresh, dynamic aesthetic."
+                    captionMargin={20}
                 />
             </Section>
             <Section>
                 <h2>Applications</h2>
+                <p>With my completed logo in hand, I implemented it into various real-life applications, ranging from its presence in the stadium and screen media to merchandising.</p>
                 <h3>Stadium</h3>
-                <p>With my completed logo in hand, I implemented it into various real-life applications, beginning with the stadium graphics.</p>
                 <ImageDisplay
                     images={[imports['stadium-graphics']]}
                     forceFullWidth
+                    className="application-images"
                 />
                 <h3>Scoreboards</h3>
                 <ImageDisplay
                     images={[imports['scoreboard']]}
                     forceFullWidth
+                    className="application-images"
                 />
                 <h3>Motion</h3>
                 <div className="split-display">
@@ -78,6 +79,7 @@ export default function USOpenScreen() {
                 <ImageDisplay
                     images={[imports['merchandise']]}
                     forceFullWidth
+                    className="application-images"
                 />
             </Section>
         </div>

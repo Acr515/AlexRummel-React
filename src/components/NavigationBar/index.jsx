@@ -16,8 +16,8 @@ export default function NavigationBar() {
             <WidthContainer className="container" verticalPadding={false}>
                 <Link className="title" to="/"><span>Alex Rummel</span></Link>
                 <ul className="link-list">
-                    <li><Link onClick={linkClicked} to="/">home</Link></li>
-                    <li><Link onClick={linkClicked} to="/portfolio/">portfolio</Link></li>
+                    <li><Link onClick={linkClicked} to="/">portfolio</Link></li>
+                    <li><Link onClick={linkClicked} to="/about">about</Link></li>
                     <li>
                         { process.env.NODE_ENV == 'production' ? 
                             <a onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf">resume</a>

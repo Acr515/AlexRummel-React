@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
+import WidthContainer from 'components/WidthContainer';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
@@ -9,7 +9,6 @@ import WideImage from 'projects/CraigslistRedesign/small-cover.jpg';
 import NarrowImage from 'projects/CraigslistRedesign/assets/cincinnati.jpg';
 import imports from 'projects/CraigslistRedesign/imports';
 import './style.scss';
-import WidthContainer from 'components/WidthContainer';
 
 /**
  * The portfolio page for the Craigslist Redesign.
@@ -43,42 +42,71 @@ export default function CraigslistRedesignScreen() {
                     forceFullWidth
                 />
             </Section>
-            <SectionDivider />
             <Section>
                 <h2>Concept Development</h2>
                 <p>
                     I began by sketching possible flows while prioritizing the repair of the pain points that were found. I tried to implement image alternatives to Craigslist elements wherever possible to make up for Craigslist&apos;s current stiff, text-heavy communication method.
                 </p>
             </Section>
-            <WidthContainer width={1400}>
+            <WidthContainer width={1300}>
                 <div className="wide-column-area">
-                    <div className="column text-column">
-                        <p>This is where I&apos;ll describe some of the highlights, but I&apos;m just putting placeholder text here for now.</p>
+                    <div className="column text-column left">
+                        <p>
+                            <span className="bold">Carousel for map entries</span> that updates as you click areas of the map while panning it, instead of zooming in the map on click
+                        </p>
+                        <p>
+                            <span className="bold">Image substitutes</span> for home page categories
+                        </p>
+                        <p>
+                            <span className="bold">More prominent link</span> to begin creating a post
+                        </p>
+                        <p>
+                            <span className="bold">Simpler, more legible area</span> for filtering posts
+                        </p>
+                        <p>
+                            <span className="bold">Progress indicator</span> during post creation
+                        </p>
                     </div>
                     <div className="column image-column">
                         <ImageDisplay
                             images={[imports['sketch-1'], imports['sketch-2']]}
+                            className="sketch-list"
                         />
                         <ImageDisplay
                             images={[imports['sketch-3'], imports['sketch-4']]}
+                            className="sketch-list"
                         />
                         <ImageDisplay
                             images={[imports['sketch-5'], imports['sketch-6']]}
+                            className="sketch-list"
                         />
                     </div>
                 </div>
             </WidthContainer>
+            <WidthContainer width={1300}>
+                <div className="wide-column-area">
+                    <div className="column image-column">
+                        <ImageDisplay
+                            images={[imports['wireframe']]}
+                            forceFullWidth
+                        />
+                    </div>
+                    <div className="column text-column right">
+                        <p>
+                            This basic wireframe created in Adobe XD demonstrates some of the concepts illustrated in sketches. I tried to maintain a similar visual style to the current Craigslist website in order to make it comparable.
+                        </p>
+                    </div>
+                </div>
+            </WidthContainer>
             <Section>
-                <ImageDisplay
-                    images={[imports['wireframe']]}
-                    forceFullWidth
-                />
+                <h2>UI Style</h2>
                 <p>
                     The basis of the new visual language would be to make the site feel more warm and inviting. I employed the use of a more vibrant base color, a rounder typeface, and bouncy interaction animations to do so.
                 </p>
                 <ImageDisplay
                     images={[imports['style-guide']]}
                     forceFullWidth
+                    maxWidth={700}
                 />
                 <ImageDisplay
                     images={[imports['button-animations']]}

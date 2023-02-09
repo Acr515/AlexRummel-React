@@ -10,7 +10,7 @@ const imports = {
     "sketch-4": require('./assets/sketch-4.jpg'),
     "sketch-5": require('./assets/sketch-5.jpg'),
     "sketch-6": require('./assets/sketch-6.jpg'),
-    "wireframe": require('./assets/wireframe.jpg'),
+    "wireframe": require('./assets/wireframe.png'),
     "style-guide": require('./assets/style-guide.png'),
     "button-animations": require('./assets/button-animations.gif'),
     "create-details": require('./assets/prototype/create-details.png'),
