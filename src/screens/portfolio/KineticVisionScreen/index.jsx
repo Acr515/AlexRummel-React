@@ -89,6 +89,7 @@ export default function KineticVisionScreen() {
                     </p>
                     <ImageDisplay
                         images={[imports['interns']]}
+                        maxWidth={700}
                     />
                 </Section>
             </div>

@@ -85,13 +85,18 @@ export default function CraigslistRedesignScreen() {
             </WidthContainer>
             <WidthContainer width={1300}>
                 <div className="wide-column-area">
+                    <div className="column text-column right mobile">
+                        <p>
+                            This basic wireframe created in Adobe XD demonstrates some of the concepts illustrated in sketches. I tried to maintain a similar visual style to the current Craigslist website in order to make it comparable.
+                        </p>
+                    </div>
                     <div className="column image-column">
                         <ImageDisplay
                             images={[imports['wireframe']]}
                             forceFullWidth
                         />
                     </div>
-                    <div className="column text-column right">
+                    <div className="column text-column right desktop">
                         <p>
                             This basic wireframe created in Adobe XD demonstrates some of the concepts illustrated in sketches. I tried to maintain a similar visual style to the current Craigslist website in order to make it comparable.
                         </p>

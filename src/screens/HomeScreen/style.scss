@@ -25,7 +25,8 @@
 
     .portfolio-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        flex-flow: wrap;
     }
 
     /* Switch to mobile navigation bar */
