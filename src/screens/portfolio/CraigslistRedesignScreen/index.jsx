@@ -7,6 +7,7 @@ import PortfolioEntries from 'config/PortfolioEntries';
 
 import WideImage from 'projects/CraigslistRedesign/small-cover.jpg';
 import NarrowImage from 'projects/CraigslistRedesign/assets/cincinnati.jpg';
+import Chevron from 'assets/images/icons/chevron.png';
 import imports from 'projects/CraigslistRedesign/imports';
 import './style.scss';
 
@@ -25,14 +26,8 @@ export default function CraigslistRedesignScreen() {
             <Section>
                 <h2>User Testing</h2>
                 <p>
-					To assess Craigslist&apos;s problem areas, two users were asked to search for a home using the built-in map, then create a post. The findings revealed that:
+					To assess Craigslist&apos;s problem areas, two users were asked to search for a home using the built-in map, then create a post. The findings revealed a series of pain points, which became the basis of the redesign.
 				</p>
-                <ul>
-                    <li>The button used to post was not immediately obvious</li>
-                    <li>There was a lack of confidence in the process of creating a post</li>
-                    <li>The map feature was obtuse and frustrating to use</li>
-                    <li>The categories on the home page were difficult to parse</li>
-                </ul>
                 <ImageDisplay
                     images={[imports['user-flow-a']]}
                     forceFullWidth
@@ -41,6 +36,33 @@ export default function CraigslistRedesignScreen() {
                     images={[imports['user-flow-b']]}
                     forceFullWidth
                 />
+                <div className="redesign-grid">
+                    <div className="row">
+                        <div className="cell header">Pain Points</div>
+                        <div className="arrow" />
+                        <div className="cell header">Design Objectives</div>
+                    </div>
+                    <div className="row">
+                        <div className="cell">The categories on the home page were difficult to parse</div>
+                        <img className="arrow" src={Chevron} />
+                        <div className="cell bold">De-clutter the home page and make it more approachable without overwhelming users with links</div>
+                    </div>
+                    <div className="row">
+                        <div className="cell">The map feature was obtuse and frustrating to use, requiring several repetitive interactions</div>
+                        <img className="arrow" src={Chevron} />
+                        <div className="cell bold">Find a way to group properties/avoid clutter on the map and reduce the number of clicks it takes to begin viewing results</div>
+                    </div>
+                    <div className="row">
+                        <div className="cell">The button used to post was not immediately obvious</div>
+                        <img className="arrow" src={Chevron} />
+                        <div className="cell bold">Raise the button within the visual hierarchy</div>
+                    </div>
+                    <div className="row">
+                        <div className="cell">Lack of confidence in the process of creating a post</div>
+                        <img className="arrow" src={Chevron} />
+                        <div className="cell bold">Make user confident and aware of their status while creating the post, ensuring clarity of where they are in the process</div>
+                    </div>
+                </div>
             </Section>
             <Section>
                 <h2>Concept Development</h2>
