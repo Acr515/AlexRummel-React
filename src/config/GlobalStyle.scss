@@ -2,11 +2,15 @@ html,
 body {
     padding: 0;
     margin: 0;
+    background-color: $BACKGROUND;
+    position: relative;
+    z-index: -100;
 }
 
 body,
 button {
-    font-family: 'proxima-nova', sans-serif;
+    font-family: 'source-sans-pro', sans-serif;
+    color: $GREEN_TEXT;
     padding: 0;
 	margin: 0;
 	font-weight: 300;
@@ -21,13 +25,17 @@ ul {
 
 a {
     text-decoration: none;
-    color: #4aa27c;
+    color: $GREEN;
     font-weight: 500;
     transition: color .15s;
 }
 
 a:hover {
-    color: #89c7ac;
+    color: $GREEN_HI;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'input-sans', sans-serif;
 }
 
 h1 {

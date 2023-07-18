@@ -15,7 +15,7 @@ export default function MetaTags({ title = "Alex Rummel", description, titlePref
         <Helmet>
             <title>{`${titlePrefix ? "Alex Rummel: " : ""}${title}`}</title>
             <meta name="description" content={description || "My name is Alex! I'm majoring in Communication Design and minoring in Computer Science at the University of Cincinnati."} />
-            <link rel="stylesheet" href="https://use.typekit.net/ngj6bam.css" />
+            <link rel="stylesheet" href="https://use.typekit.net/ytl6msw.css" />
             <meta name="viewport" content="width=device-width, initial-scale=.8" />
         </Helmet>
     )

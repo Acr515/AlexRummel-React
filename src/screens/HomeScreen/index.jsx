@@ -1,47 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Section from 'components/Section';
 import PortfolioItem from 'components/PortfolioItem';
-import FeaturedPortfolioItem from 'components/FeaturedPortfolioItem';
-import SectionDivider from 'components/SectionDivider';
 import MetaTags from 'components/MetaTags';
 import PortfolioEntries from 'config/PortfolioEntries';
-import MyPicture from 'assets/images/alex-image.jpg'
+import BackgroundVideo from 'assets/videos/home-animation.mp4'
 import './style.scss';
 
 /**
  * The index page of the website.
  */
 export default function HomeScreen() {
+    
+    // Scrolling change functions
+    const getDescriptionOpacity = (y) => y < 110 ? 1 : Math.max(0, 1 - ((y - 110) * .01));
+    const getBgOffset = (y) => y * .25;
+
+    // Scrolling change definitions
+    const [descriptionOpacity, setDescriptionOpacity] = useState(getDescriptionOpacity(window.scrollY));
+    const [bgOffset, setBgOffset] = useState(getBgOffset(window.scrollY));
+
+    // Scrolling change listeners
+    useEffect(() => {
+        // Setters
+        const onScroll = () => {
+            setDescriptionOpacity(getDescriptionOpacity(window.scrollY));
+            setBgOffset(getBgOffset(window.scrollY));
+        }
+
+        // Clean up code
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
     return (
         <div className="_HomeScreen _Screen">
             <MetaTags title="Portfolio" />
-            <Section className="image-section">
-                <div className="image-text">
-					<h1>I&apos;m Alex!</h1>
-					<p>
-						I am currently a student at the University of Cincinnati majoring in Communication Design and minoring in Computer Science. 
-                        { /*<span className="warning"> Please pardon the dust! This site is actively being developed and is still missing information in some places.</span>*/ }
-					</p>
+            <div 
+                className="background-video"
+                style={{ marginTop: bgOffset }}
+            >
+                <video className="video-element" loop autoPlay muted>
+                    <source src={BackgroundVideo} type="video/mp4" />
+                </video>
+            </div>
+            <Section className="heading-section" style={{ opacity: descriptionOpacity }}>
+                <div className="name">
+					<h1>Alex Rummel</h1>
 				</div>
-				<div 
-                    className="image-round"
-                    style={{ backgroundImage: `url(${MyPicture})` }}
-                ></div>
-            </Section>
-            <SectionDivider />
-            <Section>
-                <h2>Featured Work</h2>
-                {
-                    PortfolioEntries.getFeaturedProjects().map(entry => (<FeaturedPortfolioItem 
-                        entry={entry}
-                        key={entry.urlName}
-                    />))
-                }
+				<div className="description">
+                    I&apos;m a designer and developer specializing in <span className="highlight">UI/UX design</span> and <span className="highlight">front-end software programming.</span>
+                </div>
             </Section>
             <Section>
                 <div className="portfolio-container">
                     {
-                        PortfolioEntries.sortProjects(PortfolioEntries.getNonFeaturedProjects()).map(entry => (
+                        PortfolioEntries.sortProjects(PortfolioEntries.getFeaturedProjects()).map(entry => (
                             <PortfolioItem
                                 key={entry.urlName}
                                 entry={entry}

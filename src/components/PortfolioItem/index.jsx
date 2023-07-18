@@ -15,7 +15,10 @@ export default function PortfolioItem({ entry }) {
                 image={entry.thumbnailImage}
                 to={entry.getUrl()}
             />
-            <h3><Link to={entry.getUrl()}>{entry.title}</Link></h3>
+            <div className="title-area">
+                <h3><Link to={entry.getUrl()}>{entry.title}</Link></h3>
+                <div className="year">20XX</div>
+            </div>
         </div>
     )
 }
