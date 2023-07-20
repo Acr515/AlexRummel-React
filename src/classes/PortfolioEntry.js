@@ -21,6 +21,7 @@ export default class PortfolioEntry {
         this.urlName = data.urlName;
         this.title = data.title;
         this.date = data.date;
+        this.sortingOrder = data.sortingOrder || data.date;
         this.tagline = data.tagline;
         this.featured = data.featured;
         this.tags = data.tags;
@@ -44,7 +45,15 @@ export default class PortfolioEntry {
      * Gets the relative URL for this portfolio entry. Used mainly by index.js to establish route names.
      * @returns A string URL
      */
-     getRelativeUrl() {
+    getRelativeUrl() {
         return `portfolio/${this.urlName}`;
+    }
+
+    /**
+     * Gets the year the project was made.
+     * @returns The year of the project
+     */
+    getYear() {
+        return new Date(this.date).getFullYear();
     }
 }

@@ -63,6 +63,6 @@ export default class ProjectCollection {
      * @returns A sorted array of portfolio entries
      */
     sortProjects(projects = this.projects) {
-        return projects.sort((a, b) => new Date(b.date) - new Date(a.date));
+        return projects.sort((a, b) => new Date(b.sortingOrder) - new Date(a.sortingOrder));
     }
 }

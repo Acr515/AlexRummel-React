@@ -17,7 +17,7 @@ export default function PortfolioItem({ entry }) {
             />
             <div className="title-area">
                 <h3><Link to={entry.getUrl()}>{entry.title}</Link></h3>
-                <div className="year">20XX</div>
+                <div className="year">{entry.getYear()}</div>
             </div>
         </div>
     )
