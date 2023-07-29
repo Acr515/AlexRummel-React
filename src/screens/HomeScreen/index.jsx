@@ -55,7 +55,7 @@ export default function HomeScreen() {
             <Section>
                 <div className="portfolio-container">
                     {
-                        PortfolioEntries.sortProjects(PortfolioEntries.getFeaturedProjects()).map(entry => (
+                        PortfolioEntries.sortProjects().map(entry => (
                             <PortfolioItem
                                 key={entry.urlName}
                                 entry={entry}

@@ -4,8 +4,7 @@ import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 
-import WideImage from 'projects/USOpen/assets/ashe-exterior.jpg';
-import NarrowImage from 'projects/USOpen/assets/nadal-tall.png';
+import Header from 'projects/USOpen/header.png';
 import imports from 'projects/USOpen/imports';
 import './style.scss';
 
@@ -17,9 +16,7 @@ export default function USOpenScreen() {
         <div className="_USOpenScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("us-open")}
-                flipLargeImages={true}
-                wideImage={WideImage}
-                narrowImage={NarrowImage}
+                wideImage={Header}
             />
             <Section>
                 <h2>Development</h2>

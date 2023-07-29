@@ -1,92 +1,49 @@
 ._PortfolioHeader {
-    .banner-image {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .info-section {
-        width: 100%;
-        padding: 0 10%;
-        box-sizing: border-box;
-
-        .row {
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-
-            span {
-                display: inline-block;
-                width: 100%;
-            }
-
-            .cat {
-                font-weight: 500;
-                flex-shrink: 1.5;
-            }
-
-            .val {
-                margin-left: auto;
-                text-align: right;
-            }
-        }
-
-        .info-line {
-            display: block;
-        }
-    }
-
-    .large-image-group {
-        display: flex;
-        margin: 50px 0 15px;
-
-        .large-image-column {
-            display: flex;
-            flex-direction: column;
-            height: 75vh;
-            width: 100%;
-        }
-
-        .large-image-column.row {
-            display: none;
-            flex-direction: row;
-        }
-
-        .large-image-column.narrow {
-            flex-basis: 35%;
-            min-width: 200px;
-        }
+    .heading-section {
+        position: relative;
 
         .large-image {
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            width: calc(100% - 16px);
-            height: 100%;
-            margin: 8px;
+            width: 100%;
+            min-height: 400px;
+            max-height: 640px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .heading-content {
+            position: absolute;
+            display: flex;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 70%;
+            color: #fff;
+
+            ._WidthContainer {
+                height: auto;
+                margin-top: auto;
+                margin-bottom: 16px;
+
+                .tagline {
+                    padding: 8px 0 8px 8px;
+                    border-left: 2px solid #fff;
+                    color: #fff;
+                    max-width: 300px;
+                    margin: 35px 10% 0 auto;
+                }
+            }
         }
     }
 
-    /* Change margin-busting headers */
-    @media (max-width: 900px) {
-        .large-image-group {
-            flex-direction: column;
-            height: 80vh;
+    .specifications h3 {
+        color: $DARK_TEXT;
+        text-transform: uppercase;
+        margin: 8px 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
 
-            .large-image-column {
-                height: 100%;
-                flex-direction: row;
-            }
-
-            .large-image-column.narrow {
-                display: none;
-            }
-
-            .large-image-column.row {
-                display: flex;
-                margin-top: 16px;
-                margin-bottom: 16px;
-            }
-        }
+    .specifications h3.date {
+        font-weight: 700;
     }
 }

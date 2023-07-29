@@ -32,6 +32,7 @@
         "no-extra-semi": 1,
         "no-unreachable": 1,
         "no-empty": 1,
-        "import-quotes/import-quotes": [1, "single"]
+        "import-quotes/import-quotes": [1, "single"],
+        "react/jsx-key": 1
     }
 }
