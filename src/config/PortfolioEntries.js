@@ -20,7 +20,7 @@ const PortfolioEntries = new ProjectCollection([
         },
         component: BlueberryFestivalScreen
     },
-    {
+    /*{
         data: require('projects/SpencerWebsite/data.json'),
         images: {
             featuredImage: require('projects/SpencerWebsite/featured-cover.png'),
@@ -43,7 +43,7 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/DigitalAnimation/small-cover.png')
         },
         component: DigitalAnimationScreen
-    },
+    },*/
     {
         data: require('projects/USOpen/data.json'),
         images: {
@@ -51,7 +51,7 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/USOpen/small-cover.png')
         },
         component: USOpenScreen
-    },
+    },/*
     {
         data: require('projects/FRCScouter/data.json'),
         images: {
@@ -75,7 +75,7 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/KineticVision/small-cover.png')
         },
         component: KineticVisionScreen
-    }
+    }*/
 ]);
 
 export default PortfolioEntries;
