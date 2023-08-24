@@ -1,10 +1,10 @@
 ._NavigationBar {
-    height: 90px;
+    height: 95px;
     position: sticky;
     top: 0;
     width: 100%;
-    padding-bottom: 10px;
     z-index: 10;
+    box-sizing: border-box;
 
     .burger-button {
         display: none;

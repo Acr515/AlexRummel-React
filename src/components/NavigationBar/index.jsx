@@ -6,35 +6,41 @@ import './style.scss';
 export default function NavigationBar() {
     
     // Setup checking for current screen
+    const [opened, setOpened] = useState(false);    // for navigation bar in mobile layout
     const location = useLocation();
     const [currentPath, setCurrentPath] = useState("");
     const currentPathRef= useRef({});
     currentPathRef.current = currentPath;
     const getHeaderOpacity = (y) => {
-        return currentPathRef.current != "/" ? 1 : y > 260 ? 1 : Math.max(0, 1 - ((260 - y) * .01));
+        return currentPathRef.current != "/" || opened ? 1 : y > 260 ? 1 : Math.max(0, 1 - ((260 - y) * .01));
     }
     const getHeaderBgOpacity = (y) => currentPathRef.current != "/" ? 1 : y > 460 ? 1 : Math.max(0, 1 - ((460 - y) * .007));
     const [headerOpacity, setHeaderOpacity] = useState(getHeaderOpacity(window.scrollY));
     const [headerBgOpacity, setHeaderBgOpacity] = useState(getHeaderBgOpacity(window.scrollY));
 
-    const [opened, setOpened] = useState(false);
     
     // Collapse mobile navigation when a link is clicked
     const linkClicked = () => {
         setOpened(false);
     }
 
-    // Scrolling change listeners
+    // Scrolling and resize change listeners
     useEffect(() => {
         // Setters
         const onScroll = () => {
             setHeaderOpacity(getHeaderOpacity(window.scrollY));
             setHeaderBgOpacity(getHeaderBgOpacity(window.scrollY));
         }
+        const onResize = () => {
+            if (innerWidth > 600) setOpened(false);
+        }
+
         // Clean up code
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onResize);
+        window.addEventListener('resize', onResize, { passive: true });
+        return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onResize); }
     }, []);
 
     // Location change listening
@@ -56,7 +62,7 @@ export default function NavigationBar() {
                 <Link 
                     className="title" 
                     to="/"
-                    style={{ opacity: headerOpacity }}
+                    style={{ opacity: opened ? 1 : headerOpacity }}
                 >
                     Alex Rummel
                 </Link>
