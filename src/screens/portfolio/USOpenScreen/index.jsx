@@ -3,11 +3,11 @@ import Section from 'components/Section';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
+import ProjectIntro from 'components/ProjectIntro';
 
 import Header from 'projects/USOpen/header.png';
 import imports from 'projects/USOpen/imports';
 import './style.scss';
-import WidthContainer from 'components/WidthContainer';
 
 /**
  * The portfolio page for the US Open rebrand.
@@ -19,23 +19,18 @@ export default function USOpenScreen() {
                 entry={PortfolioEntries.getProject("us-open")}
                 wideImage={Header}
             />
-            <WidthContainer className="initial-two-column" width={1250}>
-                <div className="image-holder">
-                    <img src={imports['arthur-ashe']} className="ashe-initial" />
-                </div>
-                <div className="text-holder">
+            <ProjectIntro image={imports['arthur-ashe']}>
                     <p>
                         The prompt for this project was to select an event, update its brand identity, and illustrate how the new identity could be applied.
                     </p>
                     <p>
                         I selected the US Open tennis tournament and began by researching its history and venue for inspiration.
                     </p>
-                </div>
-            </WidthContainer>
+            </ProjectIntro>
 
-            <div className="research-insights">
+            <section className="research-insights">
                 <img src={imports['research-insights']} />
-            </div>
+            </section>
 
             <Section className="opportunities">
                 <div>

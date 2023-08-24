@@ -1,0 +1,83 @@
+._BlueberryFestivalScreen {
+
+    .planning {
+        background-color: #fff;
+        color: black;
+        margin-top: 64px;
+        
+        h2 {
+            color: #173980;
+        }
+    }
+
+    .split-column {
+        display: flex;
+        padding: 64px 24px;
+        justify-content: space-between;
+        gap: 16px;
+
+        .text {
+            width: 40%;
+            align-self: center;
+        }
+
+        .phone-text {
+            align-self: flex-start;
+        }
+
+        .image {
+            width: 60%;
+            img, .image-holder {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+
+    .sketch-background {
+        color: #fff;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .store-badge {
+        height: 40px;
+        margin-right: 16px;
+    }
+
+    .phone-text-block {
+        margin-top: 64px;
+        margin-bottom: 60vh;
+    }
+
+    #beginner-marker {
+        margin-top: 140px;
+    }
+
+    .sticky-phone {
+        position: sticky;
+        align-self: flex-start;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        transition: opacity .1s;
+
+        .phone-screens {
+            position: relative;
+
+            .frame {
+                position: relative;
+                z-index: -5;
+            }
+
+            img:not(.frame) {
+                position: absolute;
+                width: 80.5%;
+                top: 3.5%;
+                left: 10%;
+                z-index: -10;
+                transition: opacity .15s;
+            }
+        }
+    }
+}

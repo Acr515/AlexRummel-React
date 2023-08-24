@@ -1,0 +1,13 @@
+._ProjectIntro {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    .text-holder {
+        width: 40%;
+        align-self: center;
+    }
+    .image {
+        max-width: 640px;
+    }
+}
