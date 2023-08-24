@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
 import PortfolioHeader from 'components/PortfolioHeader';
-import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 
 import Header from 'projects/BlueberryFestival/header.png';
@@ -26,8 +23,12 @@ export default function BlueberryFestivalScreen() {
     const textBoxRefs = [
         useRef(),
         useRef(),
+        useRef(),
+        useRef(),
+        useRef(),
+        useRef(),
         useRef()
-    ]
+    ];
     
     // Function to determine which image should be visible
     const getVisibleImage = () => {
@@ -136,8 +137,8 @@ export default function BlueberryFestivalScreen() {
                         <p style={{ margin: "64px 0" }}>
                             As the app interface designs were created, they were programmed into the app using an Expo-managed React Native installation. We used GitHub to organize our code into stable and unstable branches in addition to feature branches that integrated with a ticket system as we simultaneously developed new features.
                         </p>
-                        <a href="https://apps.apple.com/us/app/south-haven-blueberry-festival/id1572703423"><img src={imports['apple-badge']} className="store-badge"/></a>
-                        <a href="https://play.google.com/store/apps/details?id=com.blueberryfestival.blueberryfestival&pli=1"><img src={imports['google-badge']} className="store-badge"/></a>
+                        <a target="_blank" rel="noreferrer" href="https://apps.apple.com/us/app/south-haven-blueberry-festival/id1572703423"><img src={imports['apple-badge']} className="store-badge"/></a>
+                        <a target="_blank" rel="noreferrer" href="https://play.google.com/store/apps/details?id=com.blueberryfestival.blueberryfestival&pli=1"><img src={imports['google-badge']} className="store-badge"/></a>
                     </div>
                     <div className="phone-text-block" ref={textBoxRefs[0]}>
                         <p>
@@ -146,19 +147,45 @@ export default function BlueberryFestivalScreen() {
                     </div>
                     <div className="phone-text-block" ref={textBoxRefs[1]}>
                         <p>
-                            Users are greeted by the Schedule screen that immediately informs them what events are currently ongoing.
+                            Tapping on an event shows users details about that event, such as location, time, and a text description.
                         </p>
                     </div>
                     <div className="phone-text-block" ref={textBoxRefs[2]}>
                         <p>
-                            Users are greeted by the Schedule screen that immediately informs them what events are currently ongoing.
+                            The Map tab, accessible below, shows events on a map
+                        </p>
+                    </div>
+                    <div className="phone-text-block" ref={textBoxRefs[3]}>
+                        <p>
+                            Tapping an event on the Map takes them to the same screen as before. Events that have not begun can be subscribed to by users, which will send them a push notification when the event is about to start.
+                        </p>
+                    </div>
+                    <div className="phone-text-block" ref={textBoxRefs[4]}>
+                        <p>
+                            Over in the Alerts tab, any event that a user is subscribed 
+                        </p>
+                    </div>
+                    <div className="phone-text-block" ref={textBoxRefs[5]}>
+                        <p>
+                            Subscribed alert 
+                        </p>
+                    </div>
+                    <div className="phone-text-block" ref={textBoxRefs[6]}>
+                        <p>
+                            Generic festival announcement 
                         </p>
                     </div>
                 </div>
                 <div className="image sticky-phone" style={{ maxWidth: 320, opacity: phoneVisible ? 1 : 0 }}>
                     <div className="image-holder phone-screens">
                         <img className="frame" src={imports['phone-outline']} />
-                        <img src={imports['screenshot_map-1']} style={{ opacity: imageVisibility == 0 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_alert-2']} style={{ opacity: imageVisibility == 6 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_alert-1']} style={{ opacity: imageVisibility == 5 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_alerts']} style={{ opacity: imageVisibility == 4 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_event-2']} style={{ opacity: imageVisibility == 3 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_map-1']} style={{ opacity: imageVisibility == 2 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_event-1']} style={{ opacity: imageVisibility == 1 ? 1 : 0 }}/>
+                        <img src={imports['screenshot_schedule']} style={{ opacity: imageVisibility == 0 ? 1 : 0 }}/>
                         <img src={imports['screenshot_splash']} style={{ opacity: imageVisibility == -1 ? 1 : 0 }} />
                     </div>
                 </div>

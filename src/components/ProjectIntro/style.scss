@@ -1,13 +1,39 @@
 ._ProjectIntro {
     display: flex;
     justify-content: space-between;
-    gap: 8px;
+    gap: 24px;
 
     .text-holder {
         width: 40%;
         align-self: center;
     }
-    .image {
-        max-width: 640px;
+    .image-holder {
+        width: 60%;
+        align-self: center;
+
+        .image {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        flex-direction: column;
+
+        .text-holder {
+            width: 100%;
+            align-self: center;
+        }
+        .image-holder {
+            width: 100%;
+            align-self: center;
+    
+            .image {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
     }
 }

@@ -54,14 +54,14 @@
 
     /* Switch to mobile navigation bar */
     @media (max-width: $MOBILE_MQ) {
-        .image-section {
-            flex-direction: column;
-        }
-        .image-round {
-            margin: auto;
-        }
         .heading-section {
-            margin: 60px auto 130px;
+            margin: 30px auto 160px;
+            flex-direction: column;
+
+            .description {
+                text-align: left;
+                margin-left: 0;
+            }
         }
     }
 }

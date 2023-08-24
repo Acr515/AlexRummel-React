@@ -17,7 +17,13 @@ const imports = {
     "apple-badge": require('./assets/badge_app-store.png'),
     "google-badge": require('./assets/badge_google-play.png'),
     "screenshot_splash": require('./assets/screenshot_splash.png'),
+    "screenshot_schedule": require('./assets/screenshot_schedule.png'),
+    "screenshot_event-1": require('./assets/screenshot_event-1.png'),
+    "screenshot_event-2": require('./assets/screenshot_event-2.png'),
     "screenshot_map-1": require('./assets/screenshot_map-1.png'),
+    "screenshot_alerts": require('./assets/screenshot_alerts.png'),
+    "screenshot_alert-1": require('./assets/screenshot_alert-1.png'),
+    "screenshot_alert-2": require('./assets/screenshot_alert-2.png'),
 };
 
 export default imports;

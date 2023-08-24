@@ -40,7 +40,7 @@ export default function HomeScreen() {
                 className="background-video"
                 style={{ marginTop: bgOffset }}
             >
-                <video className="video-element" loop autoPlay muted>
+                <video className="video-element" loop autoPlay muted playsInline>
                     <source src={BackgroundVideo} type="video/mp4" />
                 </video>
             </div>
