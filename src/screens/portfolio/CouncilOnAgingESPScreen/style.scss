@@ -1,0 +1,23 @@
+._CouncilOnAgingESPScreen {
+    .image {
+        width: 100%;
+        margin: 0 auto;
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    .phase {
+        color: white;
+    }
+    .research-phase {
+        background-color: #803b27;
+    }
+    .ideation-phase {
+        background-color: #1a284a;
+    }
+    .refinement-phase {
+        background-color: #805927;
+    }
+}

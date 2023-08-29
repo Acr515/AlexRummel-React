@@ -1,5 +1,6 @@
 import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
+import CouncilOnAgingESPScreen from 'screens/portfolio/CouncilOnAgingESPScreen';
 import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
@@ -19,6 +20,14 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/BlueberryFestival/small-cover.png')
         },
         component: BlueberryFestivalScreen
+    },
+    {
+        data: require('projects/CouncilOnAgingESP/data.json'),
+        images: {
+            featuredImage: require('projects/CouncilOnAgingESP/header.png'),
+            thumbnailImage: require('projects/CouncilOnAgingESP/small-cover.png')
+        },
+        component: CouncilOnAgingESPScreen
     },
     /*{
         data: require('projects/SpencerWebsite/data.json'),
