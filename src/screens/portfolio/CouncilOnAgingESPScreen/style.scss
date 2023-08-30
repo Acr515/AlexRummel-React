@@ -2,14 +2,33 @@
     .image {
         width: 100%;
         margin: 0 auto;
-        img {
-            object-fit: contain;
-            width: 100%;
+    }
+
+    .two-columns.sticky-model {
+        max-width: 800px;
+        margin: 64px auto 0;
+        position: relative;
+
+        .sticky-image {
+            position: sticky;
+            top: 160px;
+            left: 0;
         }
+
+        .long-text {
+            margin: 35vh 0;
+        }
+    }
+    
+    .column img, .image img {
+        object-fit: contain;
+        width: 100%;
     }
 
     .phase {
         color: white;
+        margin: 64px 0;
+        padding: 32px 0;
     }
     .research-phase {
         background-color: #803b27;
@@ -19,5 +38,14 @@
     }
     .refinement-phase {
         background-color: #805927;
+    }
+
+    .two-columns {
+        display: flex;
+        gap: 20px;
+
+        .column {
+            width: 50%;
+        }
     }
 }
