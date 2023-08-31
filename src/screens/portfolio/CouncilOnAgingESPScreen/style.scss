@@ -1,7 +1,40 @@
 ._CouncilOnAgingESPScreen {
+
+    ul {
+        padding-left: 18px;
+        li {
+            margin: 12px 0;
+        }
+    }
+
+    .team {
+        font-size: 14px;
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+
+        li {
+            margin: 4px 0;
+        }
+    }
+
     .image {
         width: 100%;
         margin: 0 auto;
+    }
+
+    .image.transitioning {
+        position: relative;
+        min-height: 310px;
+
+        img {
+            position: absolute;
+            transition: opacity .35s;
+        }
+    }
+
+    .bold {
+        font-weight: 600;
     }
 
     .two-columns.sticky-model {
@@ -11,16 +44,23 @@
 
         .sticky-image {
             position: sticky;
-            top: 160px;
+            top: calc(90px + 15%);
             left: 0;
+            height: 380px;
+
+            img {
+                position: absolute;
+                transition: opacity .15s;
+            }
         }
 
         .long-text {
-            margin: 35vh 0;
+            margin: 20vh 0;
         }
     }
-    
-    .column img, .image img {
+
+    .column img,
+    .image img {
         object-fit: contain;
         width: 100%;
     }
@@ -30,12 +70,15 @@
         margin: 64px 0;
         padding: 32px 0;
     }
+
     .research-phase {
         background-color: #803b27;
     }
+
     .ideation-phase {
         background-color: #1a284a;
     }
+
     .refinement-phase {
         background-color: #805927;
     }

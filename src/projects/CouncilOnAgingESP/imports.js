@@ -11,7 +11,12 @@ const imports = {
     "stakeholders": require('./assets/stakeholders.png'),
     "colormodel-sliding-scale": require('./assets/colormodel-sliding-scale.png'),
     "colormodel-3-tiers": require('./assets/colormodel-3-tiers.png'),
+    "colormodel-3-tiers-problem": require('./assets/colormodel-3-tiers-problem.png'),
     "colormodel-3-tiers-subtiers": require('./assets/colormodel-3-tiers-subtiers.png'),
+    "pointmodel-economy": require('./assets/pointmodel-economy.png'),
+    "pointmodel-premium": require('./assets/pointmodel-premium.png'),
+    "dashboard-shots": require('./assets/dashboard-shots.png'),
+    "fixed-rate-formula": require('./assets/fixed-rate-formula.png'),
 };
 
 export default imports;
