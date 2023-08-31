@@ -4,6 +4,10 @@
         background-color: #fff;
         color: black;
         margin-top: 64px;
+
+        p {
+            font-weight: 400;
+        }
         
         h2 {
             color: #173980;
@@ -32,12 +36,15 @@
                 width: 100%;
             }
         }
+
+        .image.padded {
+            margin: 0 20px;
+        }
     }
 
-    .sketch-background {
+    .iterations {
         color: #fff;
-        background-position: center center;
-        background-size: cover;
+        background-color: #95a4c5;
     }
 
     .store-badge {
@@ -47,7 +54,7 @@
 
     .phone-text-block {
         margin-top: 64px;
-        margin-bottom: 60vh;
+        margin-bottom: 40vh;
     }
 
     #beginner-marker {
@@ -57,10 +64,14 @@
     .sticky-phone {
         position: sticky;
         align-self: flex-start;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 15%;
         margin: 0 auto;
         transition: opacity .1s;
+        max-width: 320px;
+
+        .image-holder {
+            max-height: 70vh;
+        }
 
         .phone-screens {
             position: relative;
@@ -68,16 +79,32 @@
             .frame {
                 position: relative;
                 z-index: -5;
+                max-height: 80vh;
             }
 
             img:not(.frame) {
                 position: absolute;
-                width: 80.5%;
-                top: 3.5%;
-                left: 10%;
+                width: 100%;
+                max-height: 80vh;
+                top: -0.25%;
+                left: 0;
                 z-index: -10;
                 transition: opacity .15s;
+                transform: scale(81%, 81%);
             }
+        }
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .iterations .split-column, .planning .split-column {
+            flex-direction: column;
+
+            div {
+                width: 100%;
+            }
+        }
+        .split-column .image.padded {
+            margin: 0;
         }
     }
 }

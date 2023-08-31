@@ -24,6 +24,7 @@ const imports = {
     "screenshot_alerts": require('./assets/screenshot_alerts.png'),
     "screenshot_alert-1": require('./assets/screenshot_alert-1.png'),
     "screenshot_alert-2": require('./assets/screenshot_alert-2.png'),
+    "screenshot_more": require('./assets/screenshot_more.png'),
 };
 
 export default imports;
