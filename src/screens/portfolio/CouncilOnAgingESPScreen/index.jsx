@@ -17,16 +17,19 @@ export default function CouncilOnAgingESPScreen() {
     const getY = (ref) => typeof ref !== 'undefined' && ref.current !== 'undefined' ? ref.current.getBoundingClientRect().y : 10000;
     
     // Refs for images to be turned on/off
-    const [colorGraphicVisible, setColorGraphicVisible] = useState(getY(refColorGraphic) < 500);
+    const [colorGraphic1Visible, setColorGraphic1Visible] = useState(getY(refColorGraphic1) < 500);
+    const [colorGraphic2Visible, setColorGraphic2Visible] = useState(getY(refColorGraphic2) < 500);
     const [pointGraphicVisible, setPointGraphicVisible] = useState(0);
-    const refColorGraphic = useRef();
+    const refColorGraphic1 = useRef();
+    const refColorGraphic2 = useRef();
 
     // Checking screen position
     useEffect(() => {
         // Setters
         const checkGraphicVisible = () => {
             // Set states
-            setColorGraphicVisible(getY(refColorGraphic) < 500);
+            setColorGraphic1Visible(getY(refColorGraphic1) < 500);
+            setColorGraphic2Visible(getY(refColorGraphic2) < 500);
         }
 
         // Clean up code
@@ -95,16 +98,29 @@ export default function CouncilOnAgingESPScreen() {
                         <p>
                             We interviewed 14 stakeholders consisting of clients and program administrators inside and outside of COA. We coded and synthesized the responses to generate insights towards our solution.
                         </p>
+                        <div className="image" style={{ maxWidth: 500, marginTop: 64 }}>
+                            <img src={imports['primary-research']} />
+                        </div>
                     </div>
                     <div className="column">
                         <h3>Secondary Research</h3>
                         <p>
                             A critical focus of secondary research was on alternative payment models (APMs) in other industries. I led this research and uncovered a series of different components that make up APMs.
                         </p>
-                        <div className="image" style={{ maxWidth: 800, marginTop: 64 }}>
+                        <div className="image" style={{ maxWidth: 500, marginTop: 64 }}>
                             <img src={imports['apm-components']} />
                         </div>
                     </div>
+                </div>
+            </WidthContainer>
+
+            <WidthContainer>
+                <h3>APM Co-Creation Activity</h3>
+                <p>
+                    To see how we might apply the APM components to a new payment model, I designed APM cards for the COA team to mix-and-match and discover new payment models, giving us information about how APMs could be used as well as which ones the team saw the most value in. The <span className="bold">capitated copay</span>, or fixed rate, was the most popular APM component by far, as the COA team saw great value in billing clients the exact same amounts every month.
+                </p>
+                <div className="image" style={{ maxWidth: 900, marginTop: 64 }}>
+                    <img src={imports['apm-activity']} />
                 </div>
             </WidthContainer>
 
@@ -112,7 +128,7 @@ export default function CouncilOnAgingESPScreen() {
                 <WidthContainer width={1300}>
                     <h2>Ideation Phase</h2>
                     <p>
-                        After presenting our research findings to COA leadership, I broke their responses down into what would become the basis of our new payment system: <span className="bold">a tiered model</span> where people in different income groups are billed to a different alternative payment model. Soon after, I designed a worksheet activity for the COA team to complete that would help us better understand each tier of this system. We split them into two groups to prevent groupthink and later compared and synthesized their responses.
+                        The COA team provided unique responses to the prior activity that made us realize we needed to implement different APM components to those in different income brackets. This prompted us to design a <span className="bold">tiered model</span> that billed people differently based on income brackets. I designed a worksheet activity for the COA team to complete that would help us better understand each tier of this system. We split them into two groups to prevent groupthink and later compared and synthesized their responses.
                     </p>
                     <div className="two-columns">
                         <div className="column image">
@@ -144,14 +160,14 @@ export default function CouncilOnAgingESPScreen() {
                         <div className="image">
                             <img src={imports['colormodel-sliding-scale']} />
                         </div>
-                        <p className="long-text" ref={refColorGraphic}>
+                        <p className="long-text" ref={refColorGraphic1}>
                             After later deliberations, the team realized the importantance of incorporating level of care into our payment model. The only way to adjust price for level of care would be to <span className="bold">standardize level of care</span>, as ESP&apos;s services are each unique in their units and distributions.
                         </p>
                     </div>
                     <div className="column">
                         <div className="image sticky-image">
-                            <img src={imports['colormodel-3-tiers']} style={{ opacity: !colorGraphicVisible ? 1 : 0 }}/>
-                            <img src={imports['colormodel-3-tiers-problem']} style={{ opacity: colorGraphicVisible ? 1 : 0 }}/>
+                            <img src={imports['colormodel-3-tiers']} style={{ opacity: !colorGraphic1Visible ? 1 : 0 }}/>
+                            <img src={imports['colormodel-3-tiers-problem']} style={{ opacity: colorGraphic1Visible ? 1 : 0 }}/>
                         </div>
                     </div>
                 </div>
@@ -165,14 +181,43 @@ export default function CouncilOnAgingESPScreen() {
                     <img src={imports['pointmodel-economy']} style={{ opacity: !pointGraphicVisible ? 1 : 0 }}/>
                     <img src={imports['pointmodel-premium']} style={{ opacity: pointGraphicVisible ? 1 : 0 }}/>
                 </div>
+                <p>
+                    This new concept necessitated an update to our payment model graphics, as shown below. The new economy and premium sub-tiers create distinct color/cost differences going left-to-right in the tiers with copays.
+                </p>
+                <div className="image" style={{ maxWidth: 700, marginTop: 64 }}>
+                    <img src={imports['colormodel-3-tiers-subtiers']} />
+                </div>
             </WidthContainer>
 
             <section className="refinement-phase phase">
                 <WidthContainer width={1300}>
                     <h2>Refinement Phase</h2>
-                    <p>
-                        Equity problems and reassessment
-                    </p>
+                    <div className="two-columns sticky-model" style={{ maxWidth: "unset" }}>
+                        <div className="column">                  
+                            <p>
+                                Shortly into the refinement phase, we identified a critical problem with our payment model as it stood.
+                            </p>
+                            <ul>
+                                <li>Tier 2 would encompass roughly 40% of all ESP clients. It would be difficult to find fixed rates that would both generate enough revenue from higher earners and not burden lower earners.</li>
+                                <li>Clients with high need and low income in tier 2 (indicated in the graphic) would be in danger of spending too much for services.</li>
+                                <li>We concluded that tier 2 was built to serve too many people.</li>
+                            </ul>
+                            <div className="long-text">
+                                <p ref={refColorGraphic2}>
+                                    The best solution we found was to split the population of tier 2 into yet another tier, pushing the old tier 3 population upward into what would become known as tier 4.
+                                </p>
+                                <p>
+                                    Because our changes were becoming increasingly more detailed, the team did not feel comfortable making conjectures about the merits of our models without putting real numbers behind it. During this phase, I spent a lot of time creating formulas and mock bills to assess our model.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="column">
+                            <div className="image sticky-image padded-images" style={{ maxWidth: 480, backgroundColor: '#000' }}>
+                                <img src={imports['colormodel-3-tiers-subtiers-problem']} style={{ opacity: !colorGraphic2Visible ? 1 : 0 }}/>
+                                <img src={imports['colormodel-4-tiers-subtiers']} style={{ opacity: colorGraphic2Visible ? 1 : 0 }}/>
+                            </div>
+                        </div>
+                    </div>
                 </WidthContainer>
             </section>
 
@@ -208,6 +253,12 @@ export default function CouncilOnAgingESPScreen() {
                 <div className="image">
                     <img src={imports['dashboard-shots']} />
                 </div>
+            </WidthContainer>
+            <WidthContainer>
+                <h3>Findings</h3>
+                <p>
+                    Increased revenue, comparable equitability
+                </p>
             </WidthContainer>
         </div>
     )

@@ -21,6 +21,7 @@
     .image {
         width: 100%;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 
     .image.transitioning {
@@ -31,6 +32,11 @@
             position: absolute;
             transition: opacity .35s;
         }
+    }
+
+    .padded-images img {
+        padding: 32px;
+        box-sizing: border-box;
     }
 
     .bold {
