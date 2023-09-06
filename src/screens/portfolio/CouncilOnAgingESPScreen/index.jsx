@@ -257,8 +257,25 @@ export default function CouncilOnAgingESPScreen() {
             <WidthContainer>
                 <h3>Findings</h3>
                 <p>
-                    Increased revenue, comparable equitability
+                    In order to assess the models we had created so far, we put our <span className="bold">3 tier and sub-tier model</span> into the dashboard and tested whether or not our <span className="bold">4 tier and sub-tier model</span> performed more efficiently and equitably. We used 17 real ESP clients&apos; data in the system distributed accurately along the real shares of income groups in ESP currently.
                 </p>
+                <p>
+                    The data concluded that having 4 tiers were more capable of generating revenue for ESP without burdening clients any more than before, as evidenced by the percentages we found.
+                </p>
+                <div className="image" style={{ maxWidth: 800, marginTop: 64 }}>
+                    <img src={imports['dashboard-findings']} />
+                </div>
+            </WidthContainer>
+            <WidthContainer>
+                <h3>Conclusion</h3>
+                <p>
+                    A new team took this project over at the end of my co-op, where they began refining the specifics of our system and how to implement it. I grew immensely as a designer and a researcher during the course of the project as I built upon many different skills and developed new ones:
+                </p>
+                <ul>
+                    <li>I developed a much stronger ability to understand user&apos;s needs and how to balance them with business needs</li>
+                    <li>I have an understanding of how to conduct design research, as this was something I had never done prior</li>
+                    <li>I learned how to think abductively about a project and shed the need to know how a project&apos;s deliverables will look long before its conclusion</li>
+                </ul>
             </WidthContainer>
         </div>
     )

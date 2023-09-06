@@ -20,6 +20,7 @@ const imports = {
     "pointmodel-economy": require('./assets/pointmodel-economy.png'),
     "pointmodel-premium": require('./assets/pointmodel-premium.png'),
     "dashboard-shots": require('./assets/dashboard-shots.png'),
+    "dashboard-findings": require('./assets/dashboard-findings.png'),
     "fixed-rate-formula": require('./assets/fixed-rate-formula.png'),
 };
 
