@@ -58,14 +58,13 @@ export default function CouncilOnAgingESPScreen() {
                     Council on Aging (COA) assists older adults in their homes through a range of different programs. Their Elderly Services Program (ESP) provides clients with in-home care through their network of third-party providers, empowering them to live alone in their homes.
                 </p>
                 <p>
-                    ESP&apos;s system for billing clients is over 25 years old and confusing for both case managers and clients. COA approached the Live Well Collaborative, the company I interned at, to research the problem and overhaul the existing billing system.
+                    ESP&apos;s system for billing clients is over 25 years old and confusing for both case managers and clients. COA approached Live Well Collaborative, my co-op company, to research the problem and overhaul the existing billing system.
                 </p>
                 <ul className="team">
-                    <li style={{ fontFamily: "input-sans", marginBottom: 8, fontWeight: 500 }}>Live Well Collaborative Team</li>
+                    <li style={{ fontFamily: "input-sans", marginBottom: 8, fontWeight: 500 }}>Live Well Collaborative Teammates</li>
                     <li><span className="bold">Shelby Schaffer</span> - Faculty Lead</li>
                     <li><span className="bold">Rui Pang</span> - Design Research Fellow</li>
                     <li><span className="bold">Grace Kays</span> - Design Research Co-op</li>
-                    <li><span className="bold">Alex Rummel</span> - Design Research Co-op</li>
                 </ul>
             </ProjectIntro>
 
@@ -273,7 +272,7 @@ export default function CouncilOnAgingESPScreen() {
                 </p>
                 <ul>
                     <li>I developed a much stronger ability to understand user&apos;s needs and how to balance them with business needs</li>
-                    <li>I have an understanding of how to conduct design research, as this was something I had never done prior</li>
+                    <li>I have an understanding of how to conduct real design research, as this was something I had not done before</li>
                     <li>I learned how to think abductively about a project and shed the need to know how a project&apos;s deliverables will look long before its conclusion</li>
                 </ul>
             </WidthContainer>

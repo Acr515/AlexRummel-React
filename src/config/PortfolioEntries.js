@@ -60,14 +60,6 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/USOpen/small-cover.png')
         },
         component: USOpenScreen
-    },/*
-    {
-        data: require('projects/FRCScouter/data.json'),
-        images: {
-            featuredImage: require('projects/FRCScouter/featured-cover.png'),
-            thumbnailImage: require('projects/FRCScouter/small-cover.png')
-        },
-        component: FRCScouterScreen
     },
     {
         data: require('projects/CraigslistRedesign/data.json'),
@@ -80,11 +72,19 @@ const PortfolioEntries = new ProjectCollection([
     {
         data: require('projects/KineticVision/data.json'),
         images: {
-            featuredImage: require('projects/KineticVision/featured-cover.jpg'),
             thumbnailImage: require('projects/KineticVision/small-cover.png')
         },
         component: KineticVisionScreen
-    }*/
+    },/*
+    {
+        data: require('projects/FRCScouter/data.json'),
+        images: {
+            featuredImage: require('projects/FRCScouter/featured-cover.png'),
+            thumbnailImage: require('projects/FRCScouter/small-cover.png')
+        },
+        component: FRCScouterScreen
+    }
+    */
 ]);
 
 export default PortfolioEntries;

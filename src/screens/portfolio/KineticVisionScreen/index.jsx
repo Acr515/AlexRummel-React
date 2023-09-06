@@ -5,8 +5,7 @@ import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 import './style.scss';
 
-//import WideImage from 'projects/CraigslistRedesign/small-cover.jpg';
-//import NarrowImage from 'projects/CraigslistRedesign/assets/cincinnati.jpg';
+import Header from 'projects/KineticVision/header.png';
 import imports from 'projects/KineticVision/imports';
 
 /**
@@ -17,9 +16,7 @@ export default function KineticVisionScreen() {
         <div className="_KineticVisionScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("kinetic-vision")}
-                //wideImage={WideImage}
-                //narrowImage={NarrowImage}
-                //flipLargeImages
+                wideImage={Header}
             />
             <Section>
                 <h2>Introduction</h2>
