@@ -52,8 +52,8 @@ export default function KineticVisionScreen() {
                             <span className="emphasis">I was the sole member of an internal R&D project that involved using an iOS device&apos;s camera to record data with the help of augmented reality.</span> This served as my introduction to Swift and native app development as it taught me several skills I used throughout the co-op.
                         </p>
                         <ul>
-                            <li>Learned SwiftUI and RealityKit while creating</li>
-                            <li>Designed UI of prototype</li>
+                            <li>Learned SwiftUI and RealityKit while creating a native AR app</li>
+                            <li>Designed UI of prototype and novel technology to capture spatial data of an AR object</li>
                         </ul>
                         <div className="spacer"></div>
                         <p>

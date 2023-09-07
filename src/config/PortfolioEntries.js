@@ -1,5 +1,6 @@
 import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
+import CookingAppDesignScreen from 'screens/portfolio/CookingAppDesignScreen';
 import CouncilOnAgingESPScreen from 'screens/portfolio/CouncilOnAgingESPScreen';
 import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
@@ -75,6 +76,13 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/KineticVision/small-cover.png')
         },
         component: KineticVisionScreen
+    },
+    {
+        data: require('projects/CookingAppDesign/data.json'),
+        images: {
+            thumbnailImage: require('projects/CookingAppDesign/small-cover.png')
+        },
+        component: CookingAppDesignScreen
     },/*
     {
         data: require('projects/FRCScouter/data.json'),

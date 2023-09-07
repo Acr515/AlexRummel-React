@@ -1,0 +1,48 @@
+._CookingAppDesignScreen {
+    .bold {
+        font-weight: 600;
+    }
+    h2 {
+        font-size: 23px;
+    }
+    .split-columns {
+        display: flex;
+        gap: 42px;
+
+        .column {
+            width: 50%;
+            align-self: center;
+        }
+    }
+
+    .image, .column.image {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        &.padded {
+            //padding: 0 24px;
+        }
+    }
+
+    .column img,
+    .image img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .planning, .style-intro {
+        background-color: #69581d;
+        color: #fff;
+        padding: 48px 0;
+        margin: 64px 0;
+    }
+
+    .app-demo {
+        display: block;
+        margin: 20px auto;
+        width: auto;
+        height: auto;
+        max-height: 90vh;
+    }
+}
