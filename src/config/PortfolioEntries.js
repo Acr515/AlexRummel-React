@@ -53,7 +53,7 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/DigitalAnimation/small-cover.png')
         },
         component: DigitalAnimationScreen
-    },*/
+    },
     {
         data: require('projects/USOpen/data.json'),
         images: {
@@ -61,11 +61,10 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/USOpen/small-cover.png')
         },
         component: USOpenScreen
-    },
+    },*/
     {
         data: require('projects/CraigslistRedesign/data.json'),
         images: {
-            featuredImage: require('projects/CraigslistRedesign/featured-cover.jpg'),
             thumbnailImage: require('projects/CraigslistRedesign/small-cover.jpg')
         },
         component: CraigslistRedesignScreen
