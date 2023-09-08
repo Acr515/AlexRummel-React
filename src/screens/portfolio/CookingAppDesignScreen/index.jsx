@@ -31,10 +31,10 @@ export default function CookingAppDesignScreen() {
                     <div className="column">
                         <h2>Journey Map</h2>
                         <p style={{ maxWidth: 500 }}>
-                            I created this journey map to better understand the cooking process and visualize where visual touchpoints occur, from finding a recipe to cleaning up after eating it.
+                            A journey map helped me understand the cooking process and visualize where digital touchpoints may occur, from finding a recipe to cleaning up after eating it.
                         </p>
                     </div>
-                    <div className="column image padded" style={{ maxWidth: 700 }}>
+                    <div className="column image" style={{ maxWidth: 700 }}>
                         <img src={imports['journey-map']} />
                     </div>
                 </WidthContainer>
@@ -45,7 +45,7 @@ export default function CookingAppDesignScreen() {
                             While the journey map shows that the process of cooking can be fun, it also highlights an opportunity area where an app could step in to help. Somebody engaged in cooking has a predictable set of situational limitations that make it difficult to read and interface with traditional instructions. 
                         </p>
                     </div>
-                    <div className="column image padded" style={{ maxWidth: 700 }}>
+                    <div className="column image" style={{ maxWidth: 700 }}>
                         <img src={imports['situational-limitations']} />
                     </div>
                 </WidthContainer>
@@ -57,7 +57,7 @@ export default function CookingAppDesignScreen() {
                 </WidthContainer>
             </section>
 
-            <WidthContainer width={1200} className="split-columns">
+            <WidthContainer width={1300} className="split-columns">
                 <div className="column">
                     <h2>Benchmarking</h2>
                 </div>
@@ -65,10 +65,10 @@ export default function CookingAppDesignScreen() {
                     <img src={imports['benchmarking']} />
                 </div>
             </WidthContainer>
-            <WidthContainer width={1200} className="split-columns">
+            <WidthContainer width={1300} className="split-columns">
                 <div className="column">
                     <h2>Sketches</h2>
-                    <p>
+                    <p className="small">
                         The final sketches focused on how users would explore recipes, including an Explore tab which allows users to see many recipes quickly. I chose a carousel format with large recipe components that take up the majority of the screen after feedback from peers.
                     </p>
                 </div>
@@ -76,10 +76,10 @@ export default function CookingAppDesignScreen() {
                     <img src={imports['sketches']} />
                 </div>
             </WidthContainer>
-            <WidthContainer width={1200} className="split-columns">
+            <WidthContainer width={1300} className="split-columns">
                 <div className="column">
                     <h2>Wireframes</h2>
-                    <p>
+                    <p className="small">
                         Digitized, interactive versions of the sketches revealed that the <span className="bold">Cook Mode</span>, or the state of the app to be used in the kitchen for instructions, needed more iteration later on as users did not respond well to initializing it or using it.
                     </p>
                 </div>
@@ -87,7 +87,7 @@ export default function CookingAppDesignScreen() {
                     <img src={imports['wireframes']} />
                 </div>
             </WidthContainer>
-            <WidthContainer width={1200}>
+            <WidthContainer width={1300}>
                 <h2>Information Architecture</h2>
                 <div className="column image" style={{ maxWidth: 900, margin: "64px auto" }}>
                     <img src={imports['information-architecture']} />
@@ -116,7 +116,7 @@ export default function CookingAppDesignScreen() {
                 </WidthContainer>
             </section>
 
-            <WidthContainer width={1200}>
+            <WidthContainer width={1300}>
                 <h2>Cook Mode</h2>
                 <p>
                     The kitchen instruction interface underwent the most change of any other screen as test users responded to initial designs:
