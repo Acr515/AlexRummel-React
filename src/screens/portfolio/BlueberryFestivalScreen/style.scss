@@ -1,24 +1,16 @@
 ._BlueberryFestivalScreen {
 
     .planning {
-        background-color: #fff;
-        color: black;
+        background-color: #101724;
+        color: #fff;
         margin-top: 64px;
-
-        p {
-            font-weight: 400;
-        }
-        
-        h2 {
-            color: #173980;
-        }
     }
 
     .split-column {
         display: flex;
         padding: 64px 24px;
         justify-content: space-between;
-        gap: 16px;
+        gap: 68px;
 
         .text {
             width: 40%;
@@ -36,15 +28,11 @@
                 width: 100%;
             }
         }
-
-        .image.padded {
-            margin: 0 20px;
-        }
     }
 
     .iterations {
         color: #fff;
-        background-color: #95a4c5;
+        background-color: #798ebc;
     }
 
     .store-badge {
@@ -98,13 +86,11 @@
     @media (max-width: $MOBILE_MQ) {
         .iterations .split-column, .planning .split-column {
             flex-direction: column;
+            gap: 16px;
 
             div {
                 width: 100%;
             }
-        }
-        .split-column .image.padded {
-            margin: 0;
         }
     }
 }

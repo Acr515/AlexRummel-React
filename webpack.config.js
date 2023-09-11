@@ -53,10 +53,17 @@ module.exports = {
                 },
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf|mp4)$/i,
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/fonts/[name].[hash][ext][query]'
+                },
+            },
+            {
+                test: /\.(mov|mp4)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/videos/[name].[hash][ext][query]'
                 },
             },
         ],

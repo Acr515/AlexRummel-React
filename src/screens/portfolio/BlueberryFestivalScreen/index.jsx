@@ -77,7 +77,7 @@ export default function BlueberryFestivalScreen() {
                             We devised an information architecture to organize what information we knew that attendees needed, in addition to a firm hierarchy of information that laid out which pieces of information were the most important on each screen.
                         </p>
                     </div>
-                    <div className="image padded" style={{ maxWidth: 700 }}>
+                    <div className="image" style={{ maxWidth: 700 }}>
                         <img src={imports['information-architecture']} />
                     </div>
                 </WidthContainer>
@@ -87,15 +87,15 @@ export default function BlueberryFestivalScreen() {
                         The decisions we made in the information hierarchy informed the typographic decisions as we began to envision how event information would look across the app.
                         </p>
                     </div>
-                    <div className="image padded" style={{ maxWidth: 700 }}>
+                    <div className="image" style={{ maxWidth: 700 }}>
                         <img src={imports['typography-selections']} />
                     </div>
                 </WidthContainer>
             </section>
 
             <section className="iterations">
-                <WidthContainer width={1400} className="split-column" style={{ gap: 28 }}>
-                    <div className="image padded" style={{ maxWidth: 750 }}>
+                <WidthContainer width={1400} className="split-column">
+                    <div className="image" style={{ maxWidth: 750 }}>
                         <img src={imports['schedule-information-design']} />
                     </div>
                     <div className="text">
@@ -127,7 +127,7 @@ export default function BlueberryFestivalScreen() {
                 </WidthContainer>
             </section>
 
-            <WidthContainer width={1200} className="split-column">
+            <WidthContainer width={1200} className="split-column" style={{ gap: 28 }}>
                 <div className="text phone-text" style={{ width: "50%" }}>
                     <div id="beginner-marker"></div>
                     <div className="phone-text-block">

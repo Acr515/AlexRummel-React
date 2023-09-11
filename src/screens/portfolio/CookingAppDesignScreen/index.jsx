@@ -60,6 +60,9 @@ export default function CookingAppDesignScreen() {
             <WidthContainer width={1300} className="split-columns">
                 <div className="column">
                     <h2>Benchmarking</h2>
+                    <p className="small">
+                        A critical benchmark was <span className="bold">Spotify</span>, whose Car Mode was a great example of handling a similar set of situational limitations as my concept would.
+                    </p>
                 </div>
                 <div className="column image" style={{ maxWidth: 800 }}>
                     <img src={imports['benchmarking']} />
@@ -69,7 +72,7 @@ export default function CookingAppDesignScreen() {
                 <div className="column">
                     <h2>Sketches</h2>
                     <p className="small">
-                        The final sketches focused on how users would explore recipes, including an Explore tab which allows users to see many recipes quickly. I chose a carousel format with large recipe components that take up the majority of the screen after feedback from peers.
+                        The final sketches focused on how users would explore recipes, including a <span className="bold">Discover tab</span> to inspire users. I chose a <span className="bold">carousel format</span> for this screen so that many recipes could be viewed in quick succession. Recipes would each take up the whole screen, and could be <span className="bold">swiped horizontally</span> to get a new recipe and <span className="bold">swiped vertically</span> to view more details on a recipe.
                     </p>
                 </div>
                 <div className="column image" style={{ maxWidth: 800 }}>
@@ -89,44 +92,34 @@ export default function CookingAppDesignScreen() {
             </WidthContainer>
             <WidthContainer width={1300}>
                 <h2>Information Architecture</h2>
+                <p>
+                    All components of the app would lead to recipes and their resulting Cook Mode screens, since this would be the core functionality of the UI.
+                </p>
                 <div className="column image" style={{ maxWidth: 900, margin: "64px auto" }}>
                     <img src={imports['information-architecture']} />
                 </div>
             </WidthContainer>
 
             <section className="style-intro">
-                <WidthContainer width={1500}>
+                <WidthContainer width={1100}>
                     <h2>Visual Style</h2>
-                    <p>
-                        blah blah blah
-                    </p>
-                </WidthContainer>
-                <WidthContainer width={2200} className="split-columns">
-                    <div className="column image">
-                        <img src={imports['mood-board-1']} />
-                    </div>
-                    <div className="column image">
-                        <img src={imports['mood-board-2']} />
-                    </div>
+                    <p>Style directions 1 and 2 were developed to explore the warm, homemade side of cooking versus sharp, bold, more aggressive tones resembling cutlery and fresh produce. The final style combined features of each direction.</p>
                 </WidthContainer>
                 <WidthContainer width={1100}>
                     <div className="image">
-                        <img src={imports['style-refinement']} />
+                        <img src={imports['style-development']} />
                     </div>
                 </WidthContainer>
             </section>
 
-            <WidthContainer width={1300}>
-                <h2>Cook Mode</h2>
-                <p>
-                    The kitchen instruction interface underwent the most change of any other screen as test users responded to initial designs:
-                </p>
-                <ul>
-                    <li>One step would occupy an entire screen and slide left or right by <span className="bold">tapping anywhere in the left and right regions</span> of the screen to enable easy, imprecise interaction without use of fingers, i.e. with an elbow or knuckle tap. This needed some sort of onboarding process for users to understand it.</li>
-                    <li>Directions can also be changed by <span className="bold">speaking commands aloud</span>, but this functionality needed to be more emphasized through the UI and the preceding onboarding.</li>
-                    <li>Microphone functionality needed to be <span className="bold">easily toggleable</span> in Cook Mode without burying it in a separate settings screen.</li>
-                </ul>
-                <div className="image" style={{ maxWidth: 1000 }}>
+            <WidthContainer width={1500} className="split-columns bottom-margin">
+                <div className="column">
+                    <h2>Cook Mode</h2>
+                    <p style={{ maxWidth: 500 }} className="small">
+                        The kitchen instruction interface would show one step at a time, occupying an entire screen. Moving forward or backward would be accomplished by <span className="bold">tapping anywhere in the left or right regions</span> of the screen to enable easy, imprecise interaction <span className="bold">without use of fingers</span>, i.e. with an elbow or knuckle tap, or by using <span className="bold">your voice</span> to activate commands.
+                    </p>
+                </div>
+                <div className="column image" style={{ maxWidth: 1200 }}>
                     <img src={imports['cook-mode-iteration']} />
                 </div>
             </WidthContainer>

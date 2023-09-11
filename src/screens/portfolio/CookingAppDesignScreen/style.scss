@@ -10,12 +10,15 @@
     }
     .split-columns {
         display: flex;
-        gap: 42px;
+        gap: 60px;
 
         .column {
             width: 50%;
             align-self: center;
         }
+    }
+    .bottom-margin {
+        margin-bottom: 72px;
     }
 
     .image, .column.image {
