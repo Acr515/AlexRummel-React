@@ -1,6 +1,7 @@
 import MetaTags from 'components/MetaTags';
-import React from 'react';
+import React, { useContext } from 'react';
 import WidthContainer from 'components/WidthContainer';
+import PageColorContext from 'context/PageColorContext';
 import './style.scss';
 
 /**
@@ -10,6 +11,9 @@ import './style.scss';
  * @param {boolean} dim Optional. If true, dims the opacity of the header image
  */
 export default function PortfolioHeader({ entry, wideImage = null, dim = false }) {
+
+    const colors = useContext(PageColorContext);
+
     return (
         <div className="_PortfolioHeader">
             <MetaTags
@@ -26,7 +30,7 @@ export default function PortfolioHeader({ entry, wideImage = null, dim = false }
                 </div>
             </div>
             <WidthContainer>
-                <div className="specifications">
+                <div className="specifications" style={{ color: colors.darkfont || "" }}>
                     <h3 className="date">{entry.specs.dates}</h3>
                     {entry.specs.toolsUsed.map((tools, i) => <h3 key={i}>{tools}</h3>)}
                 </div>

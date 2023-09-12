@@ -11,6 +11,7 @@ export default class PortfolioEntry {
     featured;   // boolean value of whether or not this entry should be featured on the home page
     tags;       // an array of strings that broadly describe the nature of the project (i.e. paid, software, design, etc.)
     specs;      // object of data that displays as a table near the top of a portfolio page
+    colors;     // object of data containing properties for universal colors of entire page
 
     // Calculated
     featuredImage;      // wide banner that serves as the header of a portfolio page as well as the thumbnail for the entry if it is featured
@@ -26,6 +27,7 @@ export default class PortfolioEntry {
         this.featured = data.featured;
         this.tags = data.tags;
         this.specs = data.specs;
+        this.colors = data.colors;
         
         this.featuredImage = images.featuredImage;
         this.thumbnailImage = images.thumbnailImage;

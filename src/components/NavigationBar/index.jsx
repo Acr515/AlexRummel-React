@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import WidthContainer from 'components/WidthContainer';
+import PageColorContext from 'context/PageColorContext';
 import './style.scss';
 
 export default function NavigationBar() {
@@ -17,6 +18,8 @@ export default function NavigationBar() {
     const getHeaderBgOpacity = (y) => currentPathRef.current != "/" ? 1 : y > 460 ? 1 : Math.max(0, 1 - ((460 - y) * .007));
     const [headerOpacity, setHeaderOpacity] = useState(getHeaderOpacity(window.scrollY));
     const [headerBgOpacity, setHeaderBgOpacity] = useState(getHeaderBgOpacity(window.scrollY));
+
+    const colors = useContext(PageColorContext);
 
     
     // Collapse mobile navigation when a link is clicked
@@ -45,7 +48,6 @@ export default function NavigationBar() {
 
     // Location change listening
     useEffect(() => {
-        console.log(location.pathname);
         setCurrentPath(location.pathname);
     }, [location]);
     useEffect(() => {
@@ -56,26 +58,40 @@ export default function NavigationBar() {
     return (
         <nav 
             className={`_NavigationBar ${ opened ? "open" : "" }`}
-            style={{ backgroundColor: `rgba(4, 5, 4, ${headerBgOpacity})` }}
+            style={{ 
+                backgroundColor: headerBgOpacity < 1 ? `rgba(4, 5, 4, ${headerBgOpacity})` : colors.background || "#040504"
+            }}
         >
             <WidthContainer className="container" verticalPadding={false}>
                 <Link 
                     className="title" 
                     to="/"
-                    style={{ opacity: opened ? 1 : headerOpacity }}
+                    style={{ 
+                        opacity: opened ? 1 : headerOpacity,
+                        color: colors.font || "inherit"
+                    }}
                 >
                     Alex Rummel
                 </Link>
                 <ul className="link-list">
-                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/">portfolio</Link></li>
-                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/other">other</Link></li>
-                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/about">about</Link></li>
+                    <li>
+                        <div className="overline"></div>
+                        <Link className="link-text" onClick={linkClicked} to="/" style={{ color: colors.font || "" }}>portfolio</Link>
+                    </li>
+                    <li>
+                        <div className="overline"></div>
+                        <Link className="link-text" onClick={linkClicked} to="/other" style={{ color: colors.font || "" }}>other</Link>
+                    </li>
+                    <li>
+                        <div className="overline"></div>
+                        <Link className="link-text" onClick={linkClicked} to="/about" style={{ color: colors.font || "" }}>about</Link>
+                    </li>
                     <li>
                         <div className="overline"></div>
                         { process.env.NODE_ENV == 'production' ? 
-                            <a className="link-text" onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf">resume</a>
+                            <a className="link-text" onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf" style={{ color: colors.font || "" }}>resume</a>
                         :
-                            <Link className="link-text" onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf">resume</Link>
+                            <Link className="link-text" onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf" style={{ color: colors.font || "" }}>resume</Link>
                         }
                     </li>
                 </ul>

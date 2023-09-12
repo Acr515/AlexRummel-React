@@ -5,6 +5,12 @@
 	"title": "Cooking App Design",
 	"tagline": "How can an app elevate the cooking experience from recipe discovery to food preparation?",
 	"featured": true,
+	"colors": {
+		"background": "#040403",
+		"font": "#e9e9e3",
+		"darkfont": "#797979",
+		"darktint": "brightness(36%)"
+	},
 	"tags": [
 		"school",
 		"design"

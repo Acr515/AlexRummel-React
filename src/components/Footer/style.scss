@@ -14,7 +14,7 @@
             font-weight: 400;
 
             &:hover {
-                color: $GREEN_HI;
+                color: $GREEN_HI !important;
             }
         }
     }
@@ -32,7 +32,7 @@
         }
 
         a:hover {
-            filter: brightness(0) saturate(100%) invert(66%) sepia(22%) saturate(888%) hue-rotate(88deg) brightness(93%) contrast(92%);
+            filter: brightness(0) saturate(100%) invert(66%) sepia(22%) saturate(888%) hue-rotate(88deg) brightness(93%) contrast(92%) !important;
         }
 
         a img {

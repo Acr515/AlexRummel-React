@@ -38,12 +38,14 @@
         }
     }
 
-    .specifications h3 {
+    .specifications {
         color: $DARK_TEXT;
-        text-transform: uppercase;
-        margin: 8px 0;
-        font-size: 14px;
-        font-weight: 500;
+        h3 {
+            text-transform: uppercase;
+            margin: 8px 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
     }
 
     .specifications h3.date {

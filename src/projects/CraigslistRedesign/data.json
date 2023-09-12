@@ -8,6 +8,12 @@
 		"school",
 		"design"
 	],
+	"colors": {
+		"background": "#040404",
+		"font": "#e6e6e6",
+		"darkfont": "#797979",
+		"darktint": "brightness(36%)"
+	},
 	"specs": {
 		"dates": "Jun. 2022–Aug. 2022",
 		"toolsUsed": [
