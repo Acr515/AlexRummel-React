@@ -49,7 +49,7 @@ export default function HomeScreen() {
 					<h1>Alex Rummel</h1>
 				</div>
 				<div className="description">
-                    I&apos;m a designer and developer specializing in <span className="highlight">UI/UX design</span> and <span className="highlight">front-end software programming.</span>
+                    I&apos;m a designer and developer who specializes in <span className="highlight">UI/UX design</span> and <span className="highlight">front-end software programming.</span>
                 </div>
             </Section>
             <Section>
