@@ -58,7 +58,7 @@ export default function CouncilOnAgingESPScreen() {
                     Council on Aging (COA) assists older adults in their homes through a range of different programs. Their Elderly Services Program (ESP) provides clients with in-home care through their network of third-party providers, empowering them to live alone in their homes.
                 </p>
                 <p>
-                    ESP&apos;s system for billing clients is over 25 years old and confusing for both case managers and clients. COA approached Live Well Collaborative, my co-op company, to research the problem and overhaul the existing billing system.
+                    ESP&apos;s system for billing clients is out-dated and confusing for all stakeholders. COA approached Live Well Collaborative, my co-op company, to research the problem and overhaul the existing billing system.
                 </p>
                 <ul className="team">
                     <li style={{ fontFamily: "input-sans", marginBottom: 8, fontWeight: 500 }}>Live Well Collaborative Teammates</li>
@@ -73,25 +73,20 @@ export default function CouncilOnAgingESPScreen() {
                     <div>
                         <h2>Research Phase</h2>
                         <p>
-                            The team first conducted comprehensive research on COA and the ESP program to better understand how it functions, in addition to researching adjacent organizations in similar industries.
+                            The team first conducted comprehensive research on COA and the ESP program to better understand how it functions, focusing on their standard operating procedures for billing clients. This information is confidential to COA.
                         </p>
-                        <h3>Key Stakeholders</h3>
+                        <p>
+                            The bulk of the secondary research I conducted focused on understanding alternative payment models (APMs) in other industries, as well as understanding how other non-profit groups effectively solicit donations through compelling graphics and narratives. Articles and case studies were compiled and coded into results to inform our intuitions.
+                        </p>
                     </div>
-                    <div className="image" style={{ maxWidth: 1000, marginTop: 64 }}>
-                        <img src={imports['stakeholders']} />
+                    <div className="image" style={{ marginTop: 64, marginBottom: 16 }}>
+                        <img src={imports['research']} />
                     </div>
                 </WidthContainer>
             </section>
 
             <WidthContainer>
-                <h3>Current Billing Process</h3>
-                <p>
-                    In the current ESP system, a client&apos;s income, assets, and medical expenses are put into a “black box” that calculates an adjusted monthly income. This income is placed onto a sliding scale in order to determine the percentage of their copay that they’ll need to pay monthly. Neither COA staff nor clients fully understand why the black box outputs certain percentages, leading to widespread confusion and an inability to catch mistakes when they arise.
-                </p>
-                <div className="image" style={{ maxWidth: 800, marginTop: 64 }}>
-                    <img src={imports['sliding-scale']} />
-                </div>
-                <div className="two-columns" style={{ marginTop: 96 }}>
+                <div className="two-columns">
                     <div className="column">
                         <h3>Primary Research</h3>
                         <p>
@@ -104,7 +99,7 @@ export default function CouncilOnAgingESPScreen() {
                     <div className="column">
                         <h3>Secondary Research</h3>
                         <p>
-                            A critical focus of secondary research was on alternative payment models (APMs) in other industries. I led this research and uncovered a series of different components that make up APMs.
+                            My research uncovered a series of different components that make up any APM. The existing ESP payment model related most closely to the <span className="bold">sliding scale</span>.
                         </p>
                         <div className="image" style={{ maxWidth: 500, marginTop: 64 }}>
                             <img src={imports['apm-components']} />
@@ -143,7 +138,7 @@ export default function CouncilOnAgingESPScreen() {
             <WidthContainer>
                 <h3>3-Tiered Model</h3>
                 <p>
-                    The culmination of all of our findings became the first 3-tiered payment model, which also provided us with a foundation for later design and testing efforts. The fixed rate per service model, or capitated copay, was the most popular with the COA team, making it a crucial inclusion to the new model. Clients in tier I have a low enough monthly income to make it unethical to bill them for services.
+                    The culmination of all of our findings became the first 3-tiered payment model, which also provided us with a foundation for later design and testing efforts. The fixed rate per service model, or capitated copay, was the most popular with the COA team, making it a crucial inclusion to the new model. Clients in tier 1 have a low enough monthly income making it unethical to bill them for services.
                 </p>
                 <div className="image" style={{ maxWidth: 900, marginTop: 64 }}>
                     <img src={imports['tier-introduction']} />
@@ -154,7 +149,7 @@ export default function CouncilOnAgingESPScreen() {
                 <p>
                     In order to compare payment models with each other, I created a graphic that aims to visualize how clients of many different income levels and levels of care will be billed. These graphics would help both our team and the COA team understand our proposal for the duration of the project.
                 </p>
-                <div className="two-columns sticky-model">
+                <div className="two-columns sticky-model desktop">
                     <div className="column image">
                         <div className="image">
                             <img src={imports['colormodel-sliding-scale']} />
@@ -165,11 +160,22 @@ export default function CouncilOnAgingESPScreen() {
                     </div>
                     <div className="column">
                         <div className="image sticky-image">
-                            <img src={imports['colormodel-3-tiers']} style={{ opacity: !colorGraphic1Visible ? 1 : 0 }}/>
-                            <img src={imports['colormodel-3-tiers-problem']} style={{ opacity: colorGraphic1Visible ? 1 : 0 }}/>
+                            <img src={imports['colormodel-3-tiers']} style={{ opacity: !colorGraphic1Visible ? 1 : 0 }} className="mobile-visible"/>
+                            <img src={imports['colormodel-3-tiers-problem']} style={{ opacity: colorGraphic1Visible ? 1 : 0 }} className="desktop" />
                         </div>
                     </div>
                 </div>
+                <div className="two-columns mobile">
+                    <div className="image">
+                        <img src={imports['colormodel-sliding-scale']} />
+                    </div>
+                    <div className="image">
+                        <img src={imports['colormodel-3-tiers']} />
+                    </div>
+                </div>
+                <p className="mobile">
+                    After later deliberations, the team realized the importantance of incorporating level of care into our payment model. The only way to adjust price for level of care would be to <span className="bold">standardize level of care</span>, as ESP&apos;s services are each unique in their units and distributions.
+                </p>
             </WidthContainer>
             <WidthContainer>
                 <h3>Standardizing Level of Care</h3>
@@ -210,10 +216,18 @@ export default function CouncilOnAgingESPScreen() {
                                 </p>
                             </div>
                         </div>
-                        <div className="column">
+                        <div className="column desktop">
                             <div className="image sticky-image padded-images" style={{ maxWidth: 480, backgroundColor: '#000' }}>
-                                <img src={imports['colormodel-3-tiers-subtiers-problem']} style={{ opacity: !colorGraphic2Visible ? 1 : 0 }}/>
-                                <img src={imports['colormodel-4-tiers-subtiers']} style={{ opacity: colorGraphic2Visible ? 1 : 0 }}/>
+                                <img src={imports['colormodel-3-tiers-subtiers-problem']} style={{ opacity: !colorGraphic2Visible ? 1 : 0 }} />
+                                <img src={imports['colormodel-4-tiers-subtiers']} style={{ opacity: colorGraphic2Visible ? 1 : 0 }} />
+                            </div>
+                        </div>
+                        <div className="column mobile two-columns" style={{ backgroundColor: '#000', boxSizing: 'border-box', padding: 16 }}>
+                            <div className="image">
+                                <img src={imports['colormodel-3-tiers-subtiers-problem']} />
+                            </div>
+                            <div className="image">
+                                <img src={imports['colormodel-4-tiers-subtiers']} />
                             </div>
                         </div>
                     </div>

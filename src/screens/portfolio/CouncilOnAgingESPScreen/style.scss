@@ -97,4 +97,31 @@
             width: 50%;
         }
     }
+    .mobile {
+        display: none;
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .two-columns {
+            flex-direction: column;
+            gap: 48px;
+            .column {
+                width: 100%;
+            }
+        }
+        .two-columns.mobile {
+            flex-direction: row;
+            display: flex;
+            margin-top: 48px;
+        }
+        .two-columns.sticky-model .long-text {
+            margin: revert;
+        }
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: revert;
+        }
+    }
 }
