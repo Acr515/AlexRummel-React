@@ -34,9 +34,8 @@ export default function App() {
     }, [location]);
     // Search for portfolio document color if one exists
     useEffect(() => {
-        let path = currentPathRef.current.split('/').at(-1);
+        let path = currentPathRef.current.split('/').slice(-1)[0];
         const project = PortfolioEntries.getProject(path);
-        console.log(project)
         if (project != null && typeof project.colors !== 'undefined') {
             // Update color state with custom colors
             setCustomColors(project.colors);
