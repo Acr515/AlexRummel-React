@@ -1,5 +1,12 @@
-._PortfolioScreen {
+._OtherProjectsScreen {
+    h1 {
+        font-weight: 400;
+        font-size: 24px;
+    }
     .portfolio-container {
-        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+        gap: 24px;
     }
 }

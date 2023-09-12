@@ -3,6 +3,7 @@ import Section from 'components/Section';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
+import Header from 'projects/DigitalAnimation/featured-cover.png';
 
 import imports from 'projects/DigitalAnimation/imports';
 
@@ -14,6 +15,8 @@ export default function DigitalAnimationScreen() {
         <div className="_BlueberryFestivalScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("digital-animation")}
+                wideImage={Header}
+                dim
             />
             <Section>
                 <h2>Description</h2>

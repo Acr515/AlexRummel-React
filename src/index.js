@@ -7,6 +7,7 @@ import HomeScreen from 'screens/HomeScreen';
 import AboutScreen from 'screens/AboutScreen';
 import ErrorScreen from 'screens/ErrorScreen';
 import PortfolioEntries from 'config/PortfolioEntries';
+import OtherProjectsScreen from 'screens/PortfolioScreen';
 import 'config/GlobalStyle.scss';
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "about",
                 element: <AboutScreen />
+            },
+            {
+                path: "other",
+                element: <OtherProjectsScreen />
             },
             {
                 path: "portfolio",

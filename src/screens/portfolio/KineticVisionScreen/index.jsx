@@ -7,6 +7,7 @@ import './style.scss';
 
 import Header from 'projects/KineticVision/header.png';
 import imports from 'projects/KineticVision/imports';
+import ProjectIntro from 'components/ProjectIntro';
 
 /**
  * The portfolio page for my Kinetic Vision co-op experience.
@@ -18,15 +19,15 @@ export default function KineticVisionScreen() {
                 entry={PortfolioEntries.getProject("kinetic-vision")}
                 wideImage={Header}
             />
-            <Section>
-                <h2>Introduction</h2>
+            <ProjectIntro image={imports['building']}>
                 <p>
                     I was a member of the Mobile + AR Team, a sub-team of the Interactive department, at Kinetic Vision for two co-op terms. During my time, I designed and developed for numerous technologies that I had no prior experience with, allowing me to gain new technical skills and key industry knowledge.
                 </p>
                 <p>
                     Due to the nature of Kinetic Vision&apos;s work, the precise details of the projects I worked on and their clients are confidential.
                 </p>
-            </Section>
+            </ProjectIntro>
+
             <Section className="no-bottom-padding">
                 <h2>Technologies</h2>
                 <ImageDisplay

@@ -7,8 +7,9 @@ import './style.scss';
  * Creates the large header shown on every portfolio entry's page. This also auto-generates the `MetaTags` component.
  * @param {PortfolioEntry} entry The portfolio data to use
  * @param {object} wideImage The large image to show in the background of the project header and tagline
+ * @param {boolean} dim Optional. If true, dims the opacity of the header image
  */
-export default function PortfolioHeader({ entry, wideImage = null }) {
+export default function PortfolioHeader({ entry, wideImage = null, dim = false }) {
     return (
         <div className="_PortfolioHeader">
             <MetaTags
@@ -16,7 +17,7 @@ export default function PortfolioHeader({ entry, wideImage = null }) {
                 description={entry.tagline}
             />
             <div className="heading-section">
-                <img src={wideImage} className="large-image"/>
+                <img src={wideImage} className="large-image" style={{ opacity: dim ? 0.5 : 1 }} />
                 <div className="heading-content">
                     <WidthContainer>
                         <h1>{entry.title}</h1>

@@ -24,7 +24,7 @@
     
                 &.bordered {
                     box-sizing: border-box;
-                    border: 2px solid #bbb;
+                    border: 2px solid #444645;
                 }
             }
 
@@ -66,7 +66,7 @@
 
     .image-caption {
         font-size: 16px;
-        color: #777;
+        color: $DARK_TEXT;
         font-style: italic;
         text-align: center;
         display: block;

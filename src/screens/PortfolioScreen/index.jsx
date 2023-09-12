@@ -1,29 +1,28 @@
 import React from 'react';
 import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
 import PortfolioItem from 'components/PortfolioItem';
 import PortfolioEntries from 'config/PortfolioEntries';
 import MetaTags from 'components/MetaTags';
 import './style.scss';
 
 /**
- * Currently not implemented. A screen that shows all portfolio entries.
+ * A screen that shows all other portfolio entries.
  */
-export default function PortfolioScreen() {
+export default function OtherProjectsScreen() {
     return (
-        <div className="_PortfolioScreen _Screen">
+        <div className="_OtherProjectsScreen _Screen">
             <MetaTags
-                title="Portfolio"
-                description="A catalog of some of my best projects over the years."
+                title="Other Projects"
+                description="A catalog of some of my other side projects."
             />
             <Section>
-                <h1>Portfolio</h1>
+                <h1>Other Projects</h1>
+                <p>A catalog of some other fun side projects that I&apos;ve worked on over the years.</p>
             </Section>
-            <SectionDivider />
             <Section>
                 <div className="portfolio-container">
                     {
-                        PortfolioEntries.sortProjects().map(entry => (
+                        PortfolioEntries.getNonFeaturedProjects().map(entry => (
                             <PortfolioItem
                                 key={entry.urlName}
                                 entry={entry}

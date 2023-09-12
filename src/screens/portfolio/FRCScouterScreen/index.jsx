@@ -1,9 +1,9 @@
 import React from 'react';
 import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
+import Header from 'projects/FRCScouter/header.png';
 
 import imports from 'projects/FRCScouter/imports';
 
@@ -15,11 +15,13 @@ export default function FRCScouterScreen() {
         <div className="_FRCScouterScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("frc-scouter")}
+                wideImage={Header}
+                dim
             />
             <Section>
                 <h2>Introduction</h2>
 				<p>
-                    I built a public web-app to be used to record data on robots at FIRST Robotics Competition events. The app is branded as FortyEight, named after the first digits of my former team&apos;s team number, but it is available for anyone to view and download. The app is also open-source and viewable by anyone through GitHub.
+                    I built a public web-app to be used to record data on robots at FIRST Robotics Competition events. The app is branded as FortyEight, named after the first digits of my former team&apos;s team number, but it is available for anyone to view and download. The app is also open-source and <a href="https://github.com/Acr515/FortyEight" target="_blank" rel="noreferrer">viewable by anyone through GitHub</a>.
 				</p>
                 <p>
                     Each FRC match joins 3 schools on an alliance against 3 other schools. Roughly 12 qualification matches are played by each school at a 40+ school event with randomly generated teammates and opponents for each match. Qualification matches are followed by elimination rounds, where the top 8 teams pick 2 robots each from the remaining field to compete with for the remainder of the tournament.
@@ -34,7 +36,6 @@ export default function FRCScouterScreen() {
                     <li>The students operating the robot on the field would need an easy and quick way to parse out and apply findings from the solution in a fast-paced, stressful environment.</li>
                 </ul>
             </Section>
-            <SectionDivider />
             <Section>
                 <h2>Description</h2>
 				<p>

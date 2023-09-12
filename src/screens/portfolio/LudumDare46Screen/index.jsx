@@ -1,12 +1,13 @@
 import React from 'react';
 import Section from 'components/Section';
-import SectionDivider from 'components/SectionDivider';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import Blockquote from 'components/Blockquote';
 import PortfolioEntries from 'config/PortfolioEntries';
+import Header from 'projects/LudumDare46/featured-cover.png';
 
 import imports from 'projects/LudumDare46/imports';
+import './style.scss';
 
 /**
  * The portfolio page for Ludum Dare 46.
@@ -16,6 +17,8 @@ export default function LudumDare46Screen() {
         <div className="_LudumDare46Screen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("ludum-dare-46")}
+                wideImage={Header}
+                dim
             />
             <Section>
                 <h2>Introduction</h2>
@@ -23,7 +26,21 @@ export default function LudumDare46Screen() {
 					Ludum Dare is a biannual game development competition where designers and developers from all over the world compete to make the best video game within a 72-hour span based on a theme, which is revealed at the beginning of the time limit. The theme of the 46th Ludum Dare was &quot;Keep it alive.&quot; This edition of the Ludum Dare was characterized by the COVID-19 pandemic, which lead to record-breaking participation that exceeded 4,500 global game submissions.
 				</p>
             </Section>
-            <SectionDivider />
+            <Section>
+                <div className="two-columns">
+                    <div className="column">
+                        <img src={imports['empty-cone-logo']} />
+                    </div>
+                    <div className="column">
+                        <p>
+                            <a href="https://acr515.itch.io/ld46" rel="noreferrer" target="_blank">Play now</a> on itch.io
+                        </p>
+                        <p>
+                            <a href="https://ldjam.com/events/ludum-dare/46/the-empty-cone" rel="noreferrer" target="_blank">View competition page</a> on Ludum Dare website
+                        </p>
+                    </div>
+                </div>
+            </Section>
             <Section>
                 <h2>Description</h2>
 				<p>

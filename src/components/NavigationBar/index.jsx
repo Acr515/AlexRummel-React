@@ -67,14 +67,15 @@ export default function NavigationBar() {
                     Alex Rummel
                 </Link>
                 <ul className="link-list">
-                    <li><div className="overline"></div><Link onClick={linkClicked} to="/">portfolio</Link></li>
-                    <li><div className="overline"></div><Link onClick={linkClicked} to="/about">about me</Link></li>
+                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/">portfolio</Link></li>
+                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/other">other</Link></li>
+                    <li><div className="overline"></div><Link className="link-text" onClick={linkClicked} to="/about">about</Link></li>
                     <li>
                         <div className="overline"></div>
                         { process.env.NODE_ENV == 'production' ? 
-                            <a onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf">resume</a>
+                            <a className="link-text" onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf">resume</a>
                         :
-                            <Link onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf">resume</Link>
+                            <Link className="link-text" onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf">resume</Link>
                         }
                     </li>
                 </ul>

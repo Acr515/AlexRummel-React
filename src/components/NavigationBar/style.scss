@@ -37,17 +37,17 @@
 
         li {
             display: inline-block;
-            margin-left: 45px;
-            width: 105px;
+            margin-left: 40px;
             text-align: right;
 
             a {
-                font-size: 16px;
+                font-size: 15px;
                 font-family: 'input-sans';
                 color: $GREEN_TEXT;
                 text-decoration: none;
                 font-weight: 300;
                 display: block;
+                margin-left: 24px;
             }
 
             .overline {
