@@ -5,7 +5,8 @@
     "gameplay-1": require('./assets/gameplay-1.png'),
     "gameplay-2": require('./assets/gameplay-2.png'),
     "gameplay-3": require('./assets/gameplay-3.png'),
-    "gameplay-4": require('./assets/gameplay-4.png')
+    "gameplay-4": require('./assets/gameplay-4.png'),
+    "empty-cone-logo": require('./assets/empty-cone-logo.png')
 };
 
 export default imports;

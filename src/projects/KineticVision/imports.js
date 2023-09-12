@@ -4,7 +4,8 @@
 const imports = {
     "technology-graphic": require('./assets/technology-graphic.png'),
     "technology-graphic-mobile": require('./assets/technology-graphic-mobile.png'),
-    "interns": require('./assets/interns.jpg')
+    "interns": require('./assets/interns.jpg'),
+    "building": require('./assets/building.jpg')
 };
 
 export default imports;

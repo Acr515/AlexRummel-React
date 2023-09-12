@@ -1,8 +1,9 @@
 {
 	"urlName": "blueberry-festival",
-	"date": "2022-08-12",
+	"date": "2021-08-12",
+	"sortingOrder": "2023",
 	"title": "National Blueberry Festival App",
-	"tagline": "I designed and programmed the user interface of a custom mobile phone app for a local festival.",
+	"tagline": "How can we program and design an app to inform participants of a festival about upcoming events?",
 	"featured": true,
 	"tags": [
 		"paid",

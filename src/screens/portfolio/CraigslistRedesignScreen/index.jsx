@@ -4,9 +4,9 @@ import WidthContainer from 'components/WidthContainer';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
+import ProjectIntro from 'components/ProjectIntro';
 
-import WideImage from 'projects/CraigslistRedesign/small-cover.jpg';
-import NarrowImage from 'projects/CraigslistRedesign/assets/cincinnati.jpg';
+import Header from 'projects/CraigslistRedesign/header.png';
 import Chevron from 'assets/images/icons/chevron.png';
 import imports from 'projects/CraigslistRedesign/imports';
 import './style.scss';
@@ -19,10 +19,14 @@ export default function CraigslistRedesignScreen() {
         <div className="_CraigslistRedesignScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("craigslist-redesign")}
-                wideImage={WideImage}
-                narrowImage={NarrowImage}
-                flipLargeImages
+                wideImage={Header}
             />
+            <ProjectIntro image={imports['small-cover']}>
+                <p>
+                    As an interaction design project, I was assigned to study the Craigslist website&apos;s faults with user testing and redesign the UI, with a focus on the housing sections of the website. 
+                </p>
+            </ProjectIntro>
+
             <Section>
                 <h2>User Testing</h2>
                 <p>
@@ -45,22 +49,22 @@ export default function CraigslistRedesignScreen() {
                     <div className="row">
                         <div className="cell">The categories on the home page were difficult to parse</div>
                         <img className="arrow" src={Chevron} />
-                        <div className="cell bold">De-clutter the home page and make it more approachable without overwhelming users with links</div>
+                        <div className="cell">De-clutter the home page and make it more approachable without overwhelming users with links</div>
                     </div>
                     <div className="row">
                         <div className="cell">The map feature was obtuse and frustrating to use, requiring several repetitive interactions</div>
                         <img className="arrow" src={Chevron} />
-                        <div className="cell bold">Find a way to group properties/avoid clutter on the map and reduce the number of clicks it takes to begin viewing results</div>
+                        <div className="cell">Find a way to group properties/avoid clutter on the map and reduce the number of clicks it takes to begin viewing results</div>
                     </div>
                     <div className="row">
                         <div className="cell">The button used to post was not immediately obvious</div>
                         <img className="arrow" src={Chevron} />
-                        <div className="cell bold">Raise the button within the visual hierarchy</div>
+                        <div className="cell">Raise the button within the visual hierarchy</div>
                     </div>
                     <div className="row">
                         <div className="cell">Lack of confidence in the process of creating a post</div>
                         <img className="arrow" src={Chevron} />
-                        <div className="cell bold">Make user confident and aware of their status while creating the post, ensuring clarity of where they are in the process</div>
+                        <div className="cell">Make user confident and aware of their status while creating the post, ensuring clarity of where they are in the process</div>
                     </div>
                 </div>
             </Section>
@@ -89,7 +93,7 @@ export default function CraigslistRedesignScreen() {
                             <span className="bold">Progress indicator</span> during post creation
                         </p>
                     </div>
-                    <div className="column image-column">
+                    <div className="column image-column sketches">
                         <ImageDisplay
                             images={[imports['sketch-1'], imports['sketch-2']]}
                             className="sketch-list"
@@ -125,24 +129,33 @@ export default function CraigslistRedesignScreen() {
                     </div>
                 </div>
             </WidthContainer>
-            <Section>
-                <h2>UI Style</h2>
-                <p>
-                    The basis of the new visual language would be to make the site feel more warm and inviting. I employed the use of a more vibrant base color, a rounder typeface, and bouncy interaction animations to do so.
-                </p>
-                <ImageDisplay
-                    images={[imports['style-guide']]}
-                    forceFullWidth
-                    maxWidth={700}
-                />
-                <ImageDisplay
-                    images={[imports['button-animations']]}
-                    maxWidth={400}
-                />
-            </Section>
+
+            <div className="ui-style">
+                <Section>
+                    <div className="wide-column-area">
+                        <div className="column text-column narrow">
+                            <h2>UI Style</h2>
+                            <p>
+                                The basis of the new visual language would be to make the site feel more warm and inviting. I employed the use of a more vibrant base color, a rounder typeface, and bouncy interaction animations to do so.
+                            </p>
+                        </div>
+                        <div className="column image-column">
+                            <ImageDisplay
+                                images={[imports['style-guide']]}
+                                forceFullWidth
+                                maxWidth={700}
+                            />
+                            <ImageDisplay
+                                images={[imports['button-animations']]}
+                                maxWidth={400}
+                            />
+                        </div>
+                    </div>
+                </Section>
+            </div>
+
             <div className="result-background">
                 <Section>
-                    <h2>Results</h2>
                     <ImageDisplay
                         images={[imports['home-page-large']]}
                         forceFullWidth

@@ -7,11 +7,11 @@ import './style.scss'
  * @param {number} width Defaults to 1150. The container will size to the smaller of 100% width and this number
  * @param {boolean} verticalPadding Defaults to true. Adds padding to the top and bottom of the element
  */
-export default function WidthContainer({ children, className, width = 1150, verticalPadding = true }) {
+export default function WidthContainer({ children, className, width = 1150, verticalPadding = true, style }) {
     return (
         <div 
             className={`_WidthContainer ${verticalPadding ? "vertical-padding" : ""} ${className ? className : ""}`}
-            style={{ maxWidth: width }}
+            style={{ ...style, maxWidth: width }}
         >
             {children}
         </div>

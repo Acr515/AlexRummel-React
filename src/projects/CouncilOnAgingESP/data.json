@@ -1,0 +1,21 @@
+{
+	"urlName": "council-on-aging-esp",
+	"date": "2023-08-01",
+	"sortingOrder": "2023",
+	"title": "Council on Aging: ESP Billing Redesign",
+	"tagline": "How can we make the billing process for older adults in the ESP program simpler and more equitable?",
+	"featured": true,
+	"tags": [
+		"paid",
+		"design"
+	],
+	"specs": {
+		"dates": "May 2023–Aug. 2023",
+		"toolsUsed": [
+            "Adobe Illustrator, InDesign, Miro",
+            "Microsoft Excel, Google Sheets, JavaScript"
+        ],
+		"linkNames": [],
+		"linkLocations": []
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"urlName": "cooking-app-design",
+	"date": "2023-01-31",
+	"sortingOrder": "2022-12-31",
+	"title": "Cooking App Design",
+	"tagline": "How can an app elevate the cooking experience from recipe discovery to food preparation?",
+	"featured": true,
+	"tags": [
+		"school",
+		"design"
+	],
+	"specs": {
+		"dates": "Jan. 2023–Apr. 2023",
+		"toolsUsed": [
+            "Adobe Illustrator, Figma"
+        ],
+		"linkNames": [
+			"Interactive prototype"
+		],
+		"linkLocations": [
+			"https://www.figma.com/proto/40SAqBV79Yj25qsbTPWkCO/CODE3011_Prototype?page-id=47%3A765&node-id=90-3605&viewport=-325%2C686%2C0.35&scaling=scale-down&starting-point-node-id=201%3A25456"
+		]
+	}
+}

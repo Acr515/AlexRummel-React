@@ -1,4 +1,51 @@
 ._USOpenScreen {
+    
+    .research-insights {
+        background-color: #2e33bd;
+        width: 100%;
+        padding: 24px 12px;
+        margin: 48px 0;
+        box-sizing: border-box;
+
+        img {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .opportunities {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+
+        div {
+            width: 40%;
+        }
+
+        .opportunity-list {
+            //list-style-image: url('../../../projects/USOpen/assets/yellow-bullet.png');
+
+            padding: 0;
+            li {
+                font-size: 38px;
+                span {
+                    font-size: 18px;
+                    position: relative;
+                    left: -6px;
+                    top: -6px;
+                    line-height: 0.7em;
+
+                    p {
+                        margin: 4px 0 10px 14px;
+                        color: $DARK_TEXT;
+                    }
+                }
+            }
+        }
+    }
+
     .split-display {
         display: flex;
         align-items: center;

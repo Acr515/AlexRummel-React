@@ -20,6 +20,7 @@ const imports = {
     "home-page-large": require('./assets/prototype/home-page-large.png'),
     "listing-details": require('./assets/prototype/listing-details.png'),
     "listing-gallery": require('./assets/prototype/listing-gallery.png'),
+    "small-cover": require('./small-cover.jpg'),
     "listing-map": require('./assets/prototype/listing-map.png')
 };
 

@@ -5,9 +5,9 @@ import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 import './style.scss';
 
-//import WideImage from 'projects/CraigslistRedesign/small-cover.jpg';
-//import NarrowImage from 'projects/CraigslistRedesign/assets/cincinnati.jpg';
+import Header from 'projects/KineticVision/header.png';
 import imports from 'projects/KineticVision/imports';
+import ProjectIntro from 'components/ProjectIntro';
 
 /**
  * The portfolio page for my Kinetic Vision co-op experience.
@@ -17,19 +17,17 @@ export default function KineticVisionScreen() {
         <div className="_KineticVisionScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("kinetic-vision")}
-                //wideImage={WideImage}
-                //narrowImage={NarrowImage}
-                //flipLargeImages
+                wideImage={Header}
             />
-            <Section>
-                <h2>Introduction</h2>
+            <ProjectIntro image={imports['building']}>
                 <p>
                     I was a member of the Mobile + AR Team, a sub-team of the Interactive department, at Kinetic Vision for two co-op terms. During my time, I designed and developed for numerous technologies that I had no prior experience with, allowing me to gain new technical skills and key industry knowledge.
                 </p>
                 <p>
                     Due to the nature of Kinetic Vision&apos;s work, the precise details of the projects I worked on and their clients are confidential.
                 </p>
-            </Section>
+            </ProjectIntro>
+
             <Section className="no-bottom-padding">
                 <h2>Technologies</h2>
                 <ImageDisplay
@@ -55,8 +53,8 @@ export default function KineticVisionScreen() {
                             <span className="emphasis">I was the sole member of an internal R&D project that involved using an iOS device&apos;s camera to record data with the help of augmented reality.</span> This served as my introduction to Swift and native app development as it taught me several skills I used throughout the co-op.
                         </p>
                         <ul>
-                            <li>Learned SwiftUI and RealityKit while creating</li>
-                            <li>Designed UI of prototype</li>
+                            <li>Learned SwiftUI and RealityKit while creating a native AR app</li>
+                            <li>Designed UI of prototype and novel technology to capture spatial data of an AR object</li>
                         </ul>
                         <div className="spacer"></div>
                         <p>

@@ -1,0 +1,127 @@
+._CouncilOnAgingESPScreen {
+
+    ul {
+        padding-left: 18px;
+        li {
+            margin: 12px 0;
+        }
+    }
+
+    .team {
+        font-size: 14px;
+        list-style: none;
+        padding: 0;
+        margin-top: 40px;
+
+        li {
+            margin: 4px 0;
+        }
+    }
+
+    .image {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .image.transitioning {
+        position: relative;
+        min-height: 310px;
+
+        img {
+            position: absolute;
+            transition: opacity .35s;
+        }
+    }
+
+    .padded-images img {
+        padding: 32px;
+        box-sizing: border-box;
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .two-columns.sticky-model {
+        max-width: 800px;
+        margin: 64px auto 0;
+        position: relative;
+
+        .sticky-image {
+            position: sticky;
+            top: calc(90px + 15%);
+            left: 0;
+            height: 380px;
+
+            img {
+                position: absolute;
+                transition: opacity .15s;
+            }
+        }
+
+        .long-text {
+            margin: 20vh 0;
+        }
+    }
+
+    .column img,
+    .image img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .phase {
+        color: white;
+        margin: 64px 0;
+        padding: 32px 0;
+    }
+
+    .research-phase {
+        background-color: #803b27;
+    }
+
+    .ideation-phase {
+        background-color: #1a284a;
+    }
+
+    .refinement-phase {
+        background-color: #805927;
+    }
+
+    .two-columns {
+        display: flex;
+        gap: 20px;
+
+        .column {
+            width: 50%;
+        }
+    }
+    .mobile {
+        display: none;
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .two-columns {
+            flex-direction: column;
+            gap: 48px;
+            .column {
+                width: 100%;
+            }
+        }
+        .two-columns.mobile {
+            flex-direction: row;
+            display: flex;
+            margin-top: 48px;
+        }
+        .two-columns.sticky-model .long-text {
+            margin: revert;
+        }
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: revert;
+        }
+    }
+}

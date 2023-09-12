@@ -1,79 +1,36 @@
 import MetaTags from 'components/MetaTags';
-import Section from 'components/Section';
 import React from 'react';
+import WidthContainer from 'components/WidthContainer';
 import './style.scss';
 
 /**
  * Creates the large header shown on every portfolio entry's page. This also auto-generates the `MetaTags` component.
  * @param {PortfolioEntry} entry The portfolio data to use
- * @param {object} wideImage The large, wide image to be displayed directly beneath the specifications table. Omitting this value means NEITHER of these images are shown
- * @param {object} narrowImage The narrower image to be displayed directly beneath the specifications table.
- * @param {boolean} flipLargeImages Defaults to false. By default, the wider image presents to the left edge of the screen. Setting to true moves it to the right edge
+ * @param {object} wideImage The large image to show in the background of the project header and tagline
+ * @param {boolean} dim Optional. If true, dims the opacity of the header image
  */
-export default function PortfolioHeader({ entry, wideImage = null, narrowImage, flipLargeImages = false }) {
+export default function PortfolioHeader({ entry, wideImage = null, dim = false }) {
     return (
         <div className="_PortfolioHeader">
             <MetaTags
                 title={entry.title}
                 description={entry.tagline}
             />
-            <Section>
-                <img className="banner-image" width="800" height="275" src={entry.featuredImage} />
-                <h1>{entry.title}</h1>
-                <p>{entry.tagline}</p>
-                <h2>Specifications</h2>
-                <div className="info-section">
-                    <div className="row">
-                        <span className="cat">Dates</span>
-                        <span className="val">{entry.specs.dates}</span>
-                    </div>
-                    <div className="row">
-                        <span className="cat">Tools Used</span>
-                        <span className="val">
-                            {
-                                entry.specs.toolsUsed.map((tool, ind) => (
-                                    <span
-                                        key={ind}
-                                        className="info-line"
-                                    >
-                                        {tool}
-                                    </span>
-                                ))
-                            }
-                        </span>
-                    </div>
-                    { entry.specs.linkNames.length > 0 &&
-                        <div className="row">
-                            <span className="cat">Links</span>
-                            <span className="val">
-                                {
-                                    entry.specs.linkNames.map((link, ind) => (
-                                        <a 
-                                            target="blank" 
-                                            href={entry.specs.linkLocations[ind]} 
-                                            key={ind}
-                                            className="info-line"
-                                        >
-                                            {link}
-                                        </a>
-                                    ))
-                                }
-                            </span>
-                        </div>
-                    }
+            <div className="heading-section">
+                <img src={wideImage} className="large-image" style={{ opacity: dim ? 0.5 : 1 }} />
+                <div className="heading-content">
+                    <WidthContainer>
+                        <h1>{entry.title}</h1>
+                        <div className="tagline">{entry.tagline}</div>
+                    </WidthContainer>
                 </div>
-            </Section>
-            { wideImage != null && <div className="large-image-group">
-                { flipLargeImages && <div className="large-image-column narrow">
-                    <div className="large-image" style={{ backgroundImage: `url(${narrowImage})` }}></div>
-                </div> }
-                <div className="large-image-column">
-                    <div className="large-image" style={{ backgroundImage: `url(${wideImage})` }}></div>
+            </div>
+            <WidthContainer>
+                <div className="specifications">
+                    <h3 className="date">{entry.specs.dates}</h3>
+                    {entry.specs.toolsUsed.map((tools, i) => <h3 key={i}>{tools}</h3>)}
                 </div>
-                { !flipLargeImages && <div className="large-image-column narrow">
-                    <div className="large-image" style={{ backgroundImage: `url(${narrowImage})` }}></div>
-                </div> }
-            </div> }
+            </WidthContainer>
         </div>
     )
 }

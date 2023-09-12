@@ -3,9 +3,20 @@
 
     .container {
         text-align: center;
-        font-size: 16px;
+        font-size: 13px;
+        font-family: 'input-sans';
+        color: $DARK_TEXT;
         padding-top: 60px;
         padding-bottom: 60px;
+
+        a.email {
+            color: $DARK_TEXT;
+            font-weight: 400;
+
+            &:hover {
+                color: $GREEN_HI;
+            }
+        }
     }
 
     .icon-row {
@@ -16,12 +27,12 @@
             height: 36px;
             margin: 0 6px;
             display: inline-block;
-            filter: invert(100%);
+            filter: brightness(0) saturate(100%) invert(30%) sepia(6%) saturate(1215%) hue-rotate(97deg) brightness(96%) contrast(90%);
             transition: filter .2s;
         }
 
         a:hover {
-            filter: invert(56%) sepia(36%) saturate(554%) hue-rotate(102deg) brightness(92%) contrast(83%);
+            filter: brightness(0) saturate(100%) invert(66%) sepia(22%) saturate(888%) hue-rotate(88deg) brightness(93%) contrast(92%);
         }
 
         a img {

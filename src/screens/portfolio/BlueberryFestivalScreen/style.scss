@@ -1,0 +1,96 @@
+._BlueberryFestivalScreen {
+
+    .planning {
+        background-color: #101724;
+        color: #fff;
+        margin-top: 64px;
+    }
+
+    .split-column {
+        display: flex;
+        padding: 64px 24px;
+        justify-content: space-between;
+        gap: 68px;
+
+        .text {
+            width: 40%;
+            align-self: center;
+        }
+
+        .phone-text {
+            align-self: flex-start;
+        }
+
+        .image {
+            width: 60%;
+            img, .image-holder {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+
+    .iterations {
+        color: #fff;
+        background-color: #798ebc;
+    }
+
+    .store-badge {
+        height: 40px;
+        margin-right: 16px;
+    }
+
+    .phone-text-block {
+        margin-top: 64px;
+        margin-bottom: 40vh;
+    }
+
+    #beginner-marker {
+        margin-top: 140px;
+    }
+
+    .sticky-phone {
+        position: sticky;
+        align-self: flex-start;
+        top: 15%;
+        margin: 0 auto;
+        transition: opacity .1s;
+        max-width: 320px;
+
+        .image-holder {
+            max-height: 70vh;
+        }
+
+        .phone-screens {
+            position: relative;
+
+            .frame {
+                position: relative;
+                z-index: -5;
+                max-height: 80vh;
+            }
+
+            img:not(.frame) {
+                position: absolute;
+                width: 100%;
+                max-height: 80vh;
+                top: -0.25%;
+                left: 0;
+                z-index: -10;
+                transition: opacity .15s;
+                transform: scale(81%, 81%);
+            }
+        }
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .iterations .split-column, .planning .split-column {
+            flex-direction: column;
+            gap: 16px;
+
+            div {
+                width: 100%;
+            }
+        }
+    }
+}

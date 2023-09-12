@@ -1,0 +1,78 @@
+._CookingAppDesignScreen {
+    .bold {
+        font-weight: 600;
+    }
+
+    .small {
+        font-size: 16px;
+    }
+
+    .short {
+        max-width: 500px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .split-columns {
+        display: flex;
+        gap: 60px;
+
+        .column {
+            width: 50%;
+            align-self: center;
+        }
+    }
+
+    .bottom-margin {
+        margin-bottom: 72px;
+    }
+
+    .image,
+    .column.image {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .column img,
+    .image img {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .planning,
+    .style-intro {
+        background-color: #69581d;
+        color: #fff;
+        padding: 48px 0;
+        margin: 64px 0;
+    }
+
+    .app-demo {
+        display: block;
+        margin: 20px auto;
+        width: auto;
+        height: auto;
+        max-height: 90vh;
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .split-columns {
+            flex-direction: column;
+
+            .column {
+                width: 100%;
+            }
+        }
+
+        .small {
+            font-size: 18px;
+        }
+
+        .short {
+            max-width: unset;
+        }
+    }
+}
