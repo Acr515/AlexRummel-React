@@ -7,7 +7,7 @@ import HomeScreen from 'screens/HomeScreen';
 import AboutScreen from 'screens/AboutScreen';
 import ErrorScreen from 'screens/ErrorScreen';
 import PortfolioEntries from 'config/PortfolioEntries';
-import OtherProjectsScreen from 'screens/PortfolioScreen';
+import OtherProjectsScreen from 'screens/OtherScreen';
 import 'config/GlobalStyle.scss';
 
 const router = createBrowserRouter([

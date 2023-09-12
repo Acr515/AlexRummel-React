@@ -30,7 +30,7 @@ export default function CookingAppDesignScreen() {
                 <WidthContainer width={1500} className="split-columns">
                     <div className="column">
                         <h2>Journey Map</h2>
-                        <p style={{ maxWidth: 500 }}>
+                        <p className="short">
                             A journey map helped me understand the cooking process and visualize where digital touchpoints may occur, from finding a recipe to cleaning up after eating it.
                         </p>
                     </div>
@@ -41,7 +41,7 @@ export default function CookingAppDesignScreen() {
                 <WidthContainer width={1500} className="split-columns">
                     <div className="column">
                         <h2>Situational Limitations</h2>
-                        <p style={{ maxWidth: 500 }}>
+                        <p className="short">
                             While the journey map shows that the process of cooking can be fun, it also highlights an opportunity area where an app could step in to help. Somebody engaged in cooking has a predictable set of situational limitations that make it difficult to read and interface with traditional instructions. 
                         </p>
                     </div>
@@ -103,7 +103,9 @@ export default function CookingAppDesignScreen() {
             <section className="style-intro">
                 <WidthContainer width={1100}>
                     <h2>Visual Style</h2>
-                    <p>Style directions 1 and 2 were developed to explore the warm, homemade side of cooking versus sharp, bold, more aggressive tones resembling cutlery and fresh produce. The final style combined features of each direction.</p>
+                    <p>
+                        Style directions 1 and 2 were developed to explore the warm, homemade side of cooking versus sharp, bold, more aggressive tones resembling cutlery and fresh produce. The final style combined features of each direction.
+                    </p>
                 </WidthContainer>
                 <WidthContainer width={1100}>
                     <div className="image">
@@ -115,7 +117,7 @@ export default function CookingAppDesignScreen() {
             <WidthContainer width={1500} className="split-columns bottom-margin">
                 <div className="column">
                     <h2>Cook Mode</h2>
-                    <p style={{ maxWidth: 500 }} className="small">
+                    <p className="small short">
                         The kitchen instruction interface would show one step at a time, occupying an entire screen. Moving forward or backward would be accomplished by <span className="bold">tapping anywhere in the left or right regions</span> of the screen to enable easy, imprecise interaction <span className="bold">without use of fingers</span>, i.e. with an elbow or knuckle tap, or by using <span className="bold">your voice</span> to activate commands.
                     </p>
                 </div>
