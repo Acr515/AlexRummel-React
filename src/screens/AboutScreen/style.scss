@@ -1,8 +1,35 @@
 ._AboutMeScreen {
-    .headshot {
-        margin: 32px auto;
-        display: block;
-        width: 100%;
-        max-width: 300px;
+    .two-column {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .text-column {
+        width: 60%;
+    }
+    .headshot-column {
+        width: 40%;
+        img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: $MOBILE_MQ) {
+        .two-column {
+            flex-direction: column;
+            gap: 24px;
+        }
+        .text-column {
+            width: 100%;
+        }
+        .headshot-column {
+            width: 100%;
+            img {
+                margin-right: auto;
+            }
+        }
     }
 }

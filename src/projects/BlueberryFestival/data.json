@@ -9,6 +9,12 @@
 		"paid",
 		"software"
 	],
+	"colors": {
+		"background": "#040404",
+		"font": "#eaeaea",
+		"darkfont": "#797979",
+		"darktint": "brightness(36%)"
+	},
 	"specs": {
 		"dates": "May 2021–Aug. 2021",
 		"toolsUsed": [
