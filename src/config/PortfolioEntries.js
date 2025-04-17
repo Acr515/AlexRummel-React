@@ -6,6 +6,7 @@ import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
 import KineticVisionScreen from 'screens/portfolio/KineticVisionScreen';
+import LaunchpadScreen from 'screens/portfolio/LaunchpadScreen';
 import LudumDare46Screen from 'screens/portfolio/LudumDare46Screen';
 
 /**
@@ -83,6 +84,13 @@ const PortfolioEntries = new ProjectCollection([
             thumbnailImage: require('projects/FRCScouter/small-cover.png')
         },
         component: FRCScouterScreen
+    },
+    {
+        data: require('projects/Launchpad/data.json'),
+        images: {
+            thumbnailImage: require('projects/Launchpad/small-cover.png')
+        },
+        component: LaunchpadScreen
     }
 ]);
 
