@@ -1,0 +1,30 @@
+{
+	"urlName": "launchpad",
+	"date": "2025-04-01",
+	"title": "Launchpad",
+	"tagline": "How can I help underserved high school robotics students build more competitive robots?",
+	"featured": true,
+	"tags": [
+		"school",
+		"design"
+	],
+	"colors": {
+		"background": "#040404",
+		"font": "#e6e6e6",
+		"darkfont": "#797979",
+		"darktint": "brightness(36%)"
+	},
+	"specs": {
+		"dates": "May 2024–May 2025",
+		"toolsUsed": [
+			"Adobe Illustrator, Figma",
+			"React.js, TypeScript"
+        ],
+		"linkNames": [
+			"Prototype"
+		],
+		"linkLocations": [
+			"https://launchpad.alexrummel.com"
+		]
+	}
+}
