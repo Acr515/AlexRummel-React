@@ -2,6 +2,7 @@
  * A dictionary of file names in the assets folder, minus the file extension. Used to avoid polluting the screen .jsx file for a portfolio entry.
  */
 const imports = {
+    "wordmark": require('./assets/wordmark.svg'),
     "icon-array": require('./assets/icon-array.png'),
     "project_scope_background": require('./assets/project_scope_background.jpg'),
     "screen-modules": require('./assets/prototype/screen-modules.png'),

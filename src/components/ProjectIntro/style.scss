@@ -1,21 +1,14 @@
 ._ProjectIntro {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
+    background-color: #000a;
 
-    .text-holder {
-        width: 40%;
-        align-self: center;
-    }
-    .image-holder {
-        width: 60%;
-        align-self: center;
+    .project-intro-container {
+        display: flex;
+        gap: 24px;
+        padding-top: 64px;
+        padding-bottom: 64px;
 
-        .image {
+        .column {
             width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 0 auto;
         }
     }
 

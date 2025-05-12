@@ -5,18 +5,24 @@ import './style.scss';
 /**
  * A standard-use introductory section component for each project that uses a small image to the left
  * and a custom HTML description to the right.
- * @param {URL} image The image to display alongside the HTML description
- * @param {number} maxWidth The maximum width of the image
+ * @param {ProjectEntry} entry The project to display.
+ * @param {string} overview An overview of the project. // TODO: Remove??
  */
-export default function ProjectIntro({ children, image, maxWidth = 600 }) {
+export default function ProjectIntro({ entry }) {
     return (
-        <WidthContainer className="_ProjectIntro" width={1250}>
-            <div className="image-holder">
-                <img src={image} className="image" style={{ maxWidth }}/>
-            </div>
-            <div className="text-holder">
-                {children}
-            </div>
-        </WidthContainer>
+        <div className="_ProjectIntro">
+            <WidthContainer className="project-intro-container">
+                <div className="column">
+                    <h3>Overview</h3>
+                    <p>Giggidy giggidy giggidy</p>
+                    <h3>Collaborators</h3>
+                    <p>Giggidy giggidy giggidy</p>
+                </div>
+                <div className="column">
+                    <h3>Tools Used</h3>
+                    <p>Many very dumb tools</p>
+                </div>
+            </WidthContainer>
+        </div>
     )
 }

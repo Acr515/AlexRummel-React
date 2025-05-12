@@ -1,11 +1,9 @@
 import React from 'react';
 import Section from 'components/Section';
-import WidthContainer from 'components/WidthContainer';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 import ProjectIntro from 'components/ProjectIntro';
-
 import Header from 'projects/Launchpad/header.png';
 import imports from 'projects/Launchpad/imports';
 import './style.scss';
