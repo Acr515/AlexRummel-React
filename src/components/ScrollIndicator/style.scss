@@ -1,0 +1,22 @@
+@keyframes float {
+    0% { transform: translateY(25%); }
+    50% { transform: translateY(-25%); }
+    100% { transform: translateY(25%); }
+}
+
+._ScrollIndicator {
+    width: 64px;
+    opacity: var(--opacity);
+    padding: 24px 0;
+
+    ._Icon {
+        width: 100%;
+        height: auto;
+        --color: #ddd;
+        mix-blend-mode: difference;
+        animation-name: float;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}

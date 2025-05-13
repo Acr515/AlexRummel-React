@@ -16,6 +16,7 @@ export default function LaunchpadScreen() {
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("launchpad")}
                 wideImage={Header}
+                wordmark={imports['wordmark']}
             />
 
             <div className='project-contents'>

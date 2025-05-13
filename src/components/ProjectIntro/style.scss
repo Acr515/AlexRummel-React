@@ -1,5 +1,7 @@
 ._ProjectIntro {
     background-color: #000a;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 
     .project-intro-container {
         display: flex;

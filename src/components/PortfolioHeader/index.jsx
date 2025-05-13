@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import WidthContainer from 'components/WidthContainer';
 import ProjectIntro from 'components/ProjectIntro';
 import './style.scss';
+import ScrollIndicator from 'components/ScrollIndicator';
 
 /**
  * Creates the large header shown on every portfolio entry's page. This also auto-generates the `MetaTags` component.
@@ -16,11 +17,11 @@ export default function PortfolioHeader({ children, entry, wideImage = null, wor
     const introRef = useRef(null);
     const [graphicIsVisible, setGraphicIsVisible] = useState(true);
 
-    const onScroll = () => {
-        setGraphicIsVisible(introRef.current.getBottom() > 0);
-    };
-
     useEffect(() => {
+        const onScroll = () => {
+            setGraphicIsVisible(introRef.current.getBottom() > 0);
+        };
+
         window.addEventListener('scroll', onScroll);
 
         return () => {
@@ -43,15 +44,24 @@ export default function PortfolioHeader({ children, entry, wideImage = null, wor
                     </div>
                     <div className="heading-content">
                         <WidthContainer>
-                            <div className>
-                                <h1>{entry.title}</h1>
+                            <div className='project-title-container'>
+                                { 
+                                    wordmark === null ? (
+                                        <h1>{entry.title}</h1>
+                                    ) : (
+                                        <img className='wordmark' src={wordmark} alt={entry.title} />
+                                    )
+                                }
                             </div>
                             <div className="tagline">{entry.tagline}</div>
+                            <ScrollIndicator />
                         </WidthContainer>
                     </div>
                 </div>
             </div>
+            <div className='glowing-edge' />
             <ProjectIntro entry={entry} ref={introRef} />
+            <div className='glowing-edge' />
         </div>
     )
 }

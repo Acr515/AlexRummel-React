@@ -30,22 +30,54 @@
             text-shadow: #000 0px 3px 8px;
 
             ._WidthContainer {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                justify-content: center;
                 width: 100%;
                 height: 100%;
                 margin-top: auto;
                 margin-bottom: 16px;
 
+                .project-title-container {
+                    padding: 16px 0;
+
+                    .wordmark {
+                        width: 100%;
+                        height: auto;
+                        max-width: 520px;
+                    }
+                }
                 .tagline {
                     color: #fff;
                     max-width: 300px;
                     font-weight: 400;
                     text-shadow: #000 0px 3px 8px;
                 }
+                ._ScrollIndicator {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
     }
+    .glowing-edge {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to left, #fff5, #fffb, #fff5);
+        position: relative;
 
-    .specifications h3.date {
-        font-weight: 700;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to left, #fffa, #fff, #fffa);
+            filter: blur(4px);
+        }
     }
 }
