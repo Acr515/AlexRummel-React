@@ -46,8 +46,8 @@ export default function App() {
         <div 
             className="_App"
             style={{
-                backgroundColor: customColors.background || "revert",
-                color: customColors.font || "revert",
+                // backgroundColor: customColors.background || "revert",
+                // color: customColors.font || "revert",
             }}
         >
             <ImageViewerContext.Provider value={{ openImage, closeImage }}>

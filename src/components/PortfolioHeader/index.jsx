@@ -1,7 +1,7 @@
 import MetaTags from 'components/MetaTags';
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import WidthContainer from 'components/WidthContainer';
-import PageColorContext from 'context/PageColorContext';
+import ProjectIntro from 'components/ProjectIntro';
 import './style.scss';
 
 /**
@@ -13,8 +13,20 @@ import './style.scss';
  * @param {string} wordmark Optional. The wordmark of the project show. Although not required, it is highly recommended.
  */
 export default function PortfolioHeader({ children, entry, wideImage = null, wordmark = null }) {
+    const introRef = useRef(null);
+    const [graphicIsVisible, setGraphicIsVisible] = useState(true);
 
-    const colors = useContext(PageColorContext);
+    const onScroll = () => {
+        setGraphicIsVisible(introRef.current.getBottom() > 0);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', onScroll);
+
+        return () => {
+            window.removeEventListener('scroll', onScroll);
+        };
+    }, []);
 
     return (
         <div className="_PortfolioHeader">
@@ -22,19 +34,24 @@ export default function PortfolioHeader({ children, entry, wideImage = null, wor
                 title={entry.title}
                 description={entry.tagline}
             />
-            <div className="heading-section">
-                <div className="large-graphic">
-                    { typeof children !== 'undefined' ? children : (
-                        <img className='static-image' src={wideImage} />
-                    )}
-                </div>
-                <div className="heading-content">
-                    <WidthContainer>
-                        <h1>{entry.title}</h1>
-                        <div className="tagline">{entry.tagline}</div>
-                    </WidthContainer>
+            <div className="heading-wrapper">
+                <div className="heading-section">
+                    <div className="large-graphic" style={{ opacity: graphicIsVisible ? 1 : 0 }}>
+                        { typeof children !== 'undefined' ? children : (
+                            <img className='static-image' src={wideImage} />
+                        )}
+                    </div>
+                    <div className="heading-content">
+                        <WidthContainer>
+                            <div className>
+                                <h1>{entry.title}</h1>
+                            </div>
+                            <div className="tagline">{entry.tagline}</div>
+                        </WidthContainer>
+                    </div>
                 </div>
             </div>
+            <ProjectIntro entry={entry} ref={introRef} />
         </div>
     )
 }

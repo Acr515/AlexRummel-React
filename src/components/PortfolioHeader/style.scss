@@ -1,7 +1,8 @@
 ._PortfolioHeader {
-    width: 100%;
-    height: calc(100vh - $NAVIGATION_HEIGHT);
-
+    .heading-wrapper {
+        width: 100%;
+        height: calc(100vh - $NAVIGATION_HEIGHT);
+    }
     .large-graphic {
         position: fixed;
         z-index: -10;
@@ -27,7 +28,6 @@
             height: 100%;
             color: #fff;
             text-shadow: #000 0px 3px 8px;
-            justify-content: center;
 
             ._WidthContainer {
                 width: 100%;

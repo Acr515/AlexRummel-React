@@ -1,5 +1,5 @@
 /**
- * Each portfolio project has an instance of this class, which stores important overview data about the project.
+ * Stores important overview data about the project associated with it.
  */
 export default class PortfolioEntry {
 

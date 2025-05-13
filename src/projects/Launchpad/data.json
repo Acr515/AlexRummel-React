@@ -16,15 +16,17 @@
 	},
 	"specs": {
 		"dates": "May 2024–May 2025",
-		"toolsUsed": [
-			"Adobe Illustrator, Figma",
-			"React.js, TypeScript"
-        ],
+		"toolsUsed": {
+			"Design": "Adobe Illustrator, Figma",
+			"Programming": "React.js, TypeScript",
+			"Project Management": "Git, Kanban board"
+		},
 		"linkNames": [
 			"Prototype"
 		],
 		"linkLocations": [
 			"https://launchpad.alexrummel.com"
-		]
+		],
+		"overview": "Launchpad is a website I designed and programmed for my senior capstone project for the University of Cincinnati. I chose my topic, FIRST robotics, based on the wealth of past experience I have in the program."
 	}
 }
