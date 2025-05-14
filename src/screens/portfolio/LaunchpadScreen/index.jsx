@@ -3,7 +3,6 @@ import Section from 'components/Section';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
-import Header from 'projects/Launchpad/header.png';
 import imports from 'projects/Launchpad/imports';
 import './style.scss';
 
@@ -15,9 +14,14 @@ export default function LaunchpadScreen() {
         <div className="_LaunchpadScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("launchpad")}
-                wideImage={Header}
                 wordmark={imports['wordmark']}
-            />
+            >
+                <img className='star-background' src={imports['stars']} />
+                <img className='star-background blend' src={imports['stars']} />
+                <video className="video-element" loop autoPlay muted playsInline>
+                    <source src={imports['bubble_animation']} type="video/webm" />
+                </video>
+            </PortfolioHeader>
 
             <div className='project-contents'>
                 <Section outerClassName='scope-section' className='scope-container'>

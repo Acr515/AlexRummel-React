@@ -60,7 +60,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(mov|mp4)$/i,
+                test: /\.(mov|mp4|webm)$/i,
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/videos/[name].[hash][ext][query]'

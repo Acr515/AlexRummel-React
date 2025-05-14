@@ -1,4 +1,33 @@
 ._LaunchpadScreen {
+    ._PortfolioHeader {
+        .star-background {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            &.blend {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0.75;
+                mix-blend-mode: lighten;
+                z-index: 1;
+                filter: blur(1px);
+            }
+        }
+        .video-element {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: max(50%, 700px);
+            height: 100%;
+            object-fit: cover;
+            object-position: right;
+            transform: scaleX(-1);
+        }
+    }
     .project-contents {
         background-color: $BACKGROUND;
     }
