@@ -25,9 +25,11 @@ function ProjectIntro({ entry }, ref) {
             <WidthContainer className="project-intro-container">
                 <div className="column">
                     <h3>Overview</h3>
-                    <p>{entry.specs.overview ?? "Giggidy giggidy giggidy"}</p>
-                    <h3>Collaborators</h3>
-                    <p>Giggidy giggidy giggidy</p>
+                    <p>{entry.specs.overview ?? "None specified."}</p>
+                    { typeof entry.specs.collaborators !== 'undefined' && <>
+                        <h3>Collaborators</h3>
+                        <p>{entry.specs.collaborators}</p>
+                    </>}
                 </div>
                 <div className="column">
                     <h3>Tools Used</h3>
