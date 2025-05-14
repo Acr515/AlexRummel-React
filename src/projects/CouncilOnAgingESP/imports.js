@@ -2,6 +2,7 @@
  * A dictionary of file names in the assets folder, minus the file extension. Used to avoid polluting the screen .jsx file for a portfolio entry.
  */
 const imports = {
+    "apm-opportunity-setup": require('./assets/apm-opportunity-setup.jpg'),
     "apm-components": require('./assets/apm-components.png'),
     "apm-activity": require('./assets/apm-activity.png'),
     "coa-logo": require('./assets/coa-logo.png'),

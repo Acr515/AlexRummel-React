@@ -37,7 +37,7 @@ export default function PortfolioHeader({ children, entry, wideImage = null, wor
             />
             <div className="heading-wrapper">
                 <div className="heading-section">
-                    <div className="large-graphic" style={{ opacity: graphicIsVisible ? 1 : 0 }}>
+                    <div className="large-graphic" style={{ display: graphicIsVisible ? 'block' : 'none' }}>
                         { typeof children !== 'undefined' ? children : (
                             <img className='static-image' src={wideImage} />
                         )}
