@@ -2,7 +2,6 @@ import ProjectCollection from 'classes/ProjectCollection';
 import BlueberryFestivalScreen from 'screens/portfolio/BlueberryFestivalScreen';
 import CookingAppDesignScreen from 'screens/portfolio/CookingAppDesignScreen';
 import CouncilOnAgingESPScreen from 'screens/portfolio/CouncilOnAgingESPScreen';
-import CraigslistRedesignScreen from 'screens/portfolio/CraigslistRedesignScreen';
 import DigitalAnimationScreen from 'screens/portfolio/DigitalAnimationScreen';
 import FRCScouterScreen from 'screens/portfolio/FRCScouterScreen';
 import KineticVisionScreen from 'screens/portfolio/KineticVisionScreen';
@@ -57,13 +56,13 @@ const PortfolioEntries = new ProjectCollection([
         },
         component: LudumDare46Screen
     },
-    {
+    /*{
         data: require('projects/CraigslistRedesign/data.json'),
         images: {
             thumbnailImage: require('projects/CraigslistRedesign/small-cover.jpg')
         },
         component: CraigslistRedesignScreen
-    },
+    },*/
     {
         data: require('projects/KineticVision/data.json'),
         images: {

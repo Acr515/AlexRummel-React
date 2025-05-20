@@ -1,11 +1,8 @@
 import React from 'react';
 import PortfolioHeader from 'components/PortfolioHeader';
 import PortfolioEntries from 'config/PortfolioEntries';
-
-import Header from 'projects/CookingAppDesign/header.jpg';
 import AppDemo from 'projects/CookingAppDesign/assets/app-demo.mp4';
 import imports from 'projects/CookingAppDesign/imports';
-import ProjectIntro from 'components/ProjectIntro';
 import WidthContainer from 'components/WidthContainer';
 import './style.scss';
 
@@ -18,13 +15,8 @@ export default function CookingAppDesignScreen() {
         <div className="_CookingAppDesignScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("cooking-app-design")}
-                wideImage={Header}
+                wideImage={imports['phone-kitchen']}
             />
-            <ProjectIntro image={imports['phone-kitchen']}>
-                <p>
-                    This design was the result of an interaction design class project where we were prompted to improve a facet of daily life using UI design. I selected cooking as I had identified it as a process that could use invigoration in my own life.
-                </p>
-            </ProjectIntro>
 
             <section className="planning">
                 <WidthContainer width={1500} className="split-columns">

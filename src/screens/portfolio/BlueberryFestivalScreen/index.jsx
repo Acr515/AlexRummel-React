@@ -1,21 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PortfolioHeader from 'components/PortfolioHeader';
 import PortfolioEntries from 'config/PortfolioEntries';
-
-import Header from 'projects/BlueberryFestival/header.png';
 import imports from 'projects/BlueberryFestival/imports';
-import ProjectIntro from 'components/ProjectIntro';
 import WidthContainer from 'components/WidthContainer';
 import './style.scss';
+
+// Utility to get y-position of a ref
+const getY = (ref) => typeof ref !== 'undefined' && ref.current !== 'undefined' ? ref.current.getBoundingClientRect().y : 10000;
 
 /**
  * The portfolio page for the Blueberry Festival App.
  */
 export default function BlueberryFestivalScreen() {
-
-    // Utility to get y-position of a ref
-    const getY = (ref) => typeof ref !== 'undefined' && ref.current !== 'undefined' ? ref.current.getBoundingClientRect().y : 10000;
-    
     // Refs for each element to be changed
     const [imageVisibility, setImageVisibility] = useState(-1);
     const textBoxRefs = [
@@ -30,44 +26,35 @@ export default function BlueberryFestivalScreen() {
     ];
     
     // Function to determine which image should be visible
-    const getVisibleImage = () => {
+    const setVisibleImage = () => {
         let visibleImage = -1;
         textBoxRefs.forEach((ref, ind) => {
             if (getY(ref) < 650) visibleImage = ind;
         })
         setImageVisibility(visibleImage);
-    }
+    };
 
-    // Read-outs for element
     useEffect(() => {
-        // Setters
+        // Determines which screen to show on phone
         const setScreens = () => {
-            // Determine which screen to show on phone
-            getVisibleImage();
+            setVisibleImage();
         }
 
-        // Clean up code
-        window.removeEventListener('scroll', setScreens);
-        window.removeEventListener('resize', setScreens);
         window.addEventListener('scroll', setScreens, { passive: true });
         window.addEventListener('resize', setScreens, { passive: true });
-        return () => { window.removeEventListener('scroll', setScreens); window.removeEventListener('resize', setScreens); }
+
+        return () => {
+            window.removeEventListener('scroll', setScreens);
+            window.removeEventListener('resize', setScreens);
+        };
     }, []);
 
     return (
         <div className="_BlueberryFestivalScreen _Screen">
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("blueberry-festival")}
-                wideImage={Header}
+                wideImage={imports['physical-phone']}
             />
-            <ProjectIntro image={imports['physical-phone']}>
-                <p>
-                    The National Blueberry Festival takes place every second weekend in August in South Haven, Michigan.
-                </p>
-                <p>
-                    My brother and I were approached by the festival planning committee to create an app to replace paper schedules that would include live updates and the ability to re-use it each year. He would focus on back-end development and I would design the interface and write front-end code in React Native for the app.
-                </p>
-            </ProjectIntro>
 
             <section className="planning">
                 <WidthContainer width={1400} className="split-column">

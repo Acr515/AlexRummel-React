@@ -18,9 +18,9 @@
 	"specs": {
 		"dates": "May 2021–Aug. 2021",
 		"toolsUsed": [
-            "JavaScript, React.js/React Native, Amazon AWS",
+            "JavaScript, React Native, Amazon AWS",
             "Adobe Illustrator, XD, Figma",
-            "GitHub, Git version control"
+            "Git version control"
         ],
 		"linkNames": [
 			"iOS app download",
@@ -31,6 +31,8 @@
 			"https://apps.apple.com/us/app/south-haven-blueberry-festival/id1572703423",
 			"https://play.google.com/store/apps/details?id=com.blueberryfestival.blueberryfestival",
 			"https://www.blueberryfestival.com"
-		]
+		],
+		"overview": "The National Blueberry Festival takes place every second weekend in August in South Haven, Michigan. My brother and I were approached by the festival planning committee to create an app to replace paper schedules that would include live updates and the ability to reuse it each year. He would focus on back-end development and I would design the interface and write front-end code in React Native for the app.",
+		"collaborators": "Joel Rummel, National Blueberry Festival"
 	}
 }
