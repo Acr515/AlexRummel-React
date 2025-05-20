@@ -76,6 +76,7 @@ module.exports = {
             components: path.resolve(__dirname, "src", "components"),
             config: path.resolve(__dirname, "src", "config"),
             context: path.resolve(__dirname, "src", "context"),
+            hooks: path.resolve(__dirname, "src", "hooks"),
             projects: path.resolve(__dirname, "src", "projects"),
             screens: path.resolve(__dirname, "src", "screens"),
             util: path.resolve(__dirname, "src", "util"),

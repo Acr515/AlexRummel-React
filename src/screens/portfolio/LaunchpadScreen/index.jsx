@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import Section from 'components/Section';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
+import useScrollEvents from 'hooks/useScrollEvents';
 import imports from 'projects/Launchpad/imports';
 import './style.scss';
 
 /**
- * The portfolio page for the Craigslist Redesign.
+ * The portfolio page for Launchpad.
  */
 export default function LaunchpadScreen() {
+    const rootElement = useRef(null);
+    const scroll = useScrollEvents();
+
+    const setScrollDistanceProperty = useCallback(() => {
+        if (rootElement.current === null) { return; }
+        rootElement.current.style.setProperty('--scroll-distance', window.scrollY);
+    }, []);
+
+    scroll.on(setScrollDistanceProperty);
+
     return (
-        <div className="_LaunchpadScreen _Screen">
+        <div className="_LaunchpadScreen _Screen" ref={rootElement}>
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("launchpad")}
                 wordmark={imports['wordmark']}

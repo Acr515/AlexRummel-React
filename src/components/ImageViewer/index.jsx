@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import ImageViewerContext from 'context/ImageViewerContext';
 import XIcon from 'assets/images/icons/x-icon.png';
-import useOutsideAlerter from 'util/useOutsideAlerter';
+import useOutsideAlerter from 'hooks/useOutsideAlerter';
 import sleep from 'util/sleep';
 import './style.scss';
 
