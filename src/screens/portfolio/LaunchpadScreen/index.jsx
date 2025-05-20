@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Section from 'components/Section';
 import PortfolioHeader from 'components/PortfolioHeader';
 import ImageDisplay from 'components/ImageDisplay';
@@ -19,13 +19,16 @@ export default function LaunchpadScreen() {
         rootElement.current.style.setProperty('--scroll-distance', window.scrollY);
     }, []);
 
-    scroll.on(setScrollDistanceProperty);
+    useEffect(() => {
+        scroll.on(setScrollDistanceProperty);
+    }, []);
 
     return (
         <div className="_LaunchpadScreen _Screen" ref={rootElement}>
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("launchpad")}
                 wordmark={imports['wordmark']}
+                scrollEvents={scroll}
             >
                 <img className='star-background' src={imports['stars']} />
                 <img className='star-background blend' src={imports['stars']} />

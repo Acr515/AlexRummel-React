@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const THROTTLE_INTERVAL = 200;
+const THROTTLE_INTERVAL = 100;
 
 /**
  * Hook that establishes a central location for multiple components to subscribe to scroll events.
