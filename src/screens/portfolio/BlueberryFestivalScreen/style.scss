@@ -83,7 +83,7 @@
         }
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .iterations .split-column, .planning .split-column {
             flex-direction: column;
             gap: 16px;

@@ -1,6 +1,6 @@
 ._CouncilOnAgingESPScreen {
     .project-contents {
-        background-color: $BACKGROUND;
+        background-color: $COLOR_BACKGROUND;
     }
 
     ul {
@@ -104,7 +104,7 @@
         display: none;
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .two-columns {
             flex-direction: column;
             gap: 48px;

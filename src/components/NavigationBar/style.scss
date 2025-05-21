@@ -1,5 +1,5 @@
 ._NavigationBar {
-    height: $NAVIGATION_HEIGHT;
+    height: $DIM_NAVBAR_HEIGHT;
     position: sticky;
     top: 0;
     width: 100%;
@@ -20,11 +20,11 @@
         font-size: 34px;
         font-weight: 400;
         font-family: 'input-sans';
-        color: $GREEN_TEXT;
+        color: $COLOR_TEXT;
         text-decoration: none;
 
         &:hover {
-            color: $GREEN_HI !important;
+            color: $COLOR_GREEN_BRIGHT !important;
         }
     }
 
@@ -43,7 +43,7 @@
             a {
                 font-size: 15px;
                 font-family: 'input-sans';
-                color: $GREEN_TEXT;
+                color: $COLOR_TEXT;
                 text-decoration: none;
                 font-weight: 300;
                 display: block;
@@ -51,7 +51,7 @@
             }
 
             .overline {
-                background: linear-gradient(to right, $GREEN_HI, #285159);
+                background: linear-gradient(to right, $COLOR_GREEN_BRIGHT, #285159);
                 width: 0;
                 height: 5px;
                 transition: width .2s ease;
@@ -68,14 +68,14 @@
     }
 
     // Switch to mobile navigation bar
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         transition: background-color .25s ease;
 
         .link-list {
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: $BACKGROUND;
+            background-color: $COLOR_BACKGROUND;
             width: 100%;
 
             height: 0;
@@ -117,11 +117,11 @@
             width: 40px;
 
             &:hover .line {
-                background-color: $GREEN_HI;
+                background-color: $COLOR_GREEN_BRIGHT;
             }
 
             .line {
-                background-color: $GREEN_TEXT;
+                background-color: $COLOR_TEXT;
                 width: 40px;
                 height: 3px;
                 transition: opacity .25s ease, transform .25s ease, background-color .2s ease;
@@ -147,7 +147,7 @@
         }
 
         &.open {
-            background-color: $BACKGROUND !important;
+            background-color: $COLOR_BACKGROUND !important;
 
             .link-list {
                 height: 100vh;

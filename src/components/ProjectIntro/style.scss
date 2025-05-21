@@ -14,7 +14,7 @@
         }
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         flex-direction: column;
 
         .text-holder {

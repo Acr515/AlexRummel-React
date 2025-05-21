@@ -1,7 +1,7 @@
 ._Blockquote {
     .quote {
         font-size: 1.5em;
-        color: $DARK_TEXT;
+        color: $COLOR_TEXT_DARK;
         font-weight: 400;
         margin-top: 48px;
     }
@@ -10,6 +10,6 @@
         text-align: right;
         font-style: italic;
         margin: 0 0 15px;
-        color: $DARK_TEXT;
+        color: $COLOR_TEXT_DARK;
     }
 }

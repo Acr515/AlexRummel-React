@@ -5,16 +5,16 @@
         text-align: center;
         font-size: 13px;
         font-family: 'input-sans';
-        color: $DARK_TEXT;
+        color: $COLOR_TEXT_DARK;
         padding-top: 60px;
         padding-bottom: 60px;
 
         a.email {
-            color: $DARK_TEXT;
+            color: $COLOR_TEXT_DARK;
             font-weight: 400;
 
             &:hover {
-                color: $GREEN_HI !important;
+                color: $COLOR_GREEN_BRIGHT !important;
             }
         }
     }

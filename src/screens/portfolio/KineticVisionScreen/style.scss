@@ -1,6 +1,6 @@
 ._KineticVisionScreen {
     .project-contents {
-        background-color: $BACKGROUND;
+        background-color: $COLOR_BACKGROUND;
     }
 
     .mobile {
@@ -63,7 +63,7 @@
         }
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .desktop {
             display: none;
         }

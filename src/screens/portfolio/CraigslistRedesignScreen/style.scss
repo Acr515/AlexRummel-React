@@ -106,7 +106,7 @@
         font-weight: 600;
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .mobile {
             display: block;
         }

@@ -1,7 +1,7 @@
 ._PortfolioHeader {
     .heading-wrapper {
         width: 100%;
-        height: calc(100vh - $NAVIGATION_HEIGHT);
+        height: calc(100vh - $DIM_NAVBAR_HEIGHT);
     }
     .large-graphic {
         position: fixed;

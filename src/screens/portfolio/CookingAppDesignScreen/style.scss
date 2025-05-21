@@ -58,7 +58,7 @@
         max-height: 90vh;
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .split-columns {
             flex-direction: column;
 

@@ -17,7 +17,7 @@
         }
     }
 
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .two-column {
             flex-direction: column;
             gap: 24px;

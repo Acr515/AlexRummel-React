@@ -54,7 +54,7 @@
     }
 
     /* Switch to mobile navigation bar */
-    @media (max-width: $MOBILE_MQ) {
+    @media (max-width: $DIM_MOBILE_WIDTH) {
         .heading-section {
             margin: 30px auto 160px;
             flex-direction: column;
