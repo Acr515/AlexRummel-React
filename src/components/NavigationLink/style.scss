@@ -1,0 +1,78 @@
+._NavigationLink {
+    @keyframes hover {
+        0% {
+            background-position: 0;
+        }
+        100% {
+            background-position: 100%;
+        }
+    }
+
+    position: relative;
+    display: inline-block;
+
+    a {
+        font-size: 16px;
+        font-family: 'input-sans';
+        text-decoration: none;
+        font-weight: 300;
+        color: $COLOR_TEXT;
+
+        &:hover {
+            color: unset;
+        }
+    }
+
+    .triangle {
+        --size: 4px;
+        display: block;
+        position: absolute;
+        bottom: -45%;
+        left: calc(50% - var(--size));
+        width: 0; 
+        height: 0; 
+        border-left: var(--size) solid transparent;
+        border-right: var(--size) solid transparent;
+        border-bottom: calc(var(--size) * 2 * 0.866) solid #fff;
+        transition: opacity 0.25s;
+        opacity: 0;
+        filter: drop-shadow(0 0 2px #fff9);
+        pointer-events: none;
+    }
+
+    &.current {
+        cursor: default;
+
+        a {
+            color: #fff;
+            font-weight: 600;
+            cursor: default;
+        }
+
+        .triangle {
+            opacity: 1;
+        }
+    }
+
+    &:hover:not(.current) {
+        .triangle {
+            opacity: 0.5;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:before,
+        a:after {
+            opacity: var(--opacity);
+            animation-name: hover;
+        }
+    }
+
+    @media (max-width: $DIM_MOBILE_WIDTH) {
+        a {
+            font-size: 22px;
+        }
+    }
+}

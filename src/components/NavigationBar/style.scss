@@ -17,18 +17,37 @@
     }
 
     .title {
-        font-size: 34px;
-        font-weight: 400;
-        font-family: 'input-sans';
-        color: $COLOR_TEXT;
+        position: relative;
+        font-size: 42px;
+        font-weight: 500;
+        font-family: 'jesaya';
+        color: #fff;
         text-decoration: none;
+        text-transform: uppercase;
+
+        &:before {
+            scale: 1;
+            --opacity: 0.8;
+        }
+
+        &:after {
+            --opacity: 0.75;
+            filter: blur(8px);
+        }
 
         &:hover {
-            color: $COLOR_GREEN_BRIGHT !important;
+            &:before,
+            &:after {
+                opacity: var(--opacity);
+                animation-name: hover;
+                animation-duration: 4s;
+            }
         }
     }
 
     .link-list {
+        display: flex;
+        gap: 48px;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -37,33 +56,7 @@
 
         li {
             display: inline-block;
-            margin-left: 40px;
             text-align: right;
-
-            a {
-                font-size: 15px;
-                font-family: 'input-sans';
-                color: $COLOR_TEXT;
-                text-decoration: none;
-                font-weight: 300;
-                display: block;
-                margin-left: 24px;
-            }
-
-            .overline {
-                background: linear-gradient(to right, $COLOR_GREEN_BRIGHT, #285159);
-                width: 0;
-                height: 5px;
-                transition: width .2s ease;
-            }
-
-            &:hover .overline {
-                width: 100%;
-            }
-        }
-
-        li:first-child {
-            margin-left: 0;
         }
     }
 
@@ -73,6 +66,9 @@
 
         .link-list {
             position: absolute;
+            padding: 30px;
+            flex-direction: column;
+            box-sizing: border-box;
             top: 100%;
             left: 0;
             background-color: $COLOR_BACKGROUND;
@@ -83,29 +79,9 @@
             opacity: 0;
             transition: height 0s .25s, opacity .25s 0s;
 
-            li:first-child {
-                margin-top: 60px;
-                margin-left: 30px;
-            }
-
             li {
                 display: block;
-                width: 160px;
                 text-align: left;
-                margin-left: 30px;
-                margin-bottom: 30px;
-
-                a {
-                    margin-left: 0;
-                }
-
-                .overline {
-                    margin-bottom: 3px;
-                }
-            }
-
-            li a {
-                font-size: 1.2em;
             }
         }
 

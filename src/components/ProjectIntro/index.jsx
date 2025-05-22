@@ -24,28 +24,34 @@ function ProjectIntro({ entry }, ref) {
         <div className="_ProjectIntro" ref={elementRef}>
             <WidthContainer className="project-intro-container">
                 <div className="column">
-                    <h3>Overview</h3>
-                    <p>{entry.specs.overview ?? "None specified."}</p>
-                    { typeof entry.specs.collaborators !== 'undefined' && <>
-                        <h3>Collaborators</h3>
+                    <div>
+                        <h3>Overview</h3>
+                        <p>{entry.specs.overview ?? "None specified."}</p>
+                    </div>
+                    { typeof entry.specs.collaborators !== 'undefined' && <div>
+                        <h3>In Collaboration With</h3>
                         <p>{entry.specs.collaborators}</p>
-                    </>}
+                    </div>}
                 </div>
                 <div className="column">
+                    <div>
                     <h3>Tools Used</h3>
-                    {
-                        // TODO: Remove this check once all projects are updated
-                        Array.isArray(entry.specs.toolsUsed) ? (
-                            entry.specs.toolsUsed.map(string => <p key={string}>{string}</p>) 
-                        ) : (
-                            Object.keys(entry.specs.toolsUsed).map(category => (
-                                <div className='tool-group'key={category}>
-                                    <h4>{category}</h4>
-                                    <p>{entry.specs.toolsUsed[category]}</p>
-                                </div>
-                            ))
-                        )
-                    }
+                        <div className='tool-container'>
+                            {
+                                // TODO: Remove this check once all projects are updated
+                                Array.isArray(entry.specs.toolsUsed) ? (
+                                    entry.specs.toolsUsed.map(string => <p key={string}>{string}</p>) 
+                                ) : (
+                                    Object.keys(entry.specs.toolsUsed).map(category => (
+                                        <div className='tool-group' key={category}>
+                                            <h4>{category}</h4>
+                                            <span>{entry.specs.toolsUsed[category]}</span>
+                                        </div>
+                                    ))
+                                )
+                            }
+                        </div>
+                    </div>
                 </div>
             </WidthContainer>
         </div>

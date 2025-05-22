@@ -2,9 +2,9 @@ import MetaTags from 'components/MetaTags';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import WidthContainer from 'components/WidthContainer';
 import ProjectIntro from 'components/ProjectIntro';
-import './style.scss';
 import ScrollIndicator from 'components/ScrollIndicator';
 import useScrollEvents from 'hooks/useScrollEvents';
+import './style.scss';
 
 /**
  * Creates the large header shown on every portfolio entry's page. This also auto-generates the `MetaTags` component.
@@ -26,6 +26,10 @@ export default function PortfolioHeader({ children, entry, wideImage = null, wor
 
     useEffect(() => {
         (scrollEvents ?? scrollEventBackup).on(onScroll);
+        
+        return () => {
+            (scrollEvents ?? scrollEventBackup).off(onScroll);
+        }
     }, []);
 
     return (

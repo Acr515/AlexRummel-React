@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 158 51.3"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:8px;}</style></defs><g id="Layer_1-2"><polyline class="cls-1" points="154 4 79 47.3 4 4"/></g></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 155 55.79">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path d="M76.91,55.63L.59,11.56c-.36-.21-.59-.6-.59-1.02V.44C0,.1.37-.11.66.06l76.25,44.02c.36.21.81.21,1.18,0L154.34.06c.29-.17.66.04.66.38v10.1c0,.42-.22.81-.59,1.02l-76.32,44.06c-.36.21-.81.21-1.18,0Z"/>
+  </g>
+</svg>

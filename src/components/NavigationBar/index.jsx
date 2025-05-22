@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import WidthContainer from 'components/WidthContainer';
 import PageColorContext from 'context/PageColorContext';
 import './style.scss';
+import NavigationLink from 'components/NavigationLink';
 
 export default function NavigationBar() {
     const [opened, setOpened] = useState(false);    // for navigation bar in mobile layout
@@ -49,48 +50,34 @@ export default function NavigationBar() {
         }
     }, [location]);
 
-    // Location change listening
-    useEffect(() => {
-    }, [location]);
-
     return (
         <nav 
             className={`_NavigationBar ${ opened ? "open" : "" }`}
             style={{ 
-                backgroundColor: headerBgOpacity < 1 ? `rgba(4, 5, 4, ${headerBgOpacity})` : colors.background || "#040504"
+                backgroundColor: headerBgOpacity < 1 ? `rgba(4, 4, 4, ${headerBgOpacity})` : colors.background || "#040404"
             }}
         >
             <WidthContainer className="container" verticalPadding={false}>
                 <Link 
-                    className="title" 
+                    className="title module-glow" 
                     to="/"
-                    style={{ 
-                        opacity: opened ? 1 : headerOpacity,
-                        color: colors.font || "inherit"
-                    }}
+                    style={{ opacity: opened ? 1 : headerOpacity }}
+                    data-text='Alex Rummel'
                 >
                     Alex Rummel
                 </Link>
                 <ul className="link-list">
                     <li>
-                        <div className="overline"></div>
-                        <Link className="link-text" onClick={linkClicked} to="/" style={{ color: colors.font || "" }}>portfolio</Link>
+                        <NavigationLink src='/' onClick={linkClicked} label='portfolio' />
                     </li>
                     <li>
-                        <div className="overline"></div>
-                        <Link className="link-text" onClick={linkClicked} to="/other" style={{ color: colors.font || "" }}>other</Link>
+                        <NavigationLink src='/other' onClick={linkClicked} label='other' />
                     </li>
                     <li>
-                        <div className="overline"></div>
-                        <Link className="link-text" onClick={linkClicked} to="/about" style={{ color: colors.font || "" }}>about</Link>
+                        <NavigationLink src='/about' onClick={linkClicked} label='about' />
                     </li>
                     <li>
-                        <div className="overline"></div>
-                        { process.env.NODE_ENV == 'production' ? 
-                            <a className="link-text" onClick={linkClicked} href="/bin/AlexRummel_Resume.pdf" style={{ color: colors.font || "" }}>resume</a>
-                        :
-                            <Link className="link-text" onClick={linkClicked} to="/bin/AlexRummel_Resume.pdf" style={{ color: colors.font || "" }}>resume</Link>
-                        }
+                        <NavigationLink src='/bin/AlexRummel_Resume.pdf' onClick={linkClicked} label='resume' isExternal />
                     </li>
                 </ul>
                 <div className="burger-button" onClick={ () => setOpened(!opened) }>

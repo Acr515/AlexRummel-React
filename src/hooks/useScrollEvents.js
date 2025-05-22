@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 const THROTTLE_INTERVAL = 100;
 
@@ -8,44 +8,43 @@ const THROTTLE_INTERVAL = 100;
  * @returns An object with `on()` and `off()` methods for subscribing handlers
  */
 export default function useScrollEvents() {
-    const [handlers, setHandlers] = useState([]);
+    const handlers = useRef([]);
     const throttleTimeout = useRef(null);
 
+    const onScroll = useCallback((e) => {
+        if (throttleTimeout.current !== null) { return; }
+        throttleTimeout.current = setTimeout(() => {
+            for (const handler of handlers.current) { handler(e); }
+            throttleTimeout.current = null;
+        }, THROTTLE_INTERVAL);
+    }, []);
+
+    /**
+     * Event handler to subscribe to scroll events. Ensure that the function is wrapped in `useCallback()`.
+     * @param {function} handler The handler to assign
+     */
+    const on = useCallback((handler) => {
+        if (handlers.current.includes(handler)) { return; }
+        handlers.current.push(handler);
+    }, []);
+
+    /**
+     * Unsubscribes a handler from scroll events.
+     * @param {function} handler The handler to remove
+     */
+    const off = useCallback((handler) => {
+        if (!handlers.current.includes(handler)) { return; }
+        handlers.current.filter(h => h !== handler);
+    }, []);
+
     useEffect(() => {
-        const onScroll = (e) => {
-            if (throttleTimeout.current !== null) { return; }
-            throttleTimeout.current = setTimeout(() => {
-                for (const handler of handlers) { handler(e); }
-                throttleTimeout.current = null;
-            }, THROTTLE_INTERVAL);
-        };
-
         window.addEventListener('scroll', onScroll);
-
+        
         return () => {
             window.removeEventListener('scroll', onScroll);
             clearTimeout(throttleTimeout.current);
         };
-    }, [handlers]);
+    }, [onScroll]);
 
-    return {
-        /**
-         * Event handler to subscribe to scroll events. Ensure that the function is wrapped in useCallback().
-         * @param {function} handler The handler to assign
-         */
-        on: (handler) => {
-            if (handlers.includes(handler)) { return; }
-            setHandlers([...handlers, handler]);
-        },
-        /**
-         * Unsubscribes a handler from scroll events.
-         * @param {function} handler The handler to remove
-         */
-        off: (handler) => {
-            if (!handlers.includes(handler)) { return; }
-            const newHandlers = [...handlers];
-            newHandlers.splice(newHandlers.indexOf(handler));
-            setHandlers(newHandlers);
-        } 
-    };
+    return { on, off };
 }
