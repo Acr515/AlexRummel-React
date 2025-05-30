@@ -12,9 +12,9 @@ function NavigationLink({ label, src, isExternal, onClick }) {
     return (
         <div className={`_NavigationLink ${current ? 'current' : ''}`}>
             { !isExternal ? (
-                <Link data-text={label} className='link-text module-glow' onClick={onClick} {...(!current ? {to: src} : {})}>{label}</Link>
+                <Link data-text={label} className='link-text _Mod_glowing-text' onClick={onClick} to={src}>{label}</Link>
             ) : (
-                <a data-text={label} className='link-text module-glow' onClick={onClick} href={src}>{label}</a>
+                <a data-text={label} className='link-text _Mod_glowing-text' onClick={onClick} href={src}>{label}</a>
             )}
             <span className='triangle' />
         </div>

@@ -17,7 +17,7 @@
     }
 
     .heading-section-wrapper {
-        transition: opacity 0.1s;
+        transition: opacity $TIME_SCROLL_TRANSITION;
     }
 
     .heading-section {

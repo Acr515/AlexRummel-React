@@ -68,7 +68,7 @@ h4 {
     font-size: 16px;
 }
 
-.module-glow {
+._Mod_glowing-text {
     &:before,
     &:after {
         content: attr(data-text);

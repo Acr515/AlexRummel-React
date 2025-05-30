@@ -7,7 +7,7 @@
     z-index: 10;
     box-sizing: border-box;
     background-color: rgba(4, 4, 4, var(--background-opacity));
-    transition: background-color 0.1s;
+    transition: background-color $TIME_SCROLL_TRANSITION;
 
     .burger-button {
         display: none;
@@ -27,7 +27,7 @@
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
-        transition: opacity 0.1s;
+        transition: opacity $TIME_SCROLL_TRANSITION;
 
         &:before {
             scale: 1;

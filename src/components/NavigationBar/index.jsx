@@ -8,29 +8,38 @@ import './style.scss';
 export default function NavigationBar() {
     const [opened, setOpened] = useState(false);    // for navigation bar in mobile layout
     const location = useLocation();
+    const locationRef = useRef(location);
     const scroll = useScrollEvents();
     const navRef = useRef(null);
     const wordmarkRef = useRef(null);
+    const setHomePageNavigationVisibilityRef = useRef(null);
 
     // const colors = useContext(PageColorContext);
 
-    const setHomePageNavigationVisibility = useCallback((_, scrollY) => {
-        if (location.pathname !== '/' || navRef.current === null || wordmarkRef.current === null) { return; }
+    useEffect(() => {
+        setHomePageNavigationVisibilityRef.current = setHomePageNavigationVisibility;
+        locationRef.current = location;
 
+        scroll.on(setHomePageNavigationVisibility);
+        setHomePageNavigationVisibility(null, window.scrollY);
+        
+        if (location.pathname !== '/' && navRef.current !== null && wordmarkRef.current !== null) {
+            wordmarkRef.current.style.opacity = '';
+            navRef.current.style.setProperty('--background-opacity', '');
+        }
+
+        return () => {
+            scroll.off(setHomePageNavigationVisibility.current);
+        };
+    }, [location]);
+
+    const setHomePageNavigationVisibility = useCallback((_, scrollY) => {
+        if (locationRef.current.pathname !== '/' || navRef.current === null || wordmarkRef.current === null) { return; }
         const wordmarkOpacity = opened ? 1 : scrollY > 260 ? 1 : Math.max(0, 1 - ((260 - scrollY) * .01));
         wordmarkRef.current.style.opacity = wordmarkOpacity;
 
         const navOpacity = scrollY > 460 ? 1 : Math.max(0, 1 - ((460 - scrollY) * .007));
         navRef.current.style.setProperty('--background-opacity', navOpacity);
-    });
-
-    useEffect(() => {
-        scroll.on(setHomePageNavigationVisibility);
-        setHomePageNavigationVisibility(null, window.scrollY);
-
-        return () => {
-            scroll.off(setHomePageNavigationVisibility);
-        };
     }, []);
     
     // Collapse mobile navigation when a link is clicked
@@ -42,7 +51,7 @@ export default function NavigationBar() {
         <nav className={`_NavigationBar ${ opened ? "open" : "" }`} ref={navRef}>
             <WidthContainer className="container" verticalPadding={false}>
                 <Link 
-                    className="title module-glow" 
+                    className="title _Mod_glowing-text" 
                     to="/"
                     data-text='Alex Rummel'
                     ref={wordmarkRef}
