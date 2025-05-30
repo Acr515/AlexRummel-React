@@ -14,24 +14,15 @@ export default function useScrollEvents() {
     const onScroll = useCallback((e) => {
         if (throttleTimeout.current !== null) { return; }
         throttleTimeout.current = setTimeout(() => {
-            for (const handler of handlers.current) { handler(e); }
+            const scrollY = window.scrollY;
+            for (const handler of handlers.current) { handler(e, scrollY); }
             throttleTimeout.current = null;
         }, THROTTLE_INTERVAL);
     }, []);
-
-    /**
-     * Event handler to subscribe to scroll events. Ensure that the function is wrapped in `useCallback()`.
-     * @param {function} handler The handler to assign
-     */
     const on = useCallback((handler) => {
         if (handlers.current.includes(handler)) { return; }
         handlers.current.push(handler);
     }, []);
-
-    /**
-     * Unsubscribes a handler from scroll events.
-     * @param {function} handler The handler to remove
-     */
     const off = useCallback((handler) => {
         if (!handlers.current.includes(handler)) { return; }
         handlers.current.filter(h => h !== handler);
@@ -46,5 +37,17 @@ export default function useScrollEvents() {
         };
     }, [onScroll]);
 
-    return { on, off };
+    return {
+        /**
+         * Event handler to subscribe to scroll events. Ensure that the function is wrapped in `useCallback()` and takes an
+         * argument for both the event object `e` *and* `scrollY`, which is cached before execution.
+         * @param {function} handler The handler to assign
+         */
+        on,
+        /**
+         * Unsubscribes a handler from scroll events.
+         * @param {function} handler The handler to remove
+         */
+        off
+    };
 }

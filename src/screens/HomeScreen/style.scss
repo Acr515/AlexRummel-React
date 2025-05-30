@@ -16,6 +16,10 @@
         }
     }
 
+    .heading-section-wrapper {
+        transition: opacity 0.1s;
+    }
+
     .heading-section {
         display: flex;
         margin: 100px auto 130px;

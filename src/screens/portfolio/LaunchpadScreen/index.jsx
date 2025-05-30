@@ -14,9 +14,9 @@ export default function LaunchpadScreen() {
     const rootElement = useRef(null);
     const scroll = useScrollEvents();
 
-    const setScrollDistanceProperty = useCallback(() => {
+    const setScrollDistanceProperty = useCallback((_, scrollY) => {
         if (rootElement.current === null) { return; }
-        rootElement.current.style.setProperty('--scroll-distance', window.scrollY);
+        rootElement.current.style.setProperty('--scroll-distance', scrollY);
     }, []);
 
     useEffect(() => {

@@ -1,50 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import Section from 'components/Section';
 import PortfolioItem from 'components/PortfolioItem';
 import MetaTags from 'components/MetaTags';
 import PortfolioEntries from 'config/PortfolioEntries';
 import BackgroundVideo from 'assets/videos/home-animation.mp4'
+import useScrollEvents from 'hooks/useScrollEvents';
 import './style.scss';
 
 /**
  * The index page of the website.
  */
 export default function HomeScreen() {
-    
-    // Scrolling change functions
-    const getDescriptionOpacity = (y) => y < 110 ? 1 : Math.max(0, 1 - ((y - 110) * .01));
-    const getBgOffset = (y) => y * .25;
+    const scroll = useScrollEvents();
+    const headingRef = useRef(null);
 
-    // Scrolling change definitions
-    const [descriptionOpacity, setDescriptionOpacity] = useState(getDescriptionOpacity(window.scrollY));
-    const [bgOffset, setBgOffset] = useState(getBgOffset(window.scrollY));
+    const setTopLevelTextOpacity = useCallback((_, scrollY) => {
+        if (headingRef.current === null)  { return; }
+        headingRef.current.style.opacity = scrollY < 110 ? 1 : Math.max(0, 1 - ((scrollY - 110) * .01));
+    });
 
-    // Scrolling change listeners
     useEffect(() => {
-        // Setters
-        const onScroll = () => {
-            setDescriptionOpacity(getDescriptionOpacity(window.scrollY));
-            setBgOffset(getBgOffset(window.scrollY));
-        }
+        scroll.on(setTopLevelTextOpacity);
+        setTopLevelTextOpacity(null, window.scrollY);
 
-        // Clean up code
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        return () => {
+            scroll.off(setTopLevelTextOpacity);
+        };
     }, []);
 
     return (
         <div className="_HomeScreen _Screen">
             <MetaTags title="Portfolio" />
-            <div 
-                className="background-video"
-                style={{ marginTop: bgOffset }}
-            >
+            <div className="background-video">
                 <video className="video-element" loop autoPlay muted playsInline>
                     <source src={BackgroundVideo} type="video/mp4" />
                 </video>
             </div>
-            <Section className="heading-section" style={{ opacity: descriptionOpacity }}>
+            <Section outerClassName="heading-section-wrapper" className="heading-section" ref={headingRef}>
                 <div className="name">
 					<h1>Alex Rummel</h1>
 				</div>

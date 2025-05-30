@@ -1,10 +1,13 @@
 ._NavigationBar {
+    --background-opacity: 1;
     height: $DIM_NAVBAR_HEIGHT;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 10;
     box-sizing: border-box;
+    background-color: rgba(4, 4, 4, var(--background-opacity));
+    transition: background-color 0.1s;
 
     .burger-button {
         display: none;
@@ -24,6 +27,7 @@
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
+        transition: opacity 0.1s;
 
         &:before {
             scale: 1;
