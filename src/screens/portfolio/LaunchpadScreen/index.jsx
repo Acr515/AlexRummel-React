@@ -6,6 +6,7 @@ import PortfolioEntries from 'config/PortfolioEntries';
 import useScrollEvents from 'hooks/useScrollEvents';
 import imports from 'projects/Launchpad/imports';
 import './style.scss';
+import SectionHeader from 'components/SectionHeader';
 
 /**
  * The portfolio page for Launchpad.
@@ -21,6 +22,10 @@ export default function LaunchpadScreen() {
 
     useEffect(() => {
         scroll.on(setScrollDistanceProperty);
+
+        return () => {
+            scroll.off(setScrollDistanceProperty);
+        }
     }, []);
 
     return (
@@ -41,7 +46,7 @@ export default function LaunchpadScreen() {
                 <Section outerClassName='scope-section' className='scope-container'>
                     <img src={imports['project_scope_background']} className='scope-background' />
                     <div>
-                        <h2>Problem Space</h2>
+                        <SectionHeader label='Brief' />
                         <p>
                             FIRST Robotics Competition (FRC) is the ultimate sport of the mind for high school students around the world. Teams are given just six weeks each year to prototype, build, and program a robot to play a game against other robots. Many rural or low-income teams struggle to field competitive robots due to a lack of software knowledge.
                         </p>

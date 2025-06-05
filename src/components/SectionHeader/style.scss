@@ -1,0 +1,22 @@
+._SectionHeader {
+    --color: #999;
+    background:
+        linear-gradient(to bottom, #ddd 40%, #ddd7 70%, #ddd0),
+        linear-gradient(to right, var(--color), #fff, var(--color));
+    background-position-x: mod(calc(var(--scroll-distance) * 0.2%), 100%);
+    background-clip: text;
+    background-size: 50% 100%;
+    color: transparent;
+    font-size: 48px;
+    scroll-margin-top: calc($DIM_NAVBAR_HEIGHT + 32px);
+
+    &.red {
+        --color: #{$COLOR_RED};
+    }
+    &.blue {
+        --color: #{$COLOR_BLUE};
+    }
+    &.green {
+        --color: #{$COLOR_GREEN};
+    }
+}

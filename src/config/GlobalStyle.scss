@@ -37,6 +37,7 @@ a:hover {
 h1, h2, h3, h4 {
     font-family: 'jesaya', sans-serif;
     text-transform: uppercase;
+    color: #fff;
 }
 
 h1 {
@@ -69,6 +70,15 @@ h4 {
 }
 
 ._Mod_glowing-text {
+    @keyframes hover {
+        0% {
+            background-position: 0;
+        }
+        100% {
+            background-position: 100%;
+        }
+    }
+
     &:before,
     &:after {
         content: attr(data-text);

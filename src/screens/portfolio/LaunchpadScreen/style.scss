@@ -1,13 +1,4 @@
 ._LaunchpadScreen {
-    .test-header {
-        background:
-            linear-gradient(to bottom, #fff 40%, #fff3 70%, #fff0),
-            linear-gradient(to right, #e55, #5e5, #e55);
-        background-position-x: mod(calc(var(--scroll-distance) * 0.2%), 100%);
-        background-clip: text;
-        background-size: 50% 100%;
-        color: transparent;
-    }
     ._PortfolioHeader {
         .star-background {
             display: block;
