@@ -10,3 +10,15 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+._WidthContainer.columns {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 32px;
+}
+
+@media (max-width: $DIM_MOBILE_WIDTH) {
+    ._WidthContainer.columns {
+        flex-flow: column nowrap;
+    }
+}

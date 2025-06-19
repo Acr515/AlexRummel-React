@@ -5,7 +5,7 @@ const imports = {
     "wordmark": require('./assets/wordmark.svg'),
     "bubble_animation": require('./assets/bubble_animation.webm'),
     "stars": require('./assets/stars.png'),
-    "icon-array": require('./assets/icon-array.png'),
+    "image_bubbles": require('./assets/image_bubbles.png'),
     "project_scope_background": require('./assets/project_scope_background.jpg'),
     "screen-modules": require('./assets/prototype/screen-modules.png'),
     "screen-steps": require('./assets/prototype/screen-steps.png'),

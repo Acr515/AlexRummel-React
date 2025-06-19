@@ -43,21 +43,25 @@ export default function LaunchpadScreen() {
             </PortfolioHeader>
 
             <div className='project-contents'>
-                <Section outerClassName='scope-section' className='scope-container'>
-                    <img src={imports['project_scope_background']} className='scope-background' />
-                    <div>
-                        <SectionHeader label='Brief' />
-                        <p>
-                            FIRST Robotics Competition (FRC) is the ultimate sport of the mind for high school students around the world. Teams are given just six weeks each year to prototype, build, and program a robot to play a game against other robots. Many rural or low-income teams struggle to field competitive robots due to a lack of software knowledge.
-                        </p>
-                    </div>
-                    <div>
-                        <h2>Design Solution</h2>
-                        <p>
-                            Launchpad is a website that guides underserved high school robotics teams through the yearly software setup process. It serves as the confident mentor in the room for teams who don&apos;t have programming leaders, providing a structured and engaging approach for struggling teams.
-                        </p>
-                    </div>
-                </Section>
+                <div className='project-brief'>
+                    <img src={imports['image_bubbles']} className='image-bubbles' />
+                    <Section outerClassName='brief-contents' columns>
+                        <div>
+                            <SectionHeader label='Brief' />
+                            <h3>Problem Statement</h3>
+                            <p>
+                                FIRST Robotics Competition (FRC) is the ultimate sport of the mind for high school students around the world. Teams are given just six weeks each year to prototype, build, and program a robot to play a game against other robots. Many rural or low-income teams struggle to field competitive robots due to a lack of software knowledge.
+                            </p>
+                        </div>
+                        <div className='empty-column'/>
+                        <div className='design-solution'>
+                            <h3>Design Solution</h3>
+                            <p>
+                                <strong>Launchpad</strong> is a website that guides underserved high school robotics teams through the yearly software setup process. It serves as the confident mentor in the room for teams who don&apos;t have programming leaders, providing a structured and engaging approach for struggling teams.
+                            </p>
+                        </div>
+                    </Section>
+                </div>
 
                 <Section className='wip-section'>
                     <p className='wip-caption'>
