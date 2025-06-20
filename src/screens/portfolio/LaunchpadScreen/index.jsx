@@ -5,8 +5,8 @@ import ImageDisplay from 'components/ImageDisplay';
 import PortfolioEntries from 'config/PortfolioEntries';
 import useScrollEvents from 'hooks/useScrollEvents';
 import imports from 'projects/Launchpad/imports';
-import './style.scss';
 import SectionHeader from 'components/SectionHeader';
+import './style.scss';
 
 /**
  * The portfolio page for Launchpad.
@@ -28,8 +28,12 @@ export default function LaunchpadScreen() {
         }
     }, []);
 
+    const cssVariables = {
+        '--fixed-pattern': `url(${imports['stars']})`,
+    };
+
     return (
-        <div className="_LaunchpadScreen _Screen" ref={rootElement}>
+        <div className="_LaunchpadScreen _Screen" ref={rootElement} style={cssVariables}>
             <PortfolioHeader 
                 entry={PortfolioEntries.getProject("launchpad")}
                 wordmark={imports['wordmark']}
@@ -41,6 +45,7 @@ export default function LaunchpadScreen() {
                     <source src={imports['bubble_animation']} type="video/webm" />
                 </video>
             </PortfolioHeader>
+
 
             <div className='project-contents'>
                 <div className='project-brief'>
@@ -63,13 +68,16 @@ export default function LaunchpadScreen() {
                     </Section>
                 </div>
 
-                <Section className='wip-section'>
-                    <p className='wip-caption'>
-                        I am still working on my project, so I don&apos;t have all of my process documentation here yet; when the prototype is released to the public, you&apos;ll be able to find it at the link below:
-                    </p>
-                    <p>
-                        <a className='wip-link' href='https://launchpad.alexrummel.com' rel='noreferrer' target='_blank'>launchpad.alexrummel.com</a>
-                    </p>
+                <Section className='section-heading' columns>
+                    <div>
+                        <SectionHeader label='Research' color='red' />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div>
+                        (image goes here)
+                    </div>
                 </Section>
 
                 <Section className='screenshot-section'>
