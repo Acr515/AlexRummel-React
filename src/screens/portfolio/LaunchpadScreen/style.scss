@@ -40,8 +40,7 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            max-width: 1500px;
-            max-height: 110vh;
+            max-width: 1400px;
             margin: 0 auto;
         }
         .brief-contents {
@@ -56,6 +55,7 @@
             }
             .design-solution {
                 margin-top: auto;
+                margin-bottom: 32px;
             }
         }
     }
@@ -63,6 +63,10 @@
     .section-heading {
         background-image: var(--fixed-pattern);
         background-attachment: fixed;
+
+        div {
+            width: 100%;
+        }
     }
 
     .screenshot-set {

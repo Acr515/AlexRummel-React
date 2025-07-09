@@ -68,15 +68,15 @@ export default function LaunchpadScreen() {
                     </Section>
                 </div>
 
-                <Section className='section-heading' columns>
+                <Section outerClassName='section-heading' columns>
                     <div>
                         <SectionHeader label='Research' color='red' />
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
-                    </div>
-                    <div>
-                        (image goes here)
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
                     </div>
                 </Section>
 
