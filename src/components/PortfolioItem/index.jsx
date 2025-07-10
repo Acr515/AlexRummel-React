@@ -10,8 +10,10 @@ import './style.scss';
  * @param {number} height The height of the area
  */
 export default function PortfolioItem(props) {
-	/** @import PortfolioEntry from 'classes/PortfolioEntry' */
-    /** @type {PortfolioEntry} */
+    /**
+	 * @import PortfolioEntry from 'classes/PortfolioEntry'
+	 * @type {PortfolioEntry}
+	 */
 	const entry = props.entry;
 	const width = props.width ?? 460;
 	const height = props.height ?? 420;

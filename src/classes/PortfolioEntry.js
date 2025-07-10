@@ -29,28 +29,28 @@ export default class PortfolioEntry {
 	 */
 	featured;
 	/**
-	 * Array of strings that broadly describe the nature of the project (i.e. paid, software, design, etc.)
+	 * Array of strings that broadly describe the disciplines applied in the project.
 	 * @type {string[]}
 	 */
-	tags;
+	disciplines;
 	/**
-	 * Object of data that displays as a table near the top of a portfolio page
-	 * @type {object}
+	 * Granular metadata to be displayed at the top-level of the project.
+	 * @type {Specifications}
 	 */
 	specs;
 	
 	/**
-	 * Wide banner that serves as the header of a portfolio page as well as the thumbnail for the entry if it is featured
+	 * Wide banner that serves as the header of a portfolio page as well as the thumbnail for the entry if it is featured.
 	 * @type {string}
 	 */
 	featuredImage;
 	/**
-	 * Smaller, narrow image that serves as the thumbnail for the entry on the portfolio page
+	 * Smaller, narrow image that serves as the thumbnail for the entry on the portfolio page.
 	 * @type {string}
 	 */
 	thumbnailImage;
 	/**
-	 * The screen component correlating to this entry
+	 * The screen component correlating to this entry.
 	 * @type {React.JSX.Element}
 	 */
     screenComponent;
@@ -62,7 +62,7 @@ export default class PortfolioEntry {
         this.sortingOrder = data.sortingOrder || data.date;
         this.tagline = data.tagline;
         this.featured = data.featured;
-        this.tags = data.tags;
+        this.disciplines = data.disciplines;
         this.specs = data.specs;
         
         this.featuredImage = images.featuredImage;
@@ -95,3 +95,12 @@ export default class PortfolioEntry {
         return new Date(this.date).getFullYear();
     }
 }
+
+/**
+ * @typedef {Object} Specifications
+ * @property {string} dates Human-readable date range that the project was created during.
+ * @property {Record<string, string>} toolsUsed Categorized list of tools used to produce the project.
+ * @property {Record<string, string>} links Names and hyperlinks that are pertinent to the project.
+ * @property {string} overview A paragraph overview of the project.
+ * @property {string} collaborators Anybody who collaborated on the project who should be acknowledged.
+ */
