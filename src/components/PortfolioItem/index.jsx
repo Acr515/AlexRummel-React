@@ -9,8 +9,14 @@ import './style.scss';
  * @param {number} width The max width of the area
  * @param {number} height The height of the area
  */
-export default function PortfolioItem({ entry, width = 460, height = 420 }) {
-    return (
+export default function PortfolioItem(props) {
+	/** @import PortfolioEntry from 'classes/PortfolioEntry' */
+    /** @type {PortfolioEntry} */
+	const entry = props.entry;
+	const width = props.width ?? 460;
+	const height = props.height ?? 420;
+	
+	return (
         <div className="_PortfolioItem" style={{ width }}>
             <HoverLinkBase
                 className="image-link"
@@ -23,5 +29,5 @@ export default function PortfolioItem({ entry, width = 460, height = 420 }) {
                 <div className="year">{entry.getYear()}</div>
             </div>
         </div>
-    )
+    );
 }

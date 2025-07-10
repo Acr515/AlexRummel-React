@@ -26,8 +26,6 @@ export default function OtherProjectsScreen() {
                             <PortfolioItem
                                 key={entry.urlName}
                                 entry={entry}
-                                width={340}
-                                height={300}
                             />
                         ))
                     }

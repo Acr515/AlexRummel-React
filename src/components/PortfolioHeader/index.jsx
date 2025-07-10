@@ -1,5 +1,5 @@
-import MetaTags from 'components/MetaTags';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
+import MetaTags from 'components/MetaTags';
 import WidthContainer from 'components/WidthContainer';
 import ProjectIntro from 'components/ProjectIntro';
 import ScrollIndicator from 'components/ScrollIndicator';
