@@ -14,8 +14,6 @@ export default function NavigationBar() {
     const wordmarkRef = useRef(null);
     const setHomePageNavigationVisibilityRef = useRef(null);
 
-    // const colors = useContext(PageColorContext);
-
     useEffect(() => {
         setHomePageNavigationVisibilityRef.current = setHomePageNavigationVisibility;
         locationRef.current = location;
