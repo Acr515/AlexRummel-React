@@ -100,7 +100,7 @@ export default class PortfolioEntry {
  * @typedef {Object} Specifications
  * @property {string} dates Human-readable date range that the project was created during.
  * @property {Record<string, string>} toolsUsed Categorized list of tools used to produce the project.
- * @property {Record<string, string>} links Names and hyperlinks that are pertinent to the project.
+ * @property {Record<string, string>} [links] Names and hyperlinks that are pertinent to the project.
  * @property {string} overview A paragraph overview of the project.
- * @property {string} collaborators Anybody who collaborated on the project who should be acknowledged.
+ * @property {string} [collaborators] Anybody who collaborated on the project who should be acknowledged.
  */
