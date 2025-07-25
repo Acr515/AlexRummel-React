@@ -18,11 +18,14 @@ export default function AboutScreen() {
                 <div className="text-column">
                     <h2>About Me</h2>
                     <p>
-                        I&apos;m currently a Communication Design student at the University of Cincinnati, specializing in UI design and development. With a minor in Computer Science, I have a strong foundation in software development as well. My experience in both programming and design permits me to approach projects from multiple angles and take on various roles throughout a product lifecycle. My combined skills even enabled me to design and <a href="https://github.com/Acr515/AlexRummel-React" rel="noreferrer" target="_blank">program</a> this entire website from scratch!
+                        I&apos;m a Communication Design graduate from DAAP at the University of Cincinnati, specializing in UI design. With a minor in Computer Science, I have a strong foundation in software development as well. My experience in both programming and design allows me to approach projects from multiple angles and take on various roles throughout a product lifecycle.
                     </p>
                     <p>
-                        I grew up in South Haven, Michigan and graduated from South Haven High School. I was involved in band, FIRST Robotics, and tennis for all four of my years in high school. During my free-time, I enjoy playing tennis, tinkering with my various programming projects, helping out FIRST Robotics teams, and spending time with friends and family.
+                        During my three semesters at Kinetic Vision, I worked on front-end software design and development, focusing on applications in web, iOS, and extended reality. My work in UX design and research during my co-ops at Live Well Collaborative and Lextant taught me valuable skills about evaluating user experiences and improving services and products while balancing user needs with organization needs.
                     </p>
+					<p>
+						I grew up in South Haven, Michigan. Starting in middle school, I began teaching myself programming skills, which has proved invaluable to my career. I remain actively involved with the FIRST Robotics program that I joined as a high school freshman, fueling my enthusiasm for innovation and problem-solving.
+					</p>
                     <p>
                         I&apos;m always looking for new opportunities! If you think I could be of assistance for your next project, feel free to get in contact with me through my <a href="https://www.linkedin.com/in/alex-rummel/">LinkedIn</a> or my <a href="mailto:rummelac@mail.uc.edu">email</a>.
                     </p>

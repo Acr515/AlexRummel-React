@@ -19,13 +19,19 @@
             z-index: -1;
             filter: brightness(70%) blur(2px);
         }
+
+		.scope-content {
+			width: 100%;
+		}
     }
     .wip-section {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        gap: 24px;
+        gap: 32px;
         padding: 96px 30px;
+		
+		div {
+			width: 100%;
+		}
         
         .wip-caption {
             color: #bbb;
@@ -34,12 +40,16 @@
         .wip-link {
             font-weight: bold;
             font-family: 'input-sans';
-            font-size: 24px;
+            font-size: 18px;
 
             &:not(:hover) {
                 color: #eee;
             }
         }
+		.wip-link-list {
+			display: flex;
+			flex-direction: column;
+		}
     }
     .screenshot-set {
         margin: 32px 0;
